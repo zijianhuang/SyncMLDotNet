@@ -1,0 +1,48 @@
+﻿<project schemaVersion="1.6.0.2">
+    <assemblies>
+        <assembly assemblyPath=".\FonlowCommon\bin\Release\FonlowCommon.dll" xmlCommentsPath=".\FonlowCommon\bin\Release\FonlowCommon.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\LocalDataSource\bin\Release\LocalDataSource.dll" xmlCommentsPath=".\LocalDataSource\bin\Release\LocalDataSource.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\OCSyncML\bin\Release\OCSyncML.exe" xmlCommentsPath=".\OCSyncML\bin\Release\OCSyncML.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\SyncCommonFunc\bin\Release\SyncCommonFunc.dll" xmlCommentsPath=".\SyncCommonFunc\bin\Release\SyncCommonFunc.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\SyncCommonUI\bin\Release\SyncCommonUI.dll" xmlCommentsPath=".\SyncCommonUI\bin\Release\SyncCommonUI.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\SyncMLElements\bin\Release\SyncMLElements.dll" xmlCommentsPath=".\SyncMLElements\bin\Release\SyncMLElements.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\SyncMLFacade\bin\Release\SyncMLFacade.dll" xmlCommentsPath=".\SyncMLFacade\bin\Release\SyncMLFacade.XML" commentsOnly="False" />
+    </assemblies>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace</MissingTags>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Internals, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath path="" />
+    <HtmlHelp2xCompilerPath path="" />
+    <OutputPath>.\Help\</OutputPath>
+    <SandcastlePath path="" />
+    <WorkingPath path="" />
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <HelpFileFormat>HtmlHelp1x</HelpFileFormat>
+    <PurgeDuplicateTopics>True</PurgeDuplicateTopics>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <FrameworkVersion>2.0.50727</FrameworkVersion>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>False</IncludeFavorites>
+    <Preliminary>False</Preliminary>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <RootNamespaceTitle />
+    <HelpTitle>SyncMLDotNet Class Library</HelpTitle>
+    <HtmlHelpName>SyncMLLibrary</HtmlHelpName>
+    <Language>en-US</Language>
+    <CopyrightHref />
+    <CopyrightText />
+    <FeedbackEMailAddress />
+    <HeaderText />
+    <FooterText />
+    <ProjectLinkType>Local</ProjectLinkType>
+    <SdkLinkType>Msdn</SdkLinkType>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <PresentationStyle>Prototype</PresentationStyle>
+    <NamingMethod>Guid</NamingMethod>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <ShowFeedbackControl>False</ShowFeedbackControl>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ContentSiteMap path="" />
+    <TopicFileTransform path="" />
+</project>

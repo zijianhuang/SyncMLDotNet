@@ -1,0 +1,20 @@
+<Delete>
+<CmdID>12345</CmdID>
+<SftDel/>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Item>
+<Target><LocURI>./5</LocURI></Target>
+</Item>
+<Item>
+<Target><LocURI>./10</LocURI></Target>
+</Item>
+<Item>
+<Target><LocURI>./8</LocURI></Target>
+</Item>
+</Delete>

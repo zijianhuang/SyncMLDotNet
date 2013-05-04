@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contact>
+  <Companies>Maga S.p.A.</Companies>
+  <CompanyMainTelephoneNumber/>
+  <Email3Address>john@yahoo.com</Email3Address>
+  <Business2TelephoneNumber>+001 2345776</Business2TelephoneNumber>
+  <CarTelephoneNumber/>
+  <Email2Address>john2@hotmail.com</Email2Address>
+  <OtherAddressCountry/>
+  <OtherFaxNumber/>
+  <Suffix/>
+  <BusinessAddressPostOfficeBox/>
+  <FirstName>John</FirstName>
+  <Subject/>
+  <Hobby>Hockey</Hobby>
+  <HomeAddressPostOfficeBox/>
+  <OtherTelephoneNumber/>
+  <PersonalWebPage>http://www.jhon.com</PersonalWebPage>
+  <Department>dep 1</Department>
+  <Home2TelephoneNumber>+001 3456 7767</Home2TelephoneNumber>
+  <HomeAddressStreet>21th Street</HomeAddressStreet>
+  <JobTitle>Programmer</JobTitle>
+  <Anniversary>2004-11-23</Anniversary>
+  <PrimaryTelephoneNumber>+001 45667 34543</PrimaryTelephoneNumber>
+  <MobileTelephoneNumber>3357766689</MobileTelephoneNumber>
+  <YomiCompanyName/>
+  <BusinessAddressCountry>New York</BusinessAddressCountry>
+  <Sensitivity>0</Sensitivity>
+  <OtherAddressState/>
+  <NickName>JJ</NickName>
+  <HomeAddressPostalCode>54065</HomeAddressPostalCode>
+  <OrganizationalIDNumber/>
+  <ManagerName>Mr.White</ManagerName>
+  <BusinessTelephoneNumber>+001 12399 9999</BusinessTelephoneNumber>
+  <YomiLastName/>
+  <WebPage>http://www.maga.com</WebPage>
+  <BusinessAddressCity>New York</BusinessAddressCity>
+  <Email2AddressType>SMTP</Email2AddressType>
+  <Title>Ing</Title>
+  <FileAs>Doe,John</FileAs>
+  <MiddleName>Patrick</MiddleName>
+  <HomeAddressCountry>home country</HomeAddressCountry>
+  <Birthday>1973-10-03</Birthday>
+  <RadioTelephoneNumber/>
+  <OtherAddressPostalCode/>
+  <BusinessAddressPostalCode>54667</BusinessAddressPostalCode>
+  <BusinessAddressStreet>45th street</BusinessAddressStreet>
+  <AssistantTelephoneNumber/>
+  <PagerNumber/>
+  <HomeAddressCity>home city</HomeAddressCity>
+  <Profession>IT developer</Profession>
+  <HomeAddressState>home state</HomeAddressState>
+  <YomiFirstName/>
+  <OtherAddressStreet/>
+  <OtherAddressCity/>
+  <CallbackTelephoneNumber/>
+  <OtherAddressPostOfficeBox/>
+  <Initials>J.D.</Initials>
+  <Mileage/>
+  <Language/>
+  <Email1Address>john.doe@funambol.com</Email1Address>
+  <Children/>
+  <BusinessFaxNumber>+001 456 65 5556456</BusinessFaxNumber>
+  <Email3AddressType>SMTP</Email3AddressType>
+  <Importance>0</Importance>
+  <Email1AddressType>SMTP</Email1AddressType>
+  <Body>a little note...</Body>
+  <TelexNumber/>
+  <OfficeLocation/>
+  <AssistantName/>
+  <Spouse/>
+  <Categories/>
+  <HomeTelephoneNumber>+001 456 65 5454 </HomeTelephoneNumber>
+  <BusinessAddressState>USA</BusinessAddressState>
+  <ComputerNetworkName/>
+  <CompanyName>Sync4j</CompanyName>
+  <HomeFaxNumber/>
+  <LastName>Doe</LastName>
+</contact>

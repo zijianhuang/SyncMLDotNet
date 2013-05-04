@@ -1,0 +1,36 @@
+ <DevInf xmlns="syncml:devinf">
+  <VerDTD>1.2</VerDTD>
+  <Man>Funambol</Man>
+  <Mod>DS Server</Mod>
+  <OEM>-</OEM>
+  <FwV>-</FwV>
+  <SwV>6.5.12</SwV>
+  <HwV>-</HwV>
+  <DevID>funambol</DevID>
+  <DevTyp>server</DevTyp>
+  <UTC />
+  <SupportLargeObjs />
+  <SupportNumberOfChanges />
+  <DataStore>
+    <SourceRef>scard</SourceRef>
+    <DisplayName>scard</DisplayName>
+    <MaxGUIDSize>32</MaxGUIDSize>
+    <Rx-Pref>
+      <CTType>text/x-s4j-sifc</CTType>
+      <VerCT>1.0</VerCT>
+    </Rx-Pref>
+    <Tx-Pref>
+      <CTType>text/x-s4j-sifc</CTType>
+      <VerCT>1.0</VerCT>
+    </Tx-Pref>
+    <SyncCap>
+      <SyncType>1</SyncType>
+      <SyncType>2</SyncType>
+      <SyncType>3</SyncType>
+      <SyncType>4</SyncType>
+      <SyncType>5</SyncType>
+      <SyncType>6</SyncType>
+      <SyncType>7</SyncType>
+    </SyncCap>
+  </DataStore>
+</DevInf>

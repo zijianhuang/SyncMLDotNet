@@ -1,0 +1,56 @@
+<C ID="0">
+<Field Name="Surname" Section="">Wong</Field>
+<Field Name="GivenName" Section="">Zijian</Field>
+<Field Name="MidName" Section="">J</Field>
+<Field Name="Title" Section="">Mr</Field>
+<Field Name="Anniversay" Section="Personal"/>
+<Field Name="Assistant" Section="Personal"/>
+<Field Name="Assistant Phone" Section="Personal"/>
+<Field Name="Birthday" Section="Personal">1978-12-13</Field>
+<Field Name="Mobile" Section="Personal">8987987987</Field>
+<Field Name="Nickname" Section="Personal">Andrew</Field>
+<Field Name="Children" Section="Personal"/>
+<Field Name="Email" Section="Personal"/>
+<Field Name="Email2" Section="Personal"/>
+<Field Name="Email3" Section="Personal"/>
+<Field Name="Gender" Section="Personal"/>
+<Field Name="Hobby" Section="Personal"/>
+<Field Name="Phone2" Section="Personal">897987987</Field>
+<Field Name="City" Section="Personal"/>
+<Field Name="Country" Section="Personal"/>
+<Field Name="Postcode" Section="Personal"/>
+<Field Name="PO Box" Section="Personal"/>
+<Field Name="State" Section="Personal"/>
+<Field Name="Street" Section="Personal">somewhere</Field>
+<Field Name="Fax" Section="Personal"/>
+<Field Name="Phone" Section="Personal">98799798</Field>
+<Field Name="Web" Section="Personal"/>
+<Field Name="Primary Phone" Section="Personal"/>
+<Field Name="Spouse" Section="Personal"/>
+<Field Name="Suffix" Section="Personal"/>
+<Field Name="Web" Section="Personal"/>
+<Field Name="Phone2" Section="Work"/>
+<Field Name="City" Section="Work"/>
+<Field Name="Country" Section="Work"/>
+<Field Name="Postcode" Section="Work"/>
+<Field Name="PO Box" Section="Work"/>
+<Field Name="State" Section="Work"/>
+<Field Name="Title" Section="Work"/>
+<Field Name="Manager" Section="Work"/>
+<Field Name="Street" Section="Work"/>
+<Field Name="Fax" Section="Work"/>
+<Field Name="Phone" Section="Work"/>
+<Field Name="Web" Section="Work"/>
+<Field Name="Primary Phone" Section="Work"/>
+<Field Name="Company" Section="Work"/>
+<Field Name="Department" Section="Work"/>
+<Field Name="Profession" Section="Work"/>
+<Field Name="City" Section="Other"/>
+<Field Name="Country" Section="Other"/>
+<Field Name="Postcode" Section="Other"/>
+<Field Name="PO Box" Section="Other"/>
+<Field Name="State" Section="Other"/>
+<Field Name="Street" Section="Other"/>
+<Field Name="Fax" Section="Other"/>
+<Field Name="Phone" Section="Other"/>
+</C>

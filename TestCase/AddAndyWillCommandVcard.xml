@@ -1,0 +1,25 @@
+<Add>
+  <CmdID />
+  <Item>
+    <Source>
+      <LocURI>89</LocURI>
+    </Source>
+    <Meta>
+      <Type xmlns="syncml:metinf">text/x-vcard</Type>
+    </Meta>
+    <Data>BEGIN:VCARD
+VERSION:2.1
+N:Will;Andy;;;
+FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Andy Will
+ORG:;Marketing
+BDAY:19810408
+EMAIL:andyw@there.com
+TEL;HOME;VOICE:81667181
+TEL;HOME;FAX:3268276
+TEL;WORK;VOICE:20 828878
+ADR;HOME:;;1100  North Dustin  Lane;Chandler;Arizona;85226;US
+NOTE;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:It is assumed that each section has only a sing-line address or multi-line =
+address. The map services support both formats.
+END:VCARD</Data>
+  </Item>
+</Add>

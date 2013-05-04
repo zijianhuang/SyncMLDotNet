@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<appointment>
+<Start>20040930T133000Z</Start>
+<End>20040930T140000Z</End>
+<AllDayEvent>0</AllDayEvent>
+<Body>O, this is just description.</Body>
+<BusyStatus>2</BusyStatus>
+<Categories>This Cat, That Cat</Categories>
+<Companies>This Company, That Co</Companies>
+<Importance>1</Importance>
+<IsRecurring>1</IsRecurring>
+<Location>Milan</Location>
+<MeetingStatus>0</MeetingStatus>
+<Mileage>1234</Mileage>
+<ReminderMinutesBeforeStart>15</ReminderMinutesBeforeStart>
+<ReminderSet>1</ReminderSet>
+<ReminderSoundFile>CalenAlarmSound</ReminderSoundFile>
+<ReminderOptions>8</ReminderOptions>
+<ReminderInterval>5</ReminderInterval>
+<ReminderRepeatCount>2</ReminderRepeatCount>
+<ReplyTime/>
+<Sensitivity/>
+<Subject>Meeting with Maga developers</Subject>
+<RecurrenceType>1</RecurrenceType>
+<Interval>1</Interval>
+<MonthOfYear>0</MonthOfYear>
+<DayOfMonth>0</DayOfMonth>
+<DayOfWeekMask>16</DayOfWeekMask>
+<Instance>0</Instance>
+<PatternStartDate>20040930T000000Z</PatternStartDate>
+<NoEndDate>1</NoEndDate>
+<Occurrences>0</Occurrences>
+<PatternEndDate></PatternEndDate>
+</appointment >

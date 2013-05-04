@@ -1,0 +1,31 @@
+<Atomic>
+<CmdID>1234</CmdID>
+<Add>
+<CmdID>1235</CmdID>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Item>
+<Target><LocURI>./devinf10/pen</LocURI></Target>
+<Data>Yes</Data>
+</Item>
+</Add>
+<Replace>
+<CmdID>12346</CmdID>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Item>
+<Target><LocURI>./devinf10/version</LocURI></Target>
+<Data>20000401T133000Z</Data>
+</Item>
+</Replace>
+</Atomic>

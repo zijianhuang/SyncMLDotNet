@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact>
+  <SIFVersion>1.0</SIFVersion>
+  <Body>something to say</Body>
+  <Title>Mr</Title>
+  <FirstName>Zijian</FirstName>
+  <MiddleName>J</MiddleName>
+  <LastName>Wong</LastName>
+  <Suffix/>
+  <FileAs>Wang, Andy</FileAs>
+  <NickName>Andrew</NickName>
+  <Birthday>1978-12-13</Birthday>
+  <HomeAddressStreet>somewhere</HomeAddressStreet>
+  <HomeAddressCity/>
+  <HomeAddressState/>
+  <HomeAddressPostalCode/>
+  <HomeAddressCountry/>
+  <HomeTelephoneNumber>98799798</HomeTelephoneNumber>
+  <MobileTelephoneNumber>8987987987</MobileTelephoneNumber>
+  <Home2TelephoneNumber>897987987</Home2TelephoneNumber>
+  <Profession/>
+  <JobTitle/>
+  <CompanyName/>
+  <Department/>
+  <HomeLabel>
+    somewhere
+    ,
+  </HomeLabel>
+  <BusinessLabel>
+    ,
+  </BusinessLabel>
+</contact>

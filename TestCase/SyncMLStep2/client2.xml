@@ -1,0 +1,54 @@
+<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>2</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds</LocURI></Target>
+        <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>1</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>fjg-QFhng2</TargetRef>
+            <SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+            <Data>200</Data>
+        </Status>
+     <Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef><CmdRef>1</CmdRef><Cmd>Alert</Cmd>
+<TargetRef>scal</TargetRef>
+<SourceRef>scal</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf"><Next>1207566594796</Next></Anchor>
+</Data>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target><LocURI>scal</LocURI></Target>
+<Source><LocURI>scal</LocURI></Source>
+</Sync><Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef><CmdRef>1</CmdRef><Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>scard</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf"><Next>1207566594796</Next></Anchor>
+</Data>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target><LocURI>scard</LocURI></Target>
+<Source><LocURI>scard</LocURI></Source>
+</Sync><Final/>
+     </SyncBody>
+</SyncML>

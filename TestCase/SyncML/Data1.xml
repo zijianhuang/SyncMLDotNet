@@ -1,0 +1,7 @@
+<Data>BEGIN:VCARD
+VERSION:3.0
+FN:Smith;Bruce
+N:Bruce Smith
+TEL;TYPE=WORK;VOICE:+1-919-555-1234
+END:VCARD
+</Data>

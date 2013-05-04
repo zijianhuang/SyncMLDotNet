@@ -1,0 +1,1646 @@
+06:03:11 GMT +10:00 [DEBUG] - Current Timezone = (GMT+10:00) Brisbane
+06:03:11 GMT +10:00 [DEBUG] - Reading configuration settings from the management tree
+06:03:11 GMT +10:00 [DEBUG] - [UI] StartSync begin
+06:03:11 GMT +10:00 [DEBUG] - [UI] Hide menu
+06:03:11 GMT +10:00 [DEBUG] - [UI] Starting the syncThread...
+06:03:11 GMT +10:00 [DEBUG] - Starting the Sync process...
+06:03:11 GMT +10:00 [DEBUG] - Set a lower priority to the process
+06:03:11 GMT +10:00 [DEBUG] - Set listeners
+06:03:11 GMT +10:00 [DEBUG] - Creating SyncSources...
+06:03:11 GMT +10:00 [DEBUG] - Creating the sync-mutex ("fol-SyncInProgress-1266955391")
+06:03:11 GMT +10:00 [DEBUG] - Start SyncClient::Sync() with 1 sources
+06:03:11 GMT +10:00 [INFO] - 
+ ************************** BEGIN of Synchronization session **************************
+06:03:11 GMT +10:00 [DEBUG] - Synchronization URL: http://localhost:8080/funambol/ds
+06:03:11 GMT +10:00 [INFO] - Preparing synchronization of contact...
+06:03:11 GMT +10:00 [DEBUG] - Checking devinfo...
+06:03:11 GMT +10:00 [DEBUG] - devinfo hash: Ka5LPftgVYX0Xg1/5Iwg7w==
+06:03:11 GMT +10:00 [DEBUG] - devinfo unchanged, no need to send
+06:03:11 GMT +10:00 [DEBUG] - Server capabilities are invalid (Server URL changed)
+06:03:11 GMT +10:00 [DEBUG] - Initialization message:
+06:03:11 GMT +10:00 [DEBUG] - User Agent = Funambol Outlook Sync Client v. 8.0.4
+06:03:11 GMT +10:00 [DEBUG] - Initialization sent.
+06:03:11 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>1</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Source>
+<Cred><Meta><Format xmlns="syncml:metinf">b64</Format>
+<Type xmlns="syncml:metinf">syncml:auth-basic</Type>
+</Meta>
+<Data>dGVzdDp0dHR0dHR0dA==</Data>
+</Cred>
+<Meta><MaxMsgSize xmlns="syncml:metinf">250000</MaxMsgSize>
+</Meta>
+</SyncHdr>
+<SyncBody><Alert><CmdID>1</CmdID>
+<Data>205</Data>
+<Item><Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1266933306</Last>
+<Next>1266955391</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Get><CmdID>2</CmdID>
+<Meta><Type xmlns="syncml:metinf">application/vnd.syncml-devinf+xml</Type>
+</Meta>
+<Item><Target><LocURI>./devinf12</LocURI>
+</Target>
+</Item>
+</Get>
+<Final/></SyncBody>
+</SyncML>
+06:03:11 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+06:03:11 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds
+06:03:11 GMT +10:00 [DEBUG] - Sending data of size 992...
+06:03:11 GMT +10:00 [DEBUG] - Message sent
+06:03:11 GMT +10:00 [DEBUG] - Finished sending data of size 992.
+06:03:11 GMT +10:00 [DEBUG] - Data sent successfully to server. Server responds OK
+06:03:11 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie:
+X-funambol-ds-server: DS Server v.8.0.0
+Accept-Encoding: gzip,deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 2320
+Date: Tue, 23 Feb 2010 20:03:11 GMT
+
+
+06:03:11 GMT +10:00 [DEBUG] - Reading response...
+06:03:11 GMT +10:00 [DEBUG] - Content-length: 2320
+06:03:11 GMT +10:00 [DEBUG] - Receiving data of size 2320...
+06:03:11 GMT +10:00 [DEBUG] - Finished receiving data of size 2320.
+06:03:11 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>1</MsgID>
+<Target>
+<LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-WklKSUFOLVBDOnppamlhbg==</SourceRef>
+<Data>212</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1266955391</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Get</Cmd>
+<TargetRef>./devinf12</TargetRef>
+<Data>200</Data>
+</Status>
+<Results>
+<CmdID>4</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>2</CmdRef>
+<Meta>
+<Type xmlns='syncml:metinf'>application/vnd.syncml-devinf+xml</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>./devinf12</LocURI>
+</Source>
+<Data>
+<DevInf xmlns="syncml:devinf">
+<VerDTD>1.2</VerDTD>
+<Man>Funambol</Man>
+<Mod>DS Server</Mod>
+<OEM>-</OEM>
+<FwV>-</FwV>
+<SwV>8.0.0</SwV>
+<HwV>-</HwV>
+<DevID>funambol</DevID>
+<DevTyp>server</DevTyp>
+<UTC/>
+<SupportLargeObjs/>
+<SupportNumberOfChanges/>
+<DataStore>
+<SourceRef>scard</SourceRef>
+<DisplayName>scard</DisplayName>
+<MaxGUIDSize>32</MaxGUIDSize>
+<Rx-Pref>
+<CTType>text/x-s4j-sifc</CTType>
+<VerCT>1.0</VerCT>
+</Rx-Pref>
+<Tx-Pref>
+<CTType>text/x-s4j-sifc</CTType>
+<VerCT>1.0</VerCT>
+</Tx-Pref>
+<SyncCap>
+<SyncType>1</SyncType>
+<SyncType>2</SyncType>
+<SyncType>3</SyncType>
+<SyncType>4</SyncType>
+<SyncType>5</SyncType>
+<SyncType>6</SyncType>
+<SyncType>7</SyncType>
+</SyncCap>
+</DataStore>
+<Ext>
+<XNam>X-funambol-smartslow</XNam>
+</Ext>
+</DevInf>
+</Data>
+</Item>
+</Results>
+<Alert>
+<CmdID>5</CmdID>
+<Data>205</Data>
+<Item>
+<Target>
+<LocURI>contact</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1266933306508</Last>
+<Next>1266955391351</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Final/>
+</SyncBody>
+</SyncML>
+
+06:03:11 GMT +10:00 [DEBUG] - Server capabilities obtained
+06:03:11 GMT +10:00 [DEBUG] - Server requested syncmode "refresh-from-server" for contact.
+06:03:11 GMT +10:00 [DEBUG] - Checking for forced slow-sync...
+06:03:11 GMT +10:00 [DEBUG] - Initialize COM library
+06:03:11 GMT +10:00 [DEBUG] - Create Outlook.Application instance...
+06:03:11 GMT +10:00 [DEBUG] - Logon to Outlook MAPI: default profile, show-dialog = true, new-session = false
+06:03:11 GMT +10:00 [DEBUG] - Creating Redemption.MAPIUtils instance...
+06:03:11 GMT +10:00 [DEBUG] - Creating Redemption.RDOSession instance...
+06:03:11 GMT +10:00 [INFO] - Outlook session opened successfully! Using: Outlook 2007.
+06:03:11 GMT +10:00 [DEBUG] - ---------------------- contact BEGIN (mode "refresh-from-server") ----------------------
+06:03:11 GMT +10:00 [DEBUG] - beginSync of contact source: opening Outlook session...
+06:03:11 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Personal Folders\Contacts' (16 found)...
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Anegawa Enterprises"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Australian Taxation Office"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Butwood RSL Club"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Donnantuoni Concrete Drilling & Cutting"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Gamac Trade Imports"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "General Business"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "General Business Motor"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "General Finance"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Hales Electrical Services Pty Ltd"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Motoman Upholstery"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Russels's Automatic Transmissions"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Gothenburg Österblad"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "John Williams (Marsfield)"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Linda Lee"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Sandy Württemberg"
+06:03:12 GMT +10:00 [DEBUG] - Reading item: "Yoda Jedi"
+06:03:12 GMT +10:00 [INFO] - Removing all existing contacts (16 items to delete)...
+06:03:13 GMT +10:00 [DEBUG] - Deleted contact item: "Australian Taxation Office"
+06:03:14 GMT +10:00 [DEBUG] - Deleted contact item: "Motoman Upholstery"
+06:03:14 GMT +10:00 [DEBUG] - Deleted contact item: "Butwood RSL Club"
+06:03:14 GMT +10:00 [DEBUG] - Deleted contact item: "Russels's Automatic Transmissions"
+06:03:15 GMT +10:00 [DEBUG] - Deleted contact item: "Donnantuoni Concrete Drilling & Cutting"
+06:03:15 GMT +10:00 [DEBUG] - Deleted contact item: "Gothenburg Österblad"
+06:03:15 GMT +10:00 [DEBUG] - Deleted contact item: "Gamac Trade Imports"
+06:03:15 GMT +10:00 [DEBUG] - Deleted contact item: "John Williams (Marsfield)"
+06:03:15 GMT +10:00 [DEBUG] - Deleted contact item: "General Business"
+06:03:16 GMT +10:00 [DEBUG] - Deleted contact item: "Linda Lee"
+06:03:16 GMT +10:00 [DEBUG] - Deleted contact item: "General Business Motor"
+06:03:16 GMT +10:00 [DEBUG] - Deleted contact item: "Sandy Württemberg"
+06:03:16 GMT +10:00 [DEBUG] - Deleted contact item: "General Finance"
+06:03:16 GMT +10:00 [DEBUG] - Deleted contact item: "Yoda Jedi"
+06:03:17 GMT +10:00 [DEBUG] - Deleted contact item: "Anegawa Enterprises"
+06:03:17 GMT +10:00 [DEBUG] - Deleted contact item: "Hales Electrical Services Pty Ltd"
+06:03:17 GMT +10:00 [DEBUG] - Removed all items for source contact
+06:03:17 GMT +10:00 [DEBUG] - Modification message: estimated size 0, allowed size 250000, real size 939 / estimated size 0 = 100%
+06:03:17 GMT +10:00 [DEBUG] - Modifications sent.
+06:03:17 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>2</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Source>
+</SyncHdr>
+<SyncBody><Status><CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>fol-WklKSUFOLVBDOnppamlhbg==</TargetRef>
+<SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+<Data>200</Data>
+</Status>
+<Status><CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>5</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item><Data><Anchor xmlns="syncml:metinf"><Next>1266955391351</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Sync><CmdID>3</CmdID>
+<Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+</Sync>
+<Final/></SyncBody>
+</SyncML>
+06:03:17 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+06:03:17 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7
+06:03:17 GMT +10:00 [DEBUG] - Sending data of size 939...
+06:03:17 GMT +10:00 [DEBUG] - Message sent
+06:03:17 GMT +10:00 [DEBUG] - Finished sending data of size 939.
+06:03:17 GMT +10:00 [DEBUG] - Data sent successfully to server. Server responds OK
+06:03:17 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+X-funambol-ds-server: DS Server v.8.0.0
+Set-Cookie:
+Accept-Encoding: gzip,deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 824
+Date: Tue, 23 Feb 2010 20:03:17 GMT
+
+
+06:03:17 GMT +10:00 [DEBUG] - Reading response...
+06:03:17 GMT +10:00 [DEBUG] - Content-length: 824
+06:03:17 GMT +10:00 [DEBUG] - Receiving data of size 824...
+06:03:17 GMT +10:00 [DEBUG] - Finished receiving data of size 824.
+06:03:17 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>2</MsgID>
+<Target>
+<LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-WklKSUFOLVBDOnppamlhbg==</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Sync</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+</Status>
+</SyncBody>
+</SyncML>
+
+06:03:17 GMT +10:00 [DEBUG] - ---------------------- contact END (mode "refresh-from-server") ----------------------
+06:03:17 GMT +10:00 [DEBUG] - Alert to request server changes
+06:03:17 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>3</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Source>
+</SyncHdr>
+<SyncBody><Status><CmdID>1</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>fol-WklKSUFOLVBDOnppamlhbg==</TargetRef>
+<SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+<Data>200</Data>
+</Status>
+<Alert><CmdID>2</CmdID>
+<Data>222</Data>
+<Item><Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+</Item>
+</Alert>
+</SyncBody>
+</SyncML>
+06:03:17 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+06:03:17 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7
+06:03:17 GMT +10:00 [DEBUG] - Sending data of size 702...
+06:03:17 GMT +10:00 [DEBUG] - Message sent
+06:03:17 GMT +10:00 [DEBUG] - Finished sending data of size 702.
+06:03:17 GMT +10:00 [DEBUG] - Data sent successfully to server. Server responds OK
+06:03:17 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+X-funambol-ds-server: DS Server v.8.0.0
+Set-Cookie:
+Accept-Encoding: gzip,deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 19033
+Date: Tue, 23 Feb 2010 20:03:17 GMT
+
+
+06:03:17 GMT +10:00 [DEBUG] - Reading response...
+06:03:17 GMT +10:00 [DEBUG] - Content-length: 19033
+06:03:17 GMT +10:00 [DEBUG] - Receiving data of size 19033...
+06:03:17 GMT +10:00 [DEBUG] - Finished receiving data of size 19033.
+06:03:17 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>3</MsgID>
+<Target>
+<LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-WklKSUFOLVBDOnppamlhbg==</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item>
+<Target>
+<LocURI>scard</LocURI>
+</Target>
+<Source>
+<LocURI>contact</LocURI>
+</Source>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target>
+<LocURI>contact</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<NumberOfChanges>35</NumberOfChanges>
+<Add>
+<CmdID>4</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36895</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpBbmVnYXdhIEVudGVycHJpc2VzDQpPUkc6QW5lZ2F3YSBFbnRlcnByaXNlczsNCk5PVEU6SmFwYW5lc2UgR3JvY2VyaWVzIGFuZCBTdW5kcmllcw0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>5</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36896</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpBdXN0cmFsaWFuIFRheGF0aW9uIE9mZmljZQ0KT1JHOkF1c3RyYWxpYW4gVGF4YXRpb24gT2ZmaWNlOw0KVEVMO1ZPSUNFO1dPUks6MTMyODY2DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>6</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36897</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpCdXR3b29kIFJTTCBDbHViDQpBRFI7V09SSzo7OzExOTYsIFNoYWZ0ZWJ1cnkgUmQ7QnV0d29vZDs7Ow0KT1JHOkJ1dHdvb2QgUlNMIENsdWI7DQpMQUJFTDtXT1JLO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODoxMTk2LCBTaGFmdGVidXJ5IFJkPTBBQnV0d29vZA0KVEVMO1ZPSUNFO1dPUks6KDIpIDk3NDQtNzQ0NA0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>7</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36898</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpEb25uYW50dW9uaSBDb25jcmV0ZSBEcmlsbGluZyAmIEN1dHRpbmcNCk9SRzpEb25uYW50dW9uaSBDb25jcmV0ZSBEcmlsbGluZyAmIEN1dHRpbmc7DQpURUw7Vk9JQ0U7V09SSzooMikgOTc1NS0yODM4DQpURUw7RkFYO1dPUks6KDIpIDk3NTUtMzgyOA0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>8</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36899</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpHYW1hYyBUcmFkZSBJbXBvcnRzDQpPUkc6R2FtYWMgVHJhZGUgSW1wb3J0czsNClRFTDtWT0lDRTtXT1JLOigyKSA0MzI0LTQ1MjINCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>9</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36900</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpHZW5lcmFsIEJ1c2luZXNzDQpBRFI7V09SSzo7OzMzLCBLdXJ0IFJvYWQ7UG9wcDtDQTs7DQpPUkc6R2VuZXJhbCBCdXNpbmVzczsNCkxBQkVMO1dPUks7RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTtDSEFSU0VUPVVURi04OjMzLCBLdXJ0IFJvYWQ9MEFQb3BwICBDQQ0KVEVMO1ZPSUNFO1dPUks6NDIzNDM4NzgwDQpURUw7RkFYO1dPUks6MzQyMzQ1MjM0DQpOT1RFOk1hbnkgc3Vic2lkaWFyaWVzIGFuZCBkZXBhcnRtZW50c1w7IGRvIGV2ZXJ5dGhpbmcuDQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>10</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36901</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpHZW5lcmFsIEJ1c2luZXNzIE1vdG9yDQpPUkc6R2VuZXJhbCBCdXNpbmVzcyBNb3RvcjsNClRFTDtWT0lDRTtXT1JLOigyKSA4Nzg5LTkwOTgNClRFTDtGQVg7V09SSzooMikgODY3Ni01NDU0DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>11</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36902</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpHZW5lcmFsIEZpbmFuY2UNCkFEUjtXT1JLOjs7MzggTW9sbCBQbGFjZTtNYXJzZmllbGQ7TlNXOzIzMjA7DQpPUkc6R2VuZXJhbCBGaW5hbmNlOw0KTEFCRUw7V09SSztFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6MzggTW9sbCBQbGFjZT0wQU1hcnNmaWVsZCAgTlNXICAyMzIwDQpURUw7Vk9JQ0U7V09SSzooMikgNDU0My01MzQzDQpURUw7RkFYO1dPUks6KDIpIDQzNDMtNDQzMw0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>12</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36903</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpIYWxlcyBFbGVjdHJpY2FsIFNlcnZpY2VzIFB0eSBMdGQNCk9SRzpIYWxlcyBFbGVjdHJpY2FsIFNlcnZpY2VzIFB0eSBMdGQ7DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>13</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36904</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpNb3RvbWFuIFVwaG9sc3RlcnkNCk9SRzpNb3RvbWFuIFVwaG9sc3Rlcnk7DQpURUw7Vk9JQ0U7V09SSzooMikgMzkyMy05MzAzDQpOT1RFO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpIb21lIGFuZCBPZmZpY2UgUmVmdXJiaXNoaW5ncz0wQUxvb3NlIENvdmVycw0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>14</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36905</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpGTjpSdXNzZWxzJ3MgQXV0b21hdGljIFRyYW5zbWlzc2lvbnMNCkFEUjtXT1JLOjs7ODk4IFdhcnJpbmdhaCBSb2FkO0ZvcmVzdHZpbGxlOzs7DQpPUkc6UnVzc2VscydzIEF1dG9tYXRpYyBUcmFuc21pc3Npb25zOw0KTEFCRUw7V09SSztFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6ODk4IFdhcnJpbmdhaCBSb2FkPTBBRm9yZXN0dmlsbGUNClRFTDtWT0lDRTtXT1JLOigyKSAzOTg0LTkyMzQNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>15</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36906</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOlNtaXRoO0FuZHk7OzsNCkZOOkFuZHkgU21pdGgNClRFTDtWT0lDRTtIT01FOigyKSA4MTgxLTgxODENClRFTDtGQVg7SE9NRTooMikgMzIzMi0zMjMyDQpURUw7Q0VMTDowNDAxMzIzNDM0DQpFTUFJTDtJTlRFUk5FVDphbmR5c21pdGhAaGVyZS5jb20NClRFTDtWT0lDRTtXT1JLOigwMikgODI4My04ODgzDQpOT1RFO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpUbyByaW5nLCBjbGljayBvbiBhbnkgb2YgcGhvbmUgbnVtYmVycywgdGhlbiBwcmVzcyBGOSB0byBsYXVuY2ggV2luZG93cycgZGVmYXVsdCBkaWFsZXIuPTBBDQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>16</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36907</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOldpbGw7QW5keTs7Ow0KRk46QW5keSBXaWxsDQpBRFI7SE9NRTo7OzExMDAgIE5vcnRoIER1c3RpbiAgTGFuZTtDaGFuZGxlcjtBcml6b25hOzg1MjI2O1VTDQpMQUJFTDtIT01FO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODoxMTAwICBOb3J0aCBEdXN0aW4gIExhbmU9MEFDaGFuZGxlciwgQXJpem9uYSAgODUyMjY9MEFVUw0KVEVMO1ZPSUNFO0hPTUU6KDIpIDgxNjYtNzE4MQ0KVEVMO0ZBWDtIT01FOjMyNjgyNzYNCkVNQUlMO0lOVEVSTkVUOmFuZHl3QHRoZXJlLmNvbQ0KT1JHOjtNYXJrZXRpbmcNClRFTDtWT0lDRTtXT1JLOjIwIDgyODg3OA0KTk9URTpJdCBpcyBhc3N1bWVkIHRoYXQgZWFjaCBzZWN0aW9uIGhhcyBvbmx5IGEgc2luZy1saW5lIGFkZHJlc3Mgb3IgbXVsdGktbGluZSBhZGRyZXNzLiBUaGUgbWFwIHNlcnZpY2VzIHN1cHBvcnQgYm90aCBmb3JtYXRzLg0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>17</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36908</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkJ1c2g7QXplbjs7Ow0KRk46QXplbiBCdXNoDQpOSUNLTkFNRTpCdXNoIE1hbg0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>18</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36909</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOk91dGxvb2s7Q29udGFjdDtPZjtNci47U3IuDQpGTjpDb250YWN0IE9mIE91dGxvb2sNCkFEUjtIT01FOjs7MzIgS2FnYWdhIEF2ZTtIb21lIGNpdHk7VklDOzMwMDA7QXVzdHJhbGlhDQpBRFI6OzsyMyBKb2huIFJvYWQ7U29tZXdoZXJlO1RoaXM7MjAwMDtGYXIgRmFyIEF3YXkNCkxBQkVMO09USEVSO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODoyMyBKb2huIFJvYWQ9MEEyMDAwICBTb21ld2hlcmUgIFRoaXM9MEFGYXIgRmFyIEF3YXkNCkxBQkVMO0hPTUU7RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTtDSEFSU0VUPVVURi04OjMyIEthZ2FnYSBBdmU9MEFIb21lIGNpdHkgIFZJQyAgMzAwMA0KVEVMO1ZPSUNFO0hPTUU6NjU2ODY3ODY3DQpURUw7RkFYO0hPTUU6KDIpIDIyMzQtNDU0NQ0KVEVMO0NFTEw6OTk5OTk5DQpURUw7RkFYOjM0NDM1NDMNClRFTDtWT0lDRTooMikgNDU0NS02NDU2DQpFTUFJTDtJTlRFUk5FVDptcm1zb3V0bG9va0BlYXJ0aC5jb20NClgtQU5OSVZFUlNBUlk6MTMvMDUvMjAwNSAxMjowMA0KWC1TUE9VU0U6TGluZGEgTGVlDQpBRFI7V09SSzo7O1VuaXQgMjAsMjgyIEhlbGVuIFN0O0NoYXRzd29vZDtOU1c7MjA2NztBdXN0cmFsaWENClRJVExFOk1hbmFnZXINCk9SRzpHZW5lcmFsIEJ1c2luZXNzO3RoaXMgZGVwdA0KTEFCRUw7V09SSztFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6VW5pdCAyMCwyODIgSGVsZW4gU3Q9MEFDaGF0c3dvb2QgIE5TVyAgMjA2Nw0KVEVMO1ZPSUNFO1dPUks6NjY2NjY2DQpURUw7RkFYO1dPUks6KDIpIDg4ODgtODg4OA0KVEVMO1dPUks7UFJFRjo3OTk3ODk4DQpURUw7UFJFRjtWT0lDRTooMikgODA4MC04MDgwDQpYLU1BTkFHRVI6TWFyayBTY2jDtm5iw6RjaGxlcg0KTk9URTpBbiBleGFtcGxlIHdpdGggYSBsb3Qgb2YgZmllbGRzIG9mIGEgTVMgT3V0bG9vayBjb250YWN0IGltcG9ydGVkLg0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>19</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36910</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpTZXQ9QzM9QkFiYWw7RXN0ZXZlbnM7OzsNCkZOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpFc3RldmVucyBTZXQ9QzM9QkFiYWwNClRFTDtWT0lDRTtIT01FOigyKSAzODI5LTMyODcNCkVNQUlMO0lOVEVSTkVUOkVzdGV2ZW5zc0Bzb21ld2hlcmUuY29tLnB0DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>20</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36911</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpPcmQ9QzM9QjM9QzM9QjFlejtGZXJuPUMzPUExbmRlejs7Ow0KRk47RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTtDSEFSU0VUPVVURi04OkZlcm49QzM9QTFuZGV6IE9yZD1DMz1CMz1DMz1CMWV6DQpURUw7Q0VMTDowMzkxODM0MjM4DQpFTUFJTDtJTlRFUk5FVDpmb0BmcmFua2xpbi5lcw0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>21</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36912</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOktyYXNvd3NraTtHb2dvbGluOzs7DQpGTjpHb2dvbGluIEtyYXNvd3NraQ0KVEVMO1ZPSUNFO0hPTUU6KDIpIDg4OTctOTg4Nw0KRU1BSUw7SU5URVJORVQ6Z2tyYXNvd3NraUBzb21ld2hlcmUuY29tLnBsDQpOT1RFOkZpc2hpbmcNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>22</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36913</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODo9QzM9OTZzdGVyYmxhZDtHb3RoZW5idXJnOzs7DQpGTjtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6R290aGVuYnVyZyA9QzM9OTZzdGVyYmxhZA0KRU1BSUw7SU5URVJORVQ6Z29zdGVyYmxhZEBzZWN0aW9uLmNvbS5zZQ0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>23</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36914</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOldlc3Rlcm1laWVyO0hlaWRydW47S2Fpc2VyO0RyOw0KRk46SGVpZHJ1biBLYWlzZXIgV2VzdGVybWVpZXINClRFTDtWT0lDRTtIT01FOigyKSA4MDM4LTIwODYNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>24</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36915</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOlJvc3NpO0lyZW5lOzs7DQpGTjpJcmVuZSBSb3NzaQ0KVEVMO1ZPSUNFO0hPTUU6KDIpIDc3ODgtNzY2Nw0KVEVMO0ZBWDtIT01FOjg3ODk3ODc4OA0KVEVMO0NFTEw6MDc5MjM4NzQyMw0KRU1BSUw7SU5URVJORVQ6aXJlbmVyb3NzaUBtYXJzLmNvbS5hdQ0KQURSO1dPUks6OzsxMCBIYXplbHdvb2QgQ2xvc2U7Q2FtYnJpZGdlOztDQjM7RW5nbGFuZA0KTEFCRUw7V09SSztFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6MTAgSGF6ZWx3b29kIENsb3NlPTBBQ2FtYnJpZGdlPTBBQ0IzPTBBRW5nbGFuZA0KVEVMO1ZPSUNFO1dPUks6ODkzNDM4NDMzDQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>25</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36916</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOldpbGxpYW1zO0pvaG47O01hbmFnZXI7DQpGTjpKb2huIFdpbGxpYW1zDQpURUw7Vk9JQ0U7SE9NRTooMDIpIDMyNDktMjI3OA0KRU5EOlZDQVJEDQo=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>26</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36917</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOldpbGxpYW1zO0pvaG47O0RyOw0KRk46Sm9obiBXaWxsaWFtcyAoTWFyc2ZpZWxkKQ0KVEVMO1ZPSUNFO0hPTUU6MDIgODkwMzQyNA0KVEVMO0ZBWDtIT01FOjAyIDM0MzI0MjMzDQpURUw7Q0VMTDowMzQzNDI5MzUNCkVNQUlMO0lOVEVSTkVUOkpvaG4uV2lsbGlhbXNAdW5pdmVyc2l0eS5jb20uYXUNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>27</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36918</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOldpbGxpYW1zO0pvaG47OzsNCkZOOkpvaG4gV2lsbGlhbXMgW1FMRF0NClRFTDtWT0lDRTtIT01FOjg3ODQ0NTUNCkVNQUlMO0lOVEVSTkVUOkpvaG4uV2lsbGlhbXNAaGVyZS5jb20NCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>28</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36919</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkxlZTtMaW5kYTs7Ow0KRk46TGluZGEgTGVlDQpOT1RFOlNoZSdzIG5pY2UNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>29</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36920</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpGZXJuPUMzPUExbmRlejtMb2dybz1DMz1CMW87OzsNCkZOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpMb2dybz1DMz1CMW8gRmVybj1DMz1BMW5kZXoNClRFTDtDRUxMOjA0MjM0ODI4MzINCkVNQUlMO0lOVEVSTkVUOmxvZ0Bva2RhZG8uZXMNCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>30</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36921</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpTY2g9QzM9QjZuYj1DMz1BNGNobGVyO01hcms7OzsNCkZOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpNYXJrIFNjaD1DMz1CNm5iPUMzPUE0Y2hsZXINClRFTDtDRUxMOigwNDM4KS00ODUzODg4DQpFTUFJTDtJTlRFUk5FVDptYXJrc0BlYXJ0aG5ldC5jb20NCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>31</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36922</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpMYW5hc3A9QzM9QTh6ZTtNaWNoZWw7O0RyOw0KRk47RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTtDSEFSU0VUPVVURi04Ok1pY2hlbCBMYW5hc3A9QzM9QTh6ZQ0KVEVMO1ZPSUNFO0hPTUU6KDIpIDg2NjUtNjY0NQ0KVEVMO0NFTEw6MDQwMyA4MjgzOTINCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>32</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36923</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpIYWJ5O1Jlbj1DMz1BOTs7Ow0KRk47RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTtDSEFSU0VUPVVURi04OlJlbj1DMz1BOSBIYWJ5DQpURUw7Vk9JQ0U7SE9NRTowODI5ODM3MjkzDQpURUw7Q0VMTDowMzM4MjAxODM0NzINCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>33</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36924</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOklzbGluZ2VyO1Jvc3M7OzsNCkZOOlJvc3MgIElzbGluZ2VyDQpFTUFJTDtJTlRFUk5FVDpSb3NzLklzbGluZ2VyQHNjaG8uY29tLmF1DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>34</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36925</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkxlZTtTYW5keTs7Ow0KRk46U2FuZHkgTGVlDQpURUw7Vk9JQ0U7SE9NRTooMikgOTk4OS0wODA5DQpURUw7Q0VMTDowOTg4ODk4OTg5DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>35</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36926</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0VOQ09ESU5HPVFVT1RFRC1QUklOVEFCTEU7Q0hBUlNFVD1VVEYtODpXPUMzPUJDcnR0ZW1iZXJnO1NhbmR5Ozs7DQpGTjtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFO0NIQVJTRVQ9VVRGLTg6U2FuZHkgVz1DMz1CQ3J0dGVtYmVyZw0KT1JHOk9kb287DQpURUw7Vk9JQ0U7V09SSzooKzQ5IDYxIDMxKSA2OSA2NyAzMQ0KVEVMO0ZBWDtXT1JLOigrNDkgNjEgMzEpIDY5IDY3IDMyDQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>36</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36927</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkthbGF0Y2hldjtTaW5lbW9yZXR6OztEcjsNCkZOOlNpbmVtb3JldHogS2FsYXRjaGV2DQpURUw7Vk9JQ0U7SE9NRTooMikgODM0OS04NTQ4DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>37</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36928</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkJpZztTdXBlcjs7Ow0KRk46U3VwZXIgQmlnDQpURUw7Vk9JQ0U7SE9NRTooMDIpIDg4MDMtNDg0Mg0KVEVMO0ZBWDtIT01FOigyKSA4Nzc4LTc2NzcNClRFTDtDRUxMOjEzODc2NDA5MzMNCkVNQUlMO0lOVEVSTkVUOndhbHRlckBzb21ld2hlcmUuY29tDQpPUkc6QmlnIE1hYzsNClRFTDtWT0lDRTtXT1JLOigyKSA5ODc5LTg3OTcNClRFTDtGQVg7V09SSzo4ODk3ODk3DQpFTkQ6VkNBUkQNCg==</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>38</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-vcard</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>36929</LocURI>
+</Source>
+<Data>QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOkplZGk7WW9kYTs7TWFzdGVyOw0KRk46WW9kYSBKZWRpDQpURUw7Vk9JQ0U7SE9NRTowOTg3NjU0MzIxDQpFTUFJTDtJTlRFUk5FVDp5b2RhQHN0YXJ3YXJzLmNvbQ0KTk9URTpMaWtlIG1vc3Qgb2YgdGhlIHJlY29yZHMgb2YgdGhlIEplZGksIFlvZGEncyBvcmlnaW5zIHdlcmUgbG9zdCBpbiB0aGUgdHVybW9pbC4NCkVORDpWQ0FSRA0K</Data>
+</Item>
+</Add>
+</Sync>
+<Final/>
+</SyncBody>
+</SyncML>
+
+06:03:17 GMT +10:00 [DEBUG] - ---------------------- contact BEGIN (mode "refresh-from-server") ----------------------
+06:03:17 GMT +10:00 [INFO] - Total contact items to receive: 35
+06:03:17 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:18 GMT +10:00 [INFO] - Added contact item: "Anegawa Enterprises"
+06:03:18 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0E4722300, code 201)
+06:03:18 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:18 GMT +10:00 [INFO] - Added contact item: "Australian Taxation Office"
+06:03:18 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA004732300, code 201)
+06:03:18 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:18 GMT +10:00 [INFO] - Added contact item: "Butwood RSL Club"
+06:03:18 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA024732300, code 201)
+06:03:18 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:18 GMT +10:00 [INFO] - Added contact item: "Donnantuoni Concrete Drilling & Cutting"
+06:03:18 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA044732300, code 201)
+06:03:18 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:19 GMT +10:00 [INFO] - Added contact item: "Gamac Trade Imports"
+06:03:19 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA064732300, code 201)
+06:03:19 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:19 GMT +10:00 [INFO] - Added contact item: "General Business"
+06:03:19 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA084732300, code 201)
+06:03:19 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:19 GMT +10:00 [INFO] - Added contact item: "General Business Motor"
+06:03:19 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0A4732300, code 201)
+06:03:19 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:19 GMT +10:00 [INFO] - Added contact item: "General Finance"
+06:03:19 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0C4732300, code 201)
+06:03:19 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:20 GMT +10:00 [INFO] - Added contact item: "Hales Electrical Services Pty Ltd"
+06:03:20 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0E4732300, code 201)
+06:03:20 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:20 GMT +10:00 [INFO] - Added contact item: "Motoman Upholstery"
+06:03:20 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA004742300, code 201)
+06:03:20 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:20 GMT +10:00 [INFO] - Added contact item: "Russels's Automatic Transmissions"
+06:03:20 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA024742300, code 201)
+06:03:20 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:21 GMT +10:00 [INFO] - Added contact item: "Andy Smith"
+06:03:21 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA044742300, code 201)
+06:03:21 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:21 GMT +10:00 [INFO] - Added contact item: "Andy Will"
+06:03:21 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA064742300, code 201)
+06:03:21 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:21 GMT +10:00 [INFO] - Added contact item: "Azen Bush"
+06:03:21 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA084742300, code 201)
+06:03:21 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:22 GMT +10:00 [DEBUG] - While saving contact "Contact Of Outlook Sr." an anniversary event was automatically created by Outlook and then just deleted!
+06:03:22 GMT +10:00 [INFO] - Added contact item: "Contact Of Outlook Sr."
+06:03:22 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0A4742300, code 201)
+06:03:22 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:22 GMT +10:00 [INFO] - Added contact item: "Estevens Setúbal"
+06:03:22 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0E4742300, code 201)
+06:03:22 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:23 GMT +10:00 [INFO] - Added contact item: "Fernández Ordóñez"
+06:03:23 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA004752300, code 201)
+06:03:23 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:23 GMT +10:00 [INFO] - Added contact item: "Gogolin Krasowski"
+06:03:23 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA024752300, code 201)
+06:03:23 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:23 GMT +10:00 [INFO] - Added contact item: "Gothenburg Österblad"
+06:03:23 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA044752300, code 201)
+06:03:23 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:24 GMT +10:00 [INFO] - Added contact item: "Heidrun Kaiser Westermeier"
+06:03:24 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA064752300, code 201)
+06:03:24 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:24 GMT +10:00 [INFO] - Added contact item: "Irene Rossi"
+06:03:24 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA084752300, code 201)
+06:03:24 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:24 GMT +10:00 [INFO] - Added contact item: "John Williams"
+06:03:24 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0A4752300, code 201)
+06:03:24 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:25 GMT +10:00 [INFO] - Added contact item: "John Williams"
+06:03:25 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0C4752300, code 201)
+06:03:25 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:25 GMT +10:00 [INFO] - Added contact item: "John Williams"
+06:03:25 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0E4752300, code 201)
+06:03:25 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:25 GMT +10:00 [INFO] - Added contact item: "Linda Lee"
+06:03:25 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA004762300, code 201)
+06:03:25 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:25 GMT +10:00 [INFO] - Added contact item: "Logroño Fernández"
+06:03:25 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA024762300, code 201)
+06:03:25 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:26 GMT +10:00 [INFO] - Added contact item: "Mark Schönbächler"
+06:03:26 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA044762300, code 201)
+06:03:26 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:26 GMT +10:00 [INFO] - Added contact item: "Michel Lanaspèze"
+06:03:26 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA064762300, code 201)
+06:03:26 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:26 GMT +10:00 [INFO] - Added contact item: "René Haby"
+06:03:26 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA084762300, code 201)
+06:03:26 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:27 GMT +10:00 [INFO] - Added contact item: "Ross Islinger"
+06:03:27 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0A4762300, code 201)
+06:03:27 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:27 GMT +10:00 [INFO] - Added contact item: "Sandy Lee"
+06:03:27 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0C4762300, code 201)
+06:03:27 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:27 GMT +10:00 [INFO] - Added contact item: "Sandy Württemberg"
+06:03:27 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA0E4762300, code 201)
+06:03:27 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:28 GMT +10:00 [INFO] - Added contact item: "Sinemoretz Kalatchev"
+06:03:28 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA004772300, code 201)
+06:03:28 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:28 GMT +10:00 [INFO] - Added contact item: "Super Big"
+06:03:28 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA024772300, code 201)
+06:03:28 GMT +10:00 [DEBUG] - extractFolder method: failed to get the folder. use the default
+06:03:28 GMT +10:00 [INFO] - Added contact item: "Yoda Jedi"
+06:03:28 GMT +10:00 [DEBUG] - contact item - Add on client (key:00000000F3462AB4261E2F4BA10B56CB3B033BA044772300, code 201)
+06:03:28 GMT +10:00 [DEBUG] - ---------------------- contact END (mode "refresh-from-server") ----------------------
+06:03:28 GMT +10:00 [DEBUG] - Mapping
+06:03:28 GMT +10:00 [DEBUG] - Finalization sent.
+06:03:28 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>4</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Source>
+</SyncHdr>
+<SyncBody><Status><CmdID>1</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>fol-WklKSUFOLVBDOnppamlhbg==</TargetRef>
+<SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+<Data>200</Data>
+</Status>
+<Status><CmdID>2</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Sync</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+</Status>
+<Status><CmdID>3</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>4</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36895</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>4</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>5</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36896</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>5</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>6</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36897</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>6</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>7</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36898</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>7</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>8</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36899</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>8</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>9</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36900</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>9</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>10</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36901</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>10</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>11</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36902</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>11</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>12</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36903</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>12</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>13</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36904</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>13</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>14</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36905</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>14</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>15</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36906</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>15</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>16</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36907</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>16</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>17</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36908</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>17</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>18</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36909</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>18</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>19</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36910</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>19</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>20</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36911</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>20</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>21</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36912</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>21</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>22</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36913</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>22</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>23</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36914</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>23</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>24</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36915</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>24</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>25</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36916</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>25</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>26</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36917</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>26</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>27</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36918</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>27</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>28</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36919</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>28</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>29</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36920</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>29</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>30</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36921</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>30</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>31</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36922</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>31</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>32</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36923</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>32</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>33</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36924</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>33</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>34</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36925</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>34</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>35</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36926</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>35</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>36</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36927</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>36</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>37</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36928</LocURI>
+</Source>
+</Item>
+</Status>
+<Status><CmdID>37</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>38</CmdRef>
+<Cmd>Add</Cmd>
+<Data>201</Data>
+<Item><Source><LocURI>36929</LocURI>
+</Source>
+</Item>
+</Status>
+<Map><CmdID>38</CmdID>
+<Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+<MapItem><Target><LocURI>36895</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0E4722300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36896</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA004732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36897</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA024732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36898</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA044732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36899</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA064732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36900</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA084732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36901</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0A4732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36902</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0C4732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36903</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0E4732300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36904</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA004742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36905</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA024742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36906</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA044742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36907</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA064742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36908</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA084742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36909</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0A4742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36910</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0E4742300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36911</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA004752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36912</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA024752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36913</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA044752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36914</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA064752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36915</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA084752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36916</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0A4752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36917</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0C4752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36918</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0E4752300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36919</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA004762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36920</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA024762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36921</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA044762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36922</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA064762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36923</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA084762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36924</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0A4762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36925</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0C4762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36926</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA0E4762300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36927</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA004772300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36928</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA024772300</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target><LocURI>36929</LocURI>
+</Target>
+<Source><LocURI>00000000F3462AB4261E2F4BA10B56CB3B033BA044772300</LocURI>
+</Source>
+</MapItem>
+</Map>
+<Final/></SyncBody>
+</SyncML>
+06:03:28 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+06:03:28 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7
+06:03:28 GMT +10:00 [DEBUG] - Sending data of size 11574...
+06:03:28 GMT +10:00 [DEBUG] - Message sent
+06:03:28 GMT +10:00 [DEBUG] - Finished sending data of size 11574.
+06:03:28 GMT +10:00 [DEBUG] - Data sent successfully to server. Server responds OK
+06:03:28 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+X-funambol-ds-server: DS Server v.8.0.0
+Set-Cookie:
+Accept-Encoding: gzip,deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 833
+Date: Tue, 23 Feb 2010 20:03:28 GMT
+
+
+06:03:28 GMT +10:00 [DEBUG] - Reading response...
+06:03:28 GMT +10:00 [DEBUG] - Content-length: 833
+06:03:28 GMT +10:00 [DEBUG] - Receiving data of size 833...
+06:03:28 GMT +10:00 [DEBUG] - Finished receiving data of size 833.
+06:03:28 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.2</VerDTD>
+<VerProto>SyncML/1.2</VerProto>
+<SessionID>1266955391</SessionID>
+<MsgID>4</MsgID>
+<Target>
+<LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9A7585F6558DFE2DC986D0E1E0F4D3E7</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>4</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-WklKSUFOLVBDOnppamlhbg==</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>4</MsgRef>
+<CmdRef>38</CmdRef>
+<Cmd>Map</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+</Status>
+<Final/>
+</SyncBody>
+</SyncML>
+
+06:03:29 GMT +10:00 [DEBUG] - Committing source contact (next: 1266955391)
+06:03:29 GMT +10:00 [DEBUG] - ret: 0, lastErrorCode: 0, lastErrorMessage: 
+06:03:29 GMT +10:00 [INFO] - END of Synchronization session.
+06:03:29 GMT +10:00 [INFO] - Sync successfully completed.
+06:03:29 GMT +10:00 [INFO] - 
+============================================================
+================   SYNCHRONIZATION REPORT   ================
+============================================================
+
+SYNCHRONIZATION COMPLETED SUCCESSFULLY!
+---------------------------------------
+
+Contacts:
+---------
+    Sync completed successfully!
+    Sync type: refresh-from-server
+
+            | on Client | on Server
+    --------|-----------|----------
+    New     |   35/  35 |    0/   0 
+    Updated |    0/   0 |    0/   0 
+    Deleted |    0/   0 |    0/   0 
+
+
+
+06:03:29 GMT +10:00 [DEBUG] - Saving configuration to winRegistry
+06:03:29 GMT +10:00 [DEBUG] - Writing configuration settings to the management tree
+06:03:29 GMT +10:00 [DEBUG] - Closing Outlook...
+06:03:29 GMT +10:00 [DEBUG] - Deleting ClientApplication instance
+06:03:29 GMT +10:00 [DEBUG] - Releasing IMAPIUtils object...
+06:03:29 GMT +10:00 [INFO] - Outlook session closed successfully.
+06:03:29 GMT +10:00 [DEBUG] - Closing COM library...
+06:03:29 GMT +10:00 [DEBUG] - Releasing sync-mutex...
+06:03:29 GMT +10:00 [DEBUG] - Sync-mutex released - closing handle.
+06:03:29 GMT +10:00 [DEBUG] - Delete SyncSources...
+06:03:29 GMT +10:00 [INFO] - Syncronization process completed.

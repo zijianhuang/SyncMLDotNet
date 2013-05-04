@@ -1,0 +1,848 @@
+2008-03-07 21:09:54:734 - # SyncClient API J2SE Log
+
+21:09:54:734 [DEBUG] - System properties: {java.runtime.name=Java(TM) 2 Runtime Environment, Standard Edition, sun.boot.library.path=C:\Program Files\Funambol\tools\jre-1.5.0\jre\bin, java.vm.version=1.5.0_10-b03, wd=., java.vm.vendor=Sun Microsystems Inc., java.vendor.url=http://java.sun.com/, path.separator=;, java.vm.name=Java HotSpot(TM) Client VM, file.encoding.pkg=sun.io, user.country=AU, sun.os.patch.level=Service Pack 2, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\Program Files\Funambol\plug-ins\java-demo2, java.runtime.version=1.5.0_10-b03, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\endorsed, os.arch=x86, java.io.tmpdir=C:\DOCUME~1\VIP\LOCALS~1\Temp\, line.separator=
+, java.vm.specification.vendor=Sun Microsystems Inc., user.variant=, os.name=Windows XP, jdk.home=..\..\tools\jre-1.5.0\jre, sun.jnu.encoding=GBK, java.library.path=C:\Program Files\Funambol\plug-ins\java-demo2;.;C:\WINDOWS\system32;C:\WINDOWS;C:\DelphiComponents\dxgettext;C:\Program Files\Borland\Delphi7\Bin;C:\Program Files\Borland\Delphi7\Projects\Bpl\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Program Files\ATI Technologies\ATI Control Panel;C:\Program Files\Common Files\GTK\2.0\bin;C:\Program Files\Microsoft SQL Server\80\Tools\BINN;C:\Program Files\LizardTech\Lizardtech Document Express Enterprise 5.0\bin;C:\PROGRA~1\XRay;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Common Files\STOPzilla!;C:\Program Files\Sandcastle\ProductionTools\;C:\Program Files\CVSNT\, java.specification.name=Java Platform API Specification, java.class.version=49.0, sun.management.compiler=HotSpot Client Compiler, os.version=5.1, user.home=C:\Documents and Settings\VIP, user.timezone=Australia/Brisbane, spdm.dir.base=./config, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=UTF-8, java.specification.version=1.5, java.class.path=lib\commons-codec-1.3.jar;lib\commons-lang-2.3.jar;lib\pim-framework-6.5.6.jar;lib\funambol-commons-1.7.jar;lib\ext-6.5.2.jar;lib\funambol-javagui.jar;lib\joda-time-1.4.jar;lib\sc-api-j2se.jar;lib\sync4j-clientframework.jar;lib\core-framework-6.5.4.jar;..\..\tools\jre-1.5.0\jre\lib\dt.jar;..\..\tools\jre-1.5.0\jre\lib\tools.jar;C:\Program Files\Funambol\plug-ins\java-demo2\;C:\Program Files\Funambol\plug-ins\java-demo2\lib\;C:\Program Files\Funambol\plug-ins\java-demo2\lib\commons-codec-1.3.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\commons-lang-2.3.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\core-framework-6.5.4.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\ext-6.5.2.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\funambol-commons-1.7.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\funambol-javagui.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\joda-time-1.4.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\pim-framework-6.5.6.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\sc-api-j2se.jar;C:\Program Files\Funambol\plug-ins\java-demo2\lib\sync4j-clientframework.jar, user.name=VIP, java.vm.specification.version=1.0, java.home=C:\Program Files\Funambol\tools\jre-1.5.0\jre, sun.arch.data.model=32, user.language=en, java.specification.vendor=Sun Microsystems Inc., awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.5.0_10, java.ext.dirs=C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\ext, sun.boot.class.path=C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\rt.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\i18n.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\sunrsasign.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\jsse.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\jce.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\lib\charsets.jar;C:\Program Files\Funambol\tools\jre-1.5.0\jre\classes, java.vendor=Sun Microsystems Inc., file.separator=\, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, spds.charset=UTF8, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=}
+
+21:09:54:765 [INFO] - Synchronizing...
+
+21:09:54:796 [DEBUG] - SyncEvent - Sync begin - date: Mon Apr 07 21:09:54 EST 2008
+
+21:09:54:796 [INFO] - Initializing
+
+21:09:54:812 [DEBUG] - SyncEvent - Send initialization - date: Mon Apr 07 21:09:54 EST 2008
+
+21:09:54:812 [INFO] - Sending initialization commands
+
+21:09:54:828 [DEBUG] - inizialization-request:<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>1</MsgID>
+        <Target>
+            <LocURI>http://localhost:8080/funambol/ds</LocURI>
+        </Target>
+        <Source>
+            <LocURI>fjg-QFhng2</LocURI>
+        </Source>
+        <Cred>
+            <Meta>
+                <Type xmlns="syncml:metinf">syncml:auth-basic</Type>
+            </Meta>
+            <Data>dGVzdDp0dHR0dHR0dA==</Data>
+        </Cred>
+	<Meta>
+            <MaxMsgSize>250000</MaxMsgSize>
+            <MaxObjSize>4000000</MaxObjSize>
+        </Meta>
+    </SyncHdr>
+    <SyncBody>
+    <Alert>
+<CmdID>1</CmdID>
+<Data>200</Data>
+<Item>
+<Target><LocURI>scal</LocURI></Target>
+<Source><LocURI>scal</LocURI></Source>
+<Meta>
+<Anchor xmlns="syncml:metinf">
+<Last>1207565743093</Last>
+<Next>1207566594796</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>1</CmdID>
+<Data>200</Data>
+<Item>
+<Target><LocURI>scard</LocURI></Target>
+<Source><LocURI>scard</LocURI></Source>
+<Meta>
+<Anchor xmlns="syncml:metinf">
+<Last>1207565743093</Last>
+<Next>1207566594796</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+
+        <Final/>
+    </SyncBody>
+</SyncML>
+
+
+21:09:54:843 [DEBUG] - Connected to http://localhost:8080/funambol/ds
+
+21:09:54:875 [DEBUG] - SyncTransportEvent - Send data begin - data length: 1244
+
+21:09:54:875 [DEBUG] - SyncTransportEvent - Send data end - data length: 1244
+
+21:09:54:875 [DEBUG] - Message sent
+
+21:09:54:875 [DEBUG] - Reading response...
+
+21:09:54:953 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 1878
+
+21:09:54:968 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:54:968 [DEBUG] - Content-Length: 1878
+
+21:09:54:968 [DEBUG] - SyncTransportEvent - Data received - data length: 1878
+
+21:09:54:968 [DEBUG] - Response read
+
+21:09:54:984 [DEBUG] - SyncTransportEvent - Received data end - data length: 1878
+
+21:09:54:984 [DEBUG] - inizialization-response:<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>1</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>212</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scal</TargetRef>
+<SourceRef>scal</SourceRef>
+<Data>508</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1207566594796</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>scard</SourceRef>
+<Data>508</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1207566594796</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Alert>
+<CmdID>4</CmdID>
+<Data>201</Data>
+<Item>
+<Target>
+<LocURI>scal</LocURI>
+</Target>
+<Source>
+<LocURI>scal</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1207566594921</Last>
+<Next>1207566594921</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>5</CmdID>
+<Data>201</Data>
+<Item>
+<Target>
+<LocURI>scard</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1207566594921</Last>
+<Next>1207566594921</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Get>
+<CmdID>6</CmdID>
+<Meta>
+<Type xmlns='syncml:metinf'>application/vnd.syncml-devinf+xml</Type>
+</Meta>
+<Item>
+<Target>
+<LocURI>./devinf11</LocURI>
+<LocName>./devinf11</LocName>
+</Target>
+</Item>
+</Get>
+<Final/>
+</SyncBody>
+</SyncML>
+
+
+21:09:54:984 [INFO] - The server alert code for scal is 201
+
+21:09:55:000 [INFO] - The server alert code for scard is 201
+
+21:09:55:000 [DEBUG] - source - Name: scard| Status: 201
+
+21:09:55:000 [DEBUG] - source - Name: scal| Status: 201
+
+21:09:55:015 [INFO] - Synchronizing scard, scal
+
+21:09:55:015 [DEBUG] - url from inizialization-response:http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:015 [DEBUG] - SyncSourceEvent - Sync begin - date: Mon Apr 07 21:09:55 EST 2008 - sourceUri: scal - sync mode: 201
+
+21:09:55:031 [DEBUG] - Property syncModes not set to two-way. Method setSyncModes(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:031 [DEBUG] - Property sourceClass not set to com.funambol.syncclient.spds.source.SIFSyncSource. Method setSourceClass(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:046 [DEBUG] - Property sync not set to two-way. Method setSync(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:046 [DEBUG] - Property last not set to 1207565743093. Method setLast(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:062 [DEBUG] - SyncSourceEvent - Sync begin - date: Mon Apr 07 21:09:55 EST 2008 - sourceUri: scard - sync mode: 201
+
+21:09:55:062 [DEBUG] - Property syncModes not set to two-way. Method setSyncModes(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:062 [DEBUG] - Property sourceClass not set to com.funambol.syncclient.spds.source.SIFSyncSource. Method setSourceClass(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:062 [DEBUG] - Property sync not set to two-way. Method setSync(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:078 [DEBUG] - Property last not set to 1207565743093. Method setLast(String s) not found in com.funambol.syncclient.spds.source.SIFSyncSource
+
+21:09:55:078 [INFO] - exchange modifications started
+
+21:09:55:093 [DEBUG] - serverAlerts: {scard=201, scal=201}
+
+21:09:55:093 [INFO] - Preparing slow sync for scal
+
+21:09:55:093 [INFO] - Detected 0 items
+
+21:09:55:109 [DEBUG] - serverAlerts: {scard=201, scal=201}
+
+21:09:55:109 [INFO] - Preparing slow sync for scard
+
+21:09:55:125 [INFO] - Detected 0 items
+
+21:09:55:125 [DEBUG] - total amount of items 0
+
+21:09:55:125 [DEBUG] - SyncEvent - Send modification - date: Mon Apr 07 21:09:55 EST 2008
+
+21:09:55:125 [INFO] - Sending modifications
+
+21:09:55:140 [DEBUG] - modification-request:<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>2</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds</LocURI></Target>
+        <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>1</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>fjg-QFhng2</TargetRef>
+            <SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+            <Data>200</Data>
+        </Status>
+     <Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef><CmdRef>1</CmdRef><Cmd>Alert</Cmd>
+<TargetRef>scal</TargetRef>
+<SourceRef>scal</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf"><Next>1207566594796</Next></Anchor>
+</Data>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target><LocURI>scal</LocURI></Target>
+<Source><LocURI>scal</LocURI></Source>
+</Sync><Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef><CmdRef>1</CmdRef><Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>scard</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf"><Next>1207566594796</Next></Anchor>
+</Data>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target><LocURI>scard</LocURI></Target>
+<Source><LocURI>scard</LocURI></Source>
+</Sync><Final/>
+     </SyncBody>
+</SyncML>
+
+
+
+21:09:55:140 [DEBUG] - Connected to http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:140 [DEBUG] - SyncTransportEvent - Send data begin - data length: 1420
+
+21:09:55:156 [DEBUG] - SyncTransportEvent - Send data end - data length: 1420
+
+21:09:55:156 [DEBUG] - Message sent
+
+21:09:55:171 [DEBUG] - Reading response...
+
+21:09:55:218 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 947
+
+21:09:55:218 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:55:218 [DEBUG] - Content-Length: 947
+
+21:09:55:234 [DEBUG] - SyncTransportEvent - Data received - data length: 947
+
+21:09:55:234 [DEBUG] - Response read
+
+21:09:55:234 [DEBUG] - SyncTransportEvent - Received data end - data length: 947
+
+21:09:55:250 [DEBUG] - modification-response: <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>2</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Sync</Cmd>
+<TargetRef>scal</TargetRef>
+<SourceRef>scal</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Sync</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>scard</SourceRef>
+<Data>200</Data>
+</Status>
+</SyncBody>
+</SyncML>
+
+
+21:09:55:250 [DEBUG] - SyncEvent - Send modification - date: Mon Apr 07 21:09:55 EST 2008
+
+21:09:55:250 [DEBUG] - Sending alert message
+
+21:09:55:265 [DEBUG] - alert-request:<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>3</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI></Target>
+    <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>2</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</TargetRef>
+            <SourceRef>fjg-QFhng2</SourceRef>
+            <Data>200</Data>
+        </Status>
+        <Alert>
+            <CmdID>2</CmdID>
+            <Data>222</Data>
+            <Item>
+                <Target><LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI></Target>
+                <Source><LocURI>fjg-QFhng2</LocURI></Source>
+            </Item>
+        </Alert>
+    </SyncBody>
+</SyncML>
+
+
+
+21:09:55:265 [DEBUG] - Connected to http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:281 [DEBUG] - SyncTransportEvent - Send data begin - data length: 1077
+
+21:09:55:281 [DEBUG] - SyncTransportEvent - Send data end - data length: 1077
+
+21:09:55:281 [DEBUG] - Message sent
+
+21:09:55:296 [DEBUG] - Reading response...
+
+21:09:55:546 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 3415
+
+21:09:55:562 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:55:562 [DEBUG] - Content-Length: 3415
+
+21:09:55:562 [DEBUG] - SyncTransportEvent - Data received - data length: 3415
+
+21:09:55:578 [DEBUG] - Response read
+
+21:09:55:578 [DEBUG] - SyncTransportEvent - Received data end - data length: 3415
+
+21:09:55:593 [DEBUG] - alert-response:<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>3</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+<Item>
+<Target>
+<LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI>
+</Target>
+<Source>
+<LocURI>fjg-QFhng2</LocURI>
+</Source>
+</Item>
+</Status>
+<Sync>
+<CmdID>3</CmdID>
+<Target>
+<LocURI>scal</LocURI>
+</Target>
+<Source>
+<LocURI>scal</LocURI>
+</Source>
+</Sync>
+<Sync>
+<CmdID>4</CmdID>
+<Target>
+<LocURI>scard</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<Add>
+<CmdID>5</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-s4j-sifc</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>0</LocURI>
+</Source>
+<Data>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48Y29udGFjdD4KPFNJRlZlcnNpb24+MS4wPC9TSUZWZXJzaW9uPjxCb2R5PnNvbWV0aGluZyB0byBzYXk8L0JvZHk+PFRpdGxlPk1yPC9UaXRsZT48Rmlyc3ROYW1lPlppamlhbjwvRmlyc3ROYW1lPjxNaWRkbGVOYW1lPko8L01pZGRsZU5hbWU+PExhc3ROYW1lPldvbmc8L0xhc3ROYW1lPjxTdWZmaXgvPjxGaWxlQXM+V2FuZywgQW5keTwvRmlsZUFzPjxOaWNrTmFtZT5BbmRyZXc8L05pY2tOYW1lPjxCaXJ0aGRheT4xOTc4LTEyLTEzPC9CaXJ0aGRheT48SG9tZUFkZHJlc3NTdHJlZXQ+c29tZXdoZXJlPC9Ib21lQWRkcmVzc1N0cmVldD48SG9tZUFkZHJlc3NDaXR5Lz48SG9tZUFkZHJlc3NTdGF0ZS8+PEhvbWVBZGRyZXNzUG9zdGFsQ29kZS8+PEhvbWVBZGRyZXNzQ291bnRyeS8+PEhvbWVUZWxlcGhvbmVOdW1iZXI+OTg3OTk3OTg8L0hvbWVUZWxlcGhvbmVOdW1iZXI+PE1vYmlsZVRlbGVwaG9uZU51bWJlcj44OTg3OTg3OTg3PC9Nb2JpbGVUZWxlcGhvbmVOdW1iZXI+PEhvbWUyVGVsZXBob25lTnVtYmVyPjg5Nzk4Nzk4NzwvSG9tZTJUZWxlcGhvbmVOdW1iZXI+PFByb2Zlc3Npb24vPjxKb2JUaXRsZS8+PENvbXBhbnlOYW1lLz48RGVwYXJ0bWVudC8+PEhvbWVMYWJlbD5zb21ld2hlcmUKLCAgCjwvSG9tZUxhYmVsPjxCdXNpbmVzc0xhYmVsPgosICAKPC9CdXNpbmVzc0xhYmVsPjwvY29udGFjdD4=</Data>
+</Item>
+</Add>
+<Add>
+<CmdID>6</CmdID>
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-s4j-sifc</Type>
+</Meta>
+<Item>
+<Source>
+<LocURI>100</LocURI>
+</Source>
+<Data>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48Y29udGFjdD4KPFNJRlZlcnNpb24+MS4wPC9TSUZWZXJzaW9uPjxCb2R5Pmtsamtsamxramw8L0JvZHk+PFRpdGxlPk1yPC9UaXRsZT48Rmlyc3ROYW1lPkFuZHk8L0ZpcnN0TmFtZT48TWlkZGxlTmFtZS8+PExhc3ROYW1lPldvbmc8L0xhc3ROYW1lPjxTdWZmaXgvPjxGaWxlQXM+V29uZywgQW5keTwvRmlsZUFzPjxOaWNrTmFtZS8+PEJpcnRoZGF5Lz48SG9tZUFkZHJlc3NTdHJlZXQ+c29tZXdoZXJlPC9Ib21lQWRkcmVzc1N0cmVldD48SG9tZUFkZHJlc3NDaXR5Lz48SG9tZUFkZHJlc3NTdGF0ZS8+PEhvbWVBZGRyZXNzUG9zdGFsQ29kZS8+PEhvbWVBZGRyZXNzQ291bnRyeS8+PFByb2Zlc3Npb24vPjxKb2JUaXRsZS8+PENvbXBhbnlOYW1lLz48RGVwYXJ0bWVudC8+PEhvbWVMYWJlbD5zb21ld2hlcmUKLCAgCjwvSG9tZUxhYmVsPjxCdXNpbmVzc0xhYmVsPgosICAKPC9CdXNpbmVzc0xhYmVsPjwvY29udGFjdD4=</Data>
+</Item>
+</Add>
+</Sync>
+<Final/>
+</SyncBody>
+</SyncML>
+
+
+21:09:55:656 [INFO] - Returned 0 new items, 0 updated items, 0 deleted items for scal
+
+21:09:55:687 [DEBUG] - SyncItemEvent - Item added by server - sourceUri: scard - key: 0
+
+21:09:55:687 [DEBUG] - SyncStatusEvent - Status to send - command: Add - status: 200 - sourceUri: scard - key: 0
+
+21:09:55:703 [DEBUG] - SyncItemEvent - Item added by server - sourceUri: scard - key: 100
+
+21:09:55:703 [DEBUG] - SyncStatusEvent - Status to send - command: Add - status: 200 - sourceUri: scard - key: 100
+
+21:09:55:718 [INFO] - Returned 2 new items, 0 updated items, 0 deleted items for scard
+
+21:09:55:718 [INFO] - Mapping started
+
+21:09:55:734 [DEBUG] - SyncEvent - Send finalization - date: Mon Apr 07 21:09:55 EST 2008
+
+21:09:55:734 [INFO] - Sending mapping
+
+21:09:55:734 [DEBUG] - mapping-request: <SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>4</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds</LocURI></Target>
+        <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>1</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>fjg-QFhng2</TargetRef>
+            <SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+            <Data>200</Data>
+        </Status>
+    <Status>
+<CmdID>2</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>5</CmdRef>
+<Cmd>Add</Cmd>
+<SourceRef>0</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>3</MsgRef>
+<CmdRef>6</CmdRef>
+<Cmd>Add</Cmd>
+<SourceRef>100</SourceRef>
+<Data>200</Data>
+</Status>
+
+    </SyncBody>
+</SyncML>
+
+
+
+21:09:55:750 [DEBUG] - Connected to http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:750 [DEBUG] - SyncTransportEvent - Send data begin - data length: 936
+
+21:09:55:765 [DEBUG] - SyncTransportEvent - Send data end - data length: 936
+
+21:09:55:765 [DEBUG] - Message sent
+
+21:09:55:765 [DEBUG] - Reading response...
+
+21:09:55:796 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 619
+
+21:09:55:796 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:55:812 [DEBUG] - Content-Length: 619
+
+21:09:55:812 [DEBUG] - SyncTransportEvent - Data received - data length: 619
+
+21:09:55:812 [DEBUG] - Response read
+
+21:09:55:828 [DEBUG] - SyncTransportEvent - Received data end - data length: 619
+
+21:09:55:828 [DEBUG] - mapping-response: <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>4</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>4</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+</Status>
+</SyncBody>
+</SyncML>
+
+
+21:09:55:843 [DEBUG] - SyncEvent - Send finalization - date: Mon Apr 07 21:09:55 EST 2008
+
+21:09:55:843 [INFO] - Sending mapping
+
+21:09:55:859 [DEBUG] - mapping-request: <SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>5</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds</LocURI></Target>
+        <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>1</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>fjg-QFhng2</TargetRef>
+            <SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+            <Data>200</Data>
+        </Status>
+    <Map>
+<CmdID>2</CmdID>
+<Target>
+<LocURI>scard</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<MapItem><Target>
+<LocURI>100</LocURI>
+</Target>
+<Source>
+<LocURI>1207566595687-1</LocURI>
+</Source>
+</MapItem>
+<MapItem><Target>
+<LocURI>0</LocURI>
+</Target>
+<Source>
+<LocURI>1207566595671-0</LocURI>
+</Source>
+</MapItem>
+</Map>
+
+
+    </SyncBody>
+</SyncML>
+
+
+
+21:09:55:859 [DEBUG] - Connected to http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:859 [DEBUG] - SyncTransportEvent - Send data begin - data length: 1009
+
+21:09:55:875 [DEBUG] - SyncTransportEvent - Send data end - data length: 1009
+
+21:09:55:875 [DEBUG] - Message sent
+
+21:09:55:890 [DEBUG] - Reading response...
+
+21:09:55:906 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 783
+
+21:09:55:921 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:55:921 [DEBUG] - Content-Length: 783
+
+21:09:55:937 [DEBUG] - SyncTransportEvent - Data received - data length: 783
+
+21:09:55:937 [DEBUG] - Response read
+
+21:09:55:953 [DEBUG] - SyncTransportEvent - Received data end - data length: 783
+
+21:09:55:953 [DEBUG] - mapping-response: <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>5</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>5</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>5</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Map</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>scard</SourceRef>
+<Data>200</Data>
+</Status>
+</SyncBody>
+</SyncML>
+
+
+21:09:55:968 [DEBUG] - SyncEvent - Send finalization - date: Mon Apr 07 21:09:55 EST 2008
+
+21:09:55:968 [INFO] - Sending mapping
+
+21:09:55:968 [DEBUG] - mapping-request: <SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>6</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds</LocURI></Target>
+        <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>1</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>fjg-QFhng2</TargetRef>
+            <SourceRef>http://localhost:8080/funambol/ds</SourceRef>
+            <Data>200</Data>
+        </Status>
+    <Final></Final>
+    </SyncBody>
+</SyncML>
+
+
+
+21:09:55:984 [DEBUG] - Connected to http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54
+
+21:09:55:984 [DEBUG] - SyncTransportEvent - Send data begin - data length: 687
+
+21:09:56:000 [DEBUG] - SyncTransportEvent - Send data end - data length: 687
+
+21:09:56:000 [DEBUG] - Message sent
+
+21:09:56:015 [DEBUG] - Reading response...
+
+21:09:56:046 [DEBUG] - SyncTransportEvent - Receive data begin - data length: 628
+
+21:09:56:046 [DEBUG] - Content-Type: application/vnd.syncml+xml
+
+21:09:56:046 [DEBUG] - Content-Length: 628
+
+21:09:56:062 [DEBUG] - SyncTransportEvent - Data received - data length: 628
+
+21:09:56:062 [DEBUG] - Response read
+
+21:09:56:078 [DEBUG] - SyncTransportEvent - Received data end - data length: 628
+
+21:09:56:078 [DEBUG] - mapping-response: <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>12345678</SessionID>
+<MsgID>6</MsgID>
+<Target>
+<LocURI>fjg-QFhng2</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>6</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fjg-QFhng2</SourceRef>
+<Data>200</Data>
+</Status>
+<Final/>
+</SyncBody>
+</SyncML>
+
+
+21:09:56:093 [INFO] - Mapping done
+
+21:09:56:093 [INFO] - Synchronization done
+
+21:09:56:109 [DEBUG] - SyncSourceEvent - Sync end - date: Mon Apr 07 21:09:56 EST 2008 - sourceUri: scal - sync mode: 201
+
+21:09:56:109 [DEBUG] - SyncSourceEvent - Sync end - date: Mon Apr 07 21:09:56 EST 2008 - sourceUri: scard - sync mode: 201
+
+21:09:56:125 [DEBUG] - SyncEvent - Sync end - date: Mon Apr 07 21:09:56 EST 2008
+
+21:09:56:125 [INFO] - Done
+

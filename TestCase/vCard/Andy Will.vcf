@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Will;Andy
+FN:Andy Will
+ORG:;Marketing
+NOTE;ENCODING=QUOTED-PRINTABLE:It=E4=B8=AD=E6=96=87 is assumed that only a sing-line address or multi-line a=
+ddress.=0D=0A=0D=0AThe map services support both formats.=0D=0A
+TEL;WORK;VOICE:20 828878
+TEL;HOME;VOICE:(2) 8166-7181
+TEL;HOME;FAX:3268276
+ADR;HOME:;;1100  North Dustin  Lane;Chandler;Arizona;85226;US
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:1100  North Dustin  Lane=0D=0AChandler, Arizona 85226=0D=0AUS
+BDAY:19810408
+EMAIL;PREF;INTERNET:andyw@there.com
+REV:20080531T010458Z
+END:VCARD

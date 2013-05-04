@@ -1,0 +1,7 @@
+<Mem xmlns='syncml:metinf'>
+<SharedMem xmlns='syncml:metinf'/>
+<FreeMem xmlns='syncml:metinf'>8100</FreeMem>
+<!--Free memory (bytes) in Contact database on a device -->
+<FreeID xmlns='syncml:metinf'>81</FreeID>
+<!--Number of free records in Contact database-->
+</Mem>

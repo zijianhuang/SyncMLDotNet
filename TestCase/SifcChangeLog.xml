@@ -1,0 +1,73 @@
+<SIFCChangeLog>
+  <LastAnchor>1899-12-30 00:00:00</LastAnchor>
+  <Source>Open Contacts</Source>
+  <Changes>
+    <New>
+      <C ID="77">
+        <contact>
+          <SIFVersion>1.0</SIFVersion>
+          <FileAs>Anegawa Enterprises</FileAs>
+          <CompanyName>Anegawa Enterprises</CompanyName>
+          <Body>Japanese Groceries and Sundries</Body>
+        </contact>
+      </C>
+    </New>
+    <New>
+      <C ID="78">
+        <contact>
+          <SIFVersion>1.0</SIFVersion>
+          <FileAs>Australian Taxation Office</FileAs>
+          <CompanyName>Australian Taxation Office</CompanyName>
+          <Body></Body>
+          <BusinessTelephoneNumber>132866</BusinessTelephoneNumber>
+          <BusinessWebPage>http://www.ato.gov.au</BusinessWebPage>
+        </contact>
+      </C>
+    </New>
+    <New>
+      <C ID="88">
+        <contact>
+          <SIFVersion>1.0</SIFVersion>
+          <FileAs>Andy Smith</FileAs>
+          <LastName>Smith</LastName>
+          <FirstName>Andy</FirstName>
+          <MiddleName></MiddleName>
+          <Title></Title>
+          <Body>To ring, click on any of phone numbers, then press F9 to launch Windows' default dialer.
+</Body>
+          <HomeTelephoneNumber>81818181</HomeTelephoneNumber>
+          <MobileTelephoneNumber>0401323434</MobileTelephoneNumber>
+          <HomeFaxNumber>32323232</HomeFaxNumber>
+          <Email1Address>andysmith@here.com</Email1Address>
+          <Birthday>1963-05-16</Birthday>
+          <BusinessTelephoneNumber>(02)  82838883</BusinessTelephoneNumber>
+          <BusinessWebPage>http://www.Fenter.com</BusinessWebPage>
+        </contact>
+      </C>
+    </New>
+    <New>
+      <C ID="89">
+        <contact>
+          <SIFVersion>1.0</SIFVersion>
+          <FileAs>Andy Will</FileAs>
+          <LastName>Will</LastName>
+          <FirstName>Andy</FirstName>
+          <MiddleName></MiddleName>
+          <Title></Title>
+          <Body>It is assumed that each section has only a sing-line address or multi-line address. The map services support both formats.</Body>
+          <HomeTelephoneNumber>81667181</HomeTelephoneNumber>
+          <HomeFaxNumber>3268276</HomeFaxNumber>
+          <Email1Address>andyw@there.com</Email1Address>
+          <HomeAddressStreet>1100  North Dustin  Lane</HomeAddressStreet>
+          <HomeAddressCity>Chandler</HomeAddressCity>
+          <HomeAddressState>Arizona</HomeAddressState>
+          <HomeAddressPostalCode>85226</HomeAddressPostalCode>
+          <HomeAddressCountry>US</HomeAddressCountry>
+          <Birthday>1981-04-08</Birthday>
+          <BusinessTelephoneNumber>20 828878</BusinessTelephoneNumber>
+          <Department>Marketing</Department>
+        </contact>
+      </C>
+    </New>
+  </Changes>
+</SIFCChangeLog>

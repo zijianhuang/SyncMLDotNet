@@ -1,0 +1,14 @@
+<Alert>
+<CmdID>3456</CmdID>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Data>100</Data>
+<Item>
+<Data>You have new mail!</Data>
+</Item>
+</Alert>

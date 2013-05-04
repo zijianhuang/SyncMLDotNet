@@ -1,0 +1,12 @@
+    <Get>
+      <CmdID>6</CmdID>
+      <Meta>
+        <Type>application/vnd.syncml-devinf+xml</Type>
+      </Meta>
+      <Item>
+        <Target>
+          <LocURI>./devinf11</LocURI>
+          <LocName>./devinf11</LocName>
+        </Target>
+      </Item>
+    </Get>

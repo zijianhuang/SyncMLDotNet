@@ -1,0 +1,6 @@
+<PropParam>
+<ParamName>TYPE</ParamName>
+<ValEnum>VOICE, HOME</ValEnum>
+<ValEnum>FAX, HOME</ValEnum>
+<ValEnum>VOICE, CELL</ValEnum>
+</PropParam>

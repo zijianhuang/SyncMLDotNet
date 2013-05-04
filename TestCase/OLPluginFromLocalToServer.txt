@@ -1,0 +1,918 @@
+2008-05-05 15:11:46 GMT +10:00 - # Funambol Outlook Plug-in v. 6.0.14 - LOG file
+
+15:11:46 GMT +10:00 [DEBUG] - Starting the Sync process...
+15:11:46 GMT +10:00 [DEBUG] - Set a lower priority to the process
+15:11:46 GMT +10:00 [DEBUG] - Set listeners
+15:11:46 GMT +10:00 [DEBUG] - Creating SyncSources...
+15:11:46 GMT +10:00 [DEBUG] - Creating the sync-mutex ("fol-SyncInProgress-1209964306")
+15:11:46 GMT +10:00 [DEBUG] - Start SyncClient::Sync() with 4 sources
+15:11:46 GMT +10:00 [INFO] - 
+ ************************** BEGIN of Synchronization session **************************
+15:11:46 GMT +10:00 [INFO] - Synchronization URL: http://localhost:8080/funambol/ds
+15:11:46 GMT +10:00 [INFO] - Preparing synchronization of contact...
+15:11:46 GMT +10:00 [INFO] - Preparing synchronization of appointment...
+15:11:46 GMT +10:00 [INFO] - Preparing synchronization of task...
+15:11:46 GMT +10:00 [INFO] - Preparing synchronization of note...
+15:11:46 GMT +10:00 [DEBUG] - devinfo: <DevInf xmlns="syncml:devinf"><VerDTD>1.1</VerDTD>
+<Man>Funambol</Man>
+<Mod>Funambol Outlook Plug-in</Mod>
+<SwV>6.0.14</SwV>
+<DevID>fol-VE9TSElCQS1VU0VSOlZJUA==</DevID>
+<DevTyp>workstation</DevTyp>
+<UTC/><SupportLargeObjs/><SupportNumberOfChanges/><DataStore><SourceRef>contact</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>appointment</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcalendar</CTType>
+<VerCT>1.0</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcalendar</CTType>
+<VerCT>1.0</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>task</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>note</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+</DevInf>
+
+15:11:46 GMT +10:00 [DEBUG] - devinfo hash: rEYDNjSf2QAaDS7uWz+wBA==
+15:11:46 GMT +10:00 [DEBUG] - devinfo changed, retransmit
+15:11:46 GMT +10:00 [DEBUG] - Initialization message:
+15:11:46 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964306</SessionID>
+<MsgID>1</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Source>
+<Cred><Meta><Format xmlns="syncml:metinf">b64</Format>
+<Type xmlns="syncml:metinf">syncml:auth-basic</Type>
+</Meta>
+<Data>dGVzdDp0dHR0dHR0dA==</Data>
+</Cred>
+<Meta><MaxMsgSize xmlns="syncml:metinf">250000</MaxMsgSize>
+</Meta>
+</SyncHdr>
+<SyncBody><Alert><CmdID>1</CmdID>
+<Data>200</Data>
+<Item><Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1209946804</Last>
+<Next>1209964306</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert><CmdID>2</CmdID>
+<Data>200</Data>
+<Item><Target><LocURI>scal</LocURI>
+</Target>
+<Source><LocURI>appointment</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1209584944</Last>
+<Next>1209964306</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert><CmdID>3</CmdID>
+<Data>200</Data>
+<Item><Target><LocURI>stask</LocURI>
+</Target>
+<Source><LocURI>task</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1209584944</Last>
+<Next>1209964306</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert><CmdID>4</CmdID>
+<Data>200</Data>
+<Item><Target><LocURI>snote</LocURI>
+</Target>
+<Source><LocURI>note</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1209584944</Last>
+<Next>1209964306</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Put><CmdID>5</CmdID>
+<Meta><Type xmlns="syncml:metinf">application/vnd.syncml-devinf+xml</Type>
+</Meta>
+<Item><Source><LocURI>./devinf11</LocURI>
+</Source>
+<Data><DevInf xmlns="syncml:devinf"><VerDTD>1.1</VerDTD>
+<Man>Funambol</Man>
+<Mod>Funambol Outlook Plug-in</Mod>
+<SwV>6.0.14</SwV>
+<DevID>fol-VE9TSElCQS1VU0VSOlZJUA==</DevID>
+<DevTyp>workstation</DevTyp>
+<UTC/><SupportLargeObjs/><SupportNumberOfChanges/><DataStore><SourceRef>contact</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>appointment</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcalendar</CTType>
+<VerCT>1.0</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sife</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcalendar</CTType>
+<VerCT>1.0</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>task</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sift</CTType>
+<VerCT></VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+<DataStore><SourceRef>note</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifn</CTType>
+<VerCT></VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+</DevInf>
+</Data>
+</Item>
+</Put>
+<Final/></SyncBody>
+</SyncML>
+15:11:46 GMT +10:00 [DEBUG] - User Agent = Funambol Outlook Plug-in v. 6.0.14
+15:11:46 GMT +10:00 [DEBUG] - Initialization sent.
+15:11:46 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+15:11:46 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds
+15:11:46 GMT +10:00 [DEBUG] - Sending data of size 4129...
+15:11:48 GMT +10:00 [DEBUG] - Message sent
+15:11:48 GMT +10:00 [DEBUG] - Finished sending data of size 4129.
+15:11:48 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie:
+X-funambol-ds-server: DS Server v.6.5.14
+Accept-Encoding: gzip,deflate
+Uncompressed-Content-Length: 2901
+Content-Encoding: deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 613
+Date: Mon, 05 May 2008 05:11:48 GMT
+
+
+15:11:48 GMT +10:00 [DEBUG] - Reading response...
+15:11:48 GMT +10:00 [DEBUG] - Content-length: 613
+15:11:48 GMT +10:00 [DEBUG] - Receiving data of size 613...
+15:11:48 GMT +10:00 [DEBUG] - Finished receiving data of size 613.
+15:11:48 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964306</SessionID>
+<MsgID>1</MsgID>
+<Target>
+<LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=7D2D44E670008F1811BDC1AFCC78CEBD</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-VE9TSElCQS1VU0VSOlZJUA==</SourceRef>
+<Data>212</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1209964306</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scal</TargetRef>
+<SourceRef>appointment</SourceRef>
+<Data>508</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1209964306</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>4</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>stask</TargetRef>
+<SourceRef>task</SourceRef>
+<Data>508</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1209964306</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>5</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>4</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>snote</TargetRef>
+<SourceRef>note</SourceRef>
+<Data>508</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1209964306</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>6</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>5</CmdRef>
+<Cmd>Put</Cmd>
+<SourceRef>./devinf11</SourceRef>
+<Data>200</Data>
+</Status>
+<Alert>
+<CmdID>7</CmdID>
+<Data>200</Data>
+<Item>
+<Target>
+<LocURI>contact</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1209946804562</Last>
+<Next>1209964308468</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>8</CmdID>
+<Data>201</Data>
+<Item>
+<Target>
+<LocURI>appointment</LocURI>
+</Target>
+<Source>
+<LocURI>scal</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1209964308468</Last>
+<Next>1209964308468</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>9</CmdID>
+<Data>201</Data>
+<Item>
+<Target>
+<LocURI>task</LocURI>
+</Target>
+<Source>
+<LocURI>stask</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1209964308468</Last>
+<Next>1209964308468</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>10</CmdID>
+<Data>201</Data>
+<Item>
+<Target>
+<LocURI>note</LocURI>
+</Target>
+<Source>
+<LocURI>snote</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1209964308468</Last>
+<Next>1209964308468</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Final/>
+</SyncBody>
+</SyncML>
+
+15:11:48 GMT +10:00 [DEBUG] - Server requested syncmode "two-way" for contact.
+15:11:48 GMT +10:00 [DEBUG] - Server requested syncmode "slow" for appointment.
+15:11:48 GMT +10:00 [DEBUG] - Server requested syncmode "slow" for task.
+15:11:48 GMT +10:00 [DEBUG] - Server requested syncmode "slow" for note.
+15:11:48 GMT +10:00 [DEBUG] - Checking for forced slow-sync...
+15:11:49 GMT +10:00 [INFO] - Synchronization aborted by user to avoid full-sync of appointments, tasks and notes.
+15:11:49 GMT +10:00 [ERROR] - SyncClient: continueAfterPrepareSync returns error code: 5.
+15:11:49 GMT +10:00 [INFO] - 
+============================================================
+================   SYNCHRONIZATION REPORT   ================
+============================================================
+
+SYNCHRONIZATION COMPLETED WITH ERRORS
+-------------------------------------
+Last error message = "Synchronization aborted by user to avoid full-sync of appointments, tasks and notes."
+Last error code    = 5
+
+Contacts:
+---------
+    Not synced.
+
+Calendar:
+---------
+    Not synced.
+
+Tasks:
+------
+    Not synced.
+
+Notes:
+------
+    Not synced.
+
+
+15:11:49 GMT +10:00 [DEBUG] - Saving configuration to winRegistry
+15:11:49 GMT +10:00 [DEBUG] - Writing configuration settings to the management tree
+15:11:49 GMT +10:00 [DEBUG] - Releasing sync-mutex...
+15:11:49 GMT +10:00 [DEBUG] - Sync-mutex released - closing handle.
+15:11:49 GMT +10:00 [DEBUG] - Delete SyncSources...
+15:11:49 GMT +10:00 [INFO] - Syncronization process completed with errors (code = 5).
+15:12:15 GMT +10:00 [DEBUG] - Reading configuration settings from the management tree
+15:12:15 GMT +10:00 [DEBUG] - [UI] StartSync begin
+15:12:15 GMT +10:00 [DEBUG] - [UI] Hide menu
+15:12:15 GMT +10:00 [DEBUG] - [UI] Starting the syncThread...
+15:12:15 GMT +10:00 [DEBUG] - Starting the Sync process...
+15:12:15 GMT +10:00 [DEBUG] - Set a lower priority to the process
+15:12:15 GMT +10:00 [DEBUG] - Set listeners
+15:12:15 GMT +10:00 [DEBUG] - Creating SyncSources...
+15:12:15 GMT +10:00 [DEBUG] - Creating the sync-mutex ("fol-SyncInProgress-1209964335")
+15:12:15 GMT +10:00 [DEBUG] - Start SyncClient::Sync() with 1 sources
+15:12:15 GMT +10:00 [INFO] - 
+ ************************** BEGIN of Synchronization session **************************
+15:12:15 GMT +10:00 [INFO] - Synchronization URL: http://localhost:8080/funambol/ds
+15:12:15 GMT +10:00 [INFO] - Preparing synchronization of contact...
+15:12:15 GMT +10:00 [DEBUG] - devinfo: <DevInf xmlns="syncml:devinf"><VerDTD>1.1</VerDTD>
+<Man>Funambol</Man>
+<Mod>Funambol Outlook Plug-in</Mod>
+<SwV>6.0.14</SwV>
+<DevID>fol-VE9TSElCQS1VU0VSOlZJUA==</DevID>
+<DevTyp>workstation</DevTyp>
+<UTC/><SupportLargeObjs/><SupportNumberOfChanges/><DataStore><SourceRef>contact</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+</DevInf>
+
+15:12:15 GMT +10:00 [DEBUG] - devinfo hash: U4d9vAaaueUxWn8VyeLlzg==
+15:12:15 GMT +10:00 [DEBUG] - devinfo changed, retransmit
+15:12:15 GMT +10:00 [DEBUG] - Initialization message:
+15:12:15 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964335</SessionID>
+<MsgID>1</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Source>
+<Cred><Meta><Format xmlns="syncml:metinf">b64</Format>
+<Type xmlns="syncml:metinf">syncml:auth-basic</Type>
+</Meta>
+<Data>dGVzdDp0dHR0dHR0dA==</Data>
+</Cred>
+<Meta><MaxMsgSize xmlns="syncml:metinf">250000</MaxMsgSize>
+</Meta>
+</SyncHdr>
+<SyncBody><Alert><CmdID>1</CmdID>
+<Data>203</Data>
+<Item><Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+<Meta><Anchor xmlns="syncml:metinf"><Last>1209946804</Last>
+<Next>1209964335</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Put><CmdID>2</CmdID>
+<Meta><Type xmlns="syncml:metinf">application/vnd.syncml-devinf+xml</Type>
+</Meta>
+<Item><Source><LocURI>./devinf11</LocURI>
+</Source>
+<Data><DevInf xmlns="syncml:devinf"><VerDTD>1.1</VerDTD>
+<Man>Funambol</Man>
+<Mod>Funambol Outlook Plug-in</Mod>
+<SwV>6.0.14</SwV>
+<DevID>fol-VE9TSElCQS1VU0VSOlZJUA==</DevID>
+<DevTyp>workstation</DevTyp>
+<UTC/><SupportLargeObjs/><SupportNumberOfChanges/><DataStore><SourceRef>contact</SourceRef>
+<Rx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx-Pref>
+<Rx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Rx>
+<Rx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Rx>
+<Tx-Pref><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx-Pref>
+<Tx><CTType>text/x-s4j-sifc</CTType>
+<VerCT></VerCT>
+</Tx>
+<Tx><CTType>text/x-vcard</CTType>
+<VerCT>2.1</VerCT>
+</Tx>
+<SyncCap><SyncType>2</SyncType>
+<SyncType>1</SyncType>
+<SyncType>5</SyncType>
+<SyncType>3</SyncType>
+<SyncType>6</SyncType>
+<SyncType>4</SyncType>
+</SyncCap>
+</DataStore>
+</DevInf>
+</Data>
+</Item>
+</Put>
+<Final/></SyncBody>
+</SyncML>
+15:12:15 GMT +10:00 [DEBUG] - User Agent = Funambol Outlook Plug-in v. 6.0.14
+15:12:15 GMT +10:00 [DEBUG] - Initialization sent.
+15:12:15 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+15:12:15 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds
+15:12:15 GMT +10:00 [DEBUG] - Sending data of size 1851...
+15:12:16 GMT +10:00 [DEBUG] - Message sent
+15:12:16 GMT +10:00 [DEBUG] - Finished sending data of size 1851.
+15:12:16 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie:
+X-funambol-ds-server: DS Server v.6.5.14
+Accept-Encoding: gzip,deflate
+Uncompressed-Content-Length: 1331
+Content-Encoding: deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 505
+Date: Mon, 05 May 2008 05:12:16 GMT
+
+
+15:12:16 GMT +10:00 [DEBUG] - Reading response...
+15:12:16 GMT +10:00 [DEBUG] - Content-length: 505
+15:12:16 GMT +10:00 [DEBUG] - Receiving data of size 505...
+15:12:16 GMT +10:00 [DEBUG] - Finished receiving data of size 505.
+15:12:16 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964335</SessionID>
+<MsgID>1</MsgID>
+<Target>
+<LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=96D9B886A0CDCB0BA7B00515E489AE75</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-VE9TSElCQS1VU0VSOlZJUA==</SourceRef>
+<Data>212</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item>
+<Data>
+<Anchor xmlns="syncml:metinf">
+<Next>1209964335</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Status>
+<CmdID>3</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>2</CmdRef>
+<Cmd>Put</Cmd>
+<SourceRef>./devinf11</SourceRef>
+<Data>200</Data>
+</Status>
+<Alert>
+<CmdID>4</CmdID>
+<Data>203</Data>
+<Item>
+<Target>
+<LocURI>contact</LocURI>
+</Target>
+<Source>
+<LocURI>scard</LocURI>
+</Source>
+<Meta>
+<Anchor xmlns='syncml:metinf'>
+<Last>1209946804562</Last>
+<Next>1209964336046</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Final/>
+</SyncBody>
+</SyncML>
+
+15:12:16 GMT +10:00 [DEBUG] - Server requested syncmode "refresh-from-client" for contact.
+15:12:16 GMT +10:00 [DEBUG] - Checking for forced slow-sync...
+15:12:16 GMT +10:00 [DEBUG] - ---------------------- contact BEGIN (mode "refresh-from-client") ----------------------
+15:12:16 GMT +10:00 [DEBUG] - beginSync of contact source: opening Outlook session...
+15:12:16 GMT +10:00 [DEBUG] - Initialize COM library
+15:12:16 GMT +10:00 [DEBUG] - Create Outlook.Application instance...
+15:12:16 GMT +10:00 [DEBUG] - Logon to Outlook MAPI: default profile, show-dialog = true, new-session = false
+15:12:17 GMT +10:00 [INFO] - Outlook session opened successfully! Using: Outlook 2003.
+15:12:17 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Mailbox - Zijian Huang\Contacts' (0 found)...
+15:12:17 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Mailbox - Zijian Huang\Contacts\MyFriends' (0 found)...
+15:12:17 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Mailbox - Zijian Huang\Contacts\MyFriends\ookk' (0 found)...
+15:12:17 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Mailbox - Zijian Huang\Contacts\YesContacts' (0 found)...
+15:12:17 GMT +10:00 [DEBUG] - Reading ALL contacts from folder '\\Mailbox - Zijian Huang\Contacts\YesContacts\sss' (2 found)...
+15:12:17 GMT +10:00 [INFO] - Total contact items to send: 2
+15:12:18 GMT +10:00 [ERROR] - COM Pointer Error. Code = 80004003: Invalid pointer
+15:12:18 GMT +10:00 [ERROR] - Outlook Exception. - Error retrieving address from Redemption.RDOSession AddressList
+15:12:18 GMT +10:00 [ERROR] - Error getting item "Osram" for source 'contact'.
+15:12:18 GMT +10:00 [ERROR] - COM Pointer Error. Code = 80004003: Invalid pointer
+15:12:18 GMT +10:00 [ERROR] - Outlook Exception. - Error retrieving address from Redemption.RDOSession AddressList
+15:12:18 GMT +10:00 [ERROR] - Error getting item "Osram" for source 'contact'.
+15:12:18 GMT +10:00 [DEBUG] - Modification message: estimated size 150, allowed size 250000, real size 939 / estimated size 150 = 626%
+15:12:18 GMT +10:00 [DEBUG] - <?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr><VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964335</SessionID>
+<MsgID>2</MsgID>
+<Target><LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Target>
+<Source><LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Source>
+</SyncHdr>
+<SyncBody><Status><CmdID>1</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-VE9TSElCQS1VU0VSOlZJUA==</SourceRef>
+<Data>200</Data>
+</Status>
+<Status><CmdID>2</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>4</CmdRef>
+<Cmd>Alert</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+<Item><Data><Anchor xmlns="syncml:metinf"><Next>1209964336046</Next>
+</Anchor>
+</Data>
+</Item>
+</Status>
+<Sync><CmdID>3</CmdID>
+<Target><LocURI>scard</LocURI>
+</Target>
+<Source><LocURI>contact</LocURI>
+</Source>
+</Sync>
+<Final/></SyncBody>
+</SyncML>
+15:12:18 GMT +10:00 [DEBUG] - Modifications sent.
+15:12:18 GMT +10:00 [DEBUG] - Connecting to localhost:8080
+15:12:18 GMT +10:00 [DEBUG] - Requesting resource /funambol/ds;jsessionid=96D9B886A0CDCB0BA7B00515E489AE75
+15:12:18 GMT +10:00 [DEBUG] - Sending data of size 399...
+15:12:53 GMT +10:00 [DEBUG] - Message sent
+15:12:53 GMT +10:00 [DEBUG] - Finished sending data of size 399.
+15:12:53 GMT +10:00 [DEBUG] - Header: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+X-funambol-ds-server: DS Server v.6.5.14
+Set-Cookie:
+Accept-Encoding: gzip,deflate
+Uncompressed-Content-Length: 833
+Content-Encoding: deflate
+Content-Type: application/vnd.syncml+xml
+Content-Length: 364
+Date: Mon, 05 May 2008 05:12:53 GMT
+
+
+15:12:53 GMT +10:00 [DEBUG] - Reading response...
+15:12:53 GMT +10:00 [DEBUG] - Content-length: 364
+15:12:53 GMT +10:00 [DEBUG] - Receiving data of size 364...
+15:12:53 GMT +10:00 [DEBUG] - Finished receiving data of size 364.
+15:12:53 GMT +10:00 [DEBUG] - Response read:
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncML>
+<SyncHdr>
+<VerDTD>1.1</VerDTD>
+<VerProto>SyncML/1.1</VerProto>
+<SessionID>1209964335</SessionID>
+<MsgID>2</MsgID>
+<Target>
+<LocURI>fol-VE9TSElCQS1VU0VSOlZJUA==</LocURI>
+</Target>
+<Source>
+<LocURI>http://localhost:8080/funambol/ds</LocURI>
+</Source>
+<RespURI>http://localhost:8080/funambol/ds;jsessionid=96D9B886A0CDCB0BA7B00515E489AE75</RespURI>
+</SyncHdr>
+<SyncBody>
+<Status>
+<CmdID>1</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>0</CmdRef>
+<Cmd>SyncHdr</Cmd>
+<TargetRef>http://localhost:8080/funambol/ds</TargetRef>
+<SourceRef>fol-VE9TSElCQS1VU0VSOlZJUA==</SourceRef>
+<Data>200</Data>
+</Status>
+<Status>
+<CmdID>2</CmdID>
+<MsgRef>2</MsgRef>
+<CmdRef>3</CmdRef>
+<Cmd>Sync</Cmd>
+<TargetRef>scard</TargetRef>
+<SourceRef>contact</SourceRef>
+<Data>200</Data>
+</Status>
+<Final/>
+</SyncBody>
+</SyncML>
+
+15:12:53 GMT +10:00 [DEBUG] - ---------------------- contact END (mode "refresh-from-client") ----------------------
+15:12:53 GMT +10:00 [DEBUG] - Server requested syncmode "refresh-from-client" for contact.
+15:12:53 GMT +10:00 [DEBUG] - ----------------------  END (mode "none") ----------------------
+15:12:53 GMT +10:00 [DEBUG] - Server requested syncmode "none" for .
+15:12:53 GMT +10:00 [DEBUG] - Committing source contact (next: 1209964335)
+15:12:53 GMT +10:00 [DEBUG] - ret: 0, lastErrorCode: 0, lastErrorMessage: Error getting item "Osram" for source 'contact'.
+15:12:53 GMT +10:00 [INFO] - END of Synchronization session.
+15:12:53 GMT +10:00 [INFO] - 
+============================================================
+================   SYNCHRONIZATION REPORT   ================
+============================================================
+
+SYNCHRONIZATION COMPLETED SUCCESSFULLY!
+---------------------------------------
+
+Contacts:
+---------
+    Sync completed successfully!
+    Sync type: refresh-from-client
+
+            | on Client | on Server
+    --------|-----------|----------
+    New     |    0/   0 |    0/   0 
+    Updated |    0/   0 |    0/   0 
+    Deleted |    0/   0 |    0/   0 
+
+
+
+15:12:53 GMT +10:00 [DEBUG] - Saving configuration to winRegistry
+15:12:53 GMT +10:00 [DEBUG] - Writing configuration settings to the management tree
+15:12:53 GMT +10:00 [DEBUG] - Closing Outlook...
+15:12:53 GMT +10:00 [DEBUG] - Deleting ClientApplication instance
+15:12:53 GMT +10:00 [INFO] - Outlook session closed successfully.
+15:12:53 GMT +10:00 [DEBUG] - Closing COM library...
+15:12:53 GMT +10:00 [DEBUG] - Releasing sync-mutex...
+15:12:53 GMT +10:00 [DEBUG] - Sync-mutex released - closing handle.
+15:12:53 GMT +10:00 [DEBUG] - Delete SyncSources...
+15:12:53 GMT +10:00 [INFO] - Syncronization process completed.

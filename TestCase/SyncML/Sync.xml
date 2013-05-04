@@ -1,0 +1,30 @@
+<Sync>
+<CmdID>1234</CmdID>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Target><LocURI>./mail/bruce1</LocURI></Target>
+<Source><LocURI>./calendar</LocURI></Source>
+<Add>
+<CmdID>1246</CmdID>
+<Item>
+<Source><LocURI>./12</LocURI></Source>
+<Meta>
+<Type xmlns='syncml:metinf'>text/x-vCalendar</Type>
+</Meta>
+<Data>BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20000531T160000Z
+DTEND:20000531T160100Z
+SUMMARY:Release v0.9 of specs
+END:VEVENT
+END:VCALENDAR
+</Data>
+</Item>
+</Add>
+</Sync>

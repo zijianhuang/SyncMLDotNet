@@ -1,0 +1,31 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Outlook;Contact;Of;Mr.;Sr.
+FN:Contact Of Outlook
+ORG:General Business;this dept
+TITLE:Manager
+TEL;WORK;VOICE:666666
+TEL;WORK;VOICE:9999999
+TEL;HOME;VOICE:4444444444
+TEL;HOME;VOICE:222222222
+TEL;CELL;VOICE:999999
+TEL;VOICE:(2) 4545-6456
+TEL;FAX:12345566
+TEL;WORK;FAX:(2) 8888-8888
+TEL;HOME;FAX:(2) 2234-4545
+TEL;PREF:(2) 8080-8080
+ADR;WORK:;;Unit 20,282 Helen St;Chatswood;NSW;2067;Australia
+NOTE;CHARSET=UTF8;ENCODING=QUOTED-PRINTABLE:It=E4=B8=AD=E6=96=87 is assumed that only a sing-line address or multi-line=
+ address.=0D=0A=0D=0AThe map services support both formats.=0D=0A
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:Unit 20,282 Helen St=0D=0AChatswood, NSW 2067=0D=0AAustralia
+ADR;HOME:;;32 Kagaga Ave;Home city;VIC;3000;Australia
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:32 Kagaga Ave=0D=0AHome city, VIC 3000=0D=0AAustralia
+ADR;POSTAL:;;23 John Road;Somewhere;This;2000;Far Far Away
+LABEL;POSTAL;ENCODING=QUOTED-PRINTABLE:23 John Road=0D=0ASomewhere, This 2000=0D=0AFar Far Away
+URL;HOME:http://www.somewhere.com
+URL;WORK:http://www.work.com
+ROLE:Accountant
+BDAY:19781007
+EMAIL;PREF;INTERNET:mrmsoutlook@earth.com
+REV:20080531T010507Z
+END:VCARD

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--User will modify the mapping between dynamic fields and static fields to allow some fields only to be synchronized.
+ -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fonlow.com"
+           targetNamespace="http://www.fonlow.com"
+           >
+  <xs:element name="OpenContactsStaticDynamicMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Target" type="xs:string" />
+        <xs:element name="Fields">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Field">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required" />
+                  <xs:attribute name="Section" type="xs:string" use="required" />
+                  <xs:attribute name="Static" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

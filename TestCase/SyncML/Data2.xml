@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+<DevInf xmlns='syncml:devinf'>
+<Man xmlns='syncml:devinf'>IBM</Man>
+<Mod xmlns='syncml:devinf'>WorkPad</Mod>
+<DevTyp xmlns='syncml:devinf'>pda</DevTyp>
+<DevID xmlns='syncml:devinf'>J. Smith</DevID>
+<FwV xmlns='syncml:devinf'>PalmOSv3.0</FwV>
+<OEM xmlns='syncml:devinf'>Palm, Inc.</OEM>
+</DevInf>
+</Data>

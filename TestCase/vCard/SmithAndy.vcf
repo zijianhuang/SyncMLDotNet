@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Smith;Andy
+FN:SmithAndy
+ORG:;Marketing
+TITLE:Manager
+NOTE;ENCODING=QUOTED-PRINTABLE:To ring, click on any of phone numbers, then press F9 to launch Windows' def=
+ault dialer.=0D=0A
+TEL;WORK;VOICE:22222222222
+TEL;HOME;VOICE:111111111111
+TEL;CELL;VOICE:0401323434
+TEL;HOME;FAX:(2) 3232-3232
+URL;WORK:http://www.Fenter.com
+BDAY:19630516
+EMAIL;PREF;INTERNET:andysmith@here.com
+REV:20080531T010443Z
+END:VCARD

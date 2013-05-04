@@ -1,0 +1,56 @@
+<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>1</MsgID>
+        <Target>
+            <LocURI>http://localhost:8080/funambol/ds</LocURI>
+        </Target>
+        <Source>
+            <LocURI>fjg-QFhng2</LocURI>
+        </Source>
+        <Cred>
+            <Meta>
+                <Type xmlns="syncml:metinf">syncml:auth-basic</Type>
+            </Meta>
+            <Data>dGVzdDp0dHR0dHR0dA==</Data>
+        </Cred>
+	<Meta>
+            <MaxMsgSize>250000</MaxMsgSize>
+            <MaxObjSize>4000000</MaxObjSize>
+        </Meta>
+    </SyncHdr>
+    <SyncBody>
+    <Alert>
+<CmdID>1</CmdID>
+<Data>200</Data>
+<Item>
+<Target><LocURI>scal</LocURI></Target>
+<Source><LocURI>scal</LocURI></Source>
+<Meta>
+<Anchor xmlns="syncml:metinf">
+<Last>1207565743093</Last>
+<Next>1207566594796</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+<Alert>
+<CmdID>1</CmdID>
+<Data>200</Data>
+<Item>
+<Target><LocURI>scard</LocURI></Target>
+<Source><LocURI>scard</LocURI></Source>
+<Meta>
+<Anchor xmlns="syncml:metinf">
+<Last>1207565743093</Last>
+<Next>1207566594796</Next>
+</Anchor>
+</Meta>
+</Item>
+</Alert>
+
+        <Final/>
+    </SyncBody>
+</SyncML>

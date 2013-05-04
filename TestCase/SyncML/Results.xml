@@ -1,0 +1,40 @@
+<Results>
+<CmdID>4321</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1234</CmdRef>
+<Meta>
+<Type xmlns='syncml:metinf'>text/x-vCard</Type>
+</Meta>
+<TargetRef>./telecom/pb</TargetRef>
+<SourceRef>http://www.datasync.com/servlet/</SourceRef>
+<Item>
+<Source><LocURI>./1</LocURI></Source>
+<Data>BEGIN:VCARD
+VERSION:2.1
+FN:Bruce Smith
+N:Smith, Bruce
+TEL;WORK;VOICE:+1-919-555-1234
+END:VCARD
+</Data>
+</Item>
+<Item>
+<Source><LocURI>./2</LocURI></Source>
+<Data>BEGIN:VCARD
+VERSION:2.1
+FN:Ida Blue
+N:Blue, Ida
+TEL;WORK;VOICE:+1-919-555-2345
+END:VCARD
+</Data>
+</Item>
+<Item>
+<Source><LocURI>./3</LocURI></Source>
+<Data>BEGIN:VCARD
+VERSION:2.1
+FNke McGrath
+N:McGrath, Mike
+TEL;WORK;VOICE:+1-919-555-3456
+END:VCARD
+</Data>
+</Item>
+</Results>

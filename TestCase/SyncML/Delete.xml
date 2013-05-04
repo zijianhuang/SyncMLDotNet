@@ -1,0 +1,14 @@
+<Delete>
+<CmdID>12345</CmdID>
+<Archive/>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Item>
+<Source><LocURI>./4</LocURI></Source>
+</Item>
+</Delete>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<task>
+<Body>hahahahahhahaha</Body>
+<Categories>this, that</Categories>
+<Companies>Maga S.p.A.</Companies>
+<Complete>0</Complete>
+<DueDate>20101008T000000Z</DueDate>
+<BillingInformation>information</BillingInformation>
+<ActualWork>6</ActualWork >
+<Importance>1</Importance>
+<IsRecurring>1</IsRecurring>
+<Mileage>200</Mileage>
+<PercentComplete>0</PercentComplete>
+<ReminderSet>1</ReminderSet>
+<ReminderTime>20101011T000000Z</ReminderTime>
+<Sensitivity>2</Sensitivity>
+<StartDate>20091110T000000Z</StartDate>
+<Status>0</Status>
+<Subject>Something you need to do</Subject>
+<TeamTask>0</TeamTask>
+<TotalWork>0</TotalWork>
+<RecurrenceType>1</RecurrenceType>
+<Interval>1</Interval>
+<MonthOfYear>0</MonthOfYear>
+<DayOfMonth>0</DayOfMonth>
+<DayOfWeekMask>4</DayOfWeekMask>
+<Instance>0</Instance>
+<PatternStartDate>20100830T000000Z</PatternStartDate>
+<NoEndDate>1</NoEndDate>
+<Occurrences>3</Occurrences>
+<PatternEndDate></PatternEndDate>
+</task>

@@ -1,0 +1,13 @@
+<Item>
+<Source><LocURI>./15</LocURI></Source>
+<Meta>
+<Type xmlns='syncml:devinf'>text/directory profile=vCard</Type>
+</Meta>
+<Data>BEGIN:VCARD
+VERSION:3.0
+FN:Smith;Bruce
+N:Bruce Smith
+TEL;TYPE=WORK;VOICE:+1-919-555-1234
+END:VCARD
+</Data>
+</Item>

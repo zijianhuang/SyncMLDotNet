@@ -1,0 +1,8 @@
+<SyncBody>
+<Get>
+<CmdID>1234</CmdID>
+<Item>
+<Target><LocURI>./devinf10</LocURI></Target>
+</Item>
+</Get>
+</SyncBody>

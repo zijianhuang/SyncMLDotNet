@@ -1,0 +1,29 @@
+<Replace>
+<CmdID>1234</CmdID>
+<Cred>
+<Meta>
+<Type xmlns='syncml:metinf'>syncml:auth-md5</Type>
+<Format xmlns='syncml:metinf'>b64</Format>
+</Meta>
+<Data>Zz6EivR3yeaaENcRN6lpAQ==</Data>
+</Cred>
+<Meta><Type xmlns='syncml:metinf'>text/calendar</Type></Meta>
+<Item>
+<Source><LocURI>./20</LocURI></Source>
+<Data>BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:12345-19991015T133000Z
+SEQUENCE:1
+DTSTART:19991026T110000Z
+DTEND:19991026T190000Z
+SUMMARY:Technical Committee Meeting
+CATEGORIES:Appointment
+ORGANIZER:henry@host.com
+ATTENDEES:techcomm@host.com
+END:VEVENT
+END:VCALENDAR
+</Data>
+</Item>
+</Replace>

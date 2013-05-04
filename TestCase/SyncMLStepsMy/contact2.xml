@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact>
+  <SIFVersion>1.0</SIFVersion>
+  <Body>kljkljlkjl</Body>
+  <Title>Mr</Title>
+  <FirstName>Andy</FirstName>
+  <MiddleName/>
+  <LastName>Wong</LastName>
+  <Suffix/>
+  <FileAs>Wong, Andy</FileAs>
+  <NickName/>
+  <Birthday/>
+  <HomeAddressStreet>somewhere</HomeAddressStreet>
+  <HomeAddressCity/>
+  <HomeAddressState/>
+  <HomeAddressPostalCode/>
+  <HomeAddressCountry/>
+  <Profession/>
+  <JobTitle/>
+  <CompanyName/>
+  <Department/>
+  <HomeLabel>
+    somewhere
+    ,
+  </HomeLabel>
+  <BusinessLabel>
+    ,
+  </BusinessLabel>
+</contact>
+
+

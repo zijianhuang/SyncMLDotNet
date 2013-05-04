@@ -1,0 +1,83 @@
+<OpenContactsChangeLog>
+  <LastAnchor>1899-12-30 00:00:00</LastAnchor>
+  <Source>Open Contacts</Source>
+  <SourceVersion>5.2.2</SourceVersion>
+  <Changes>
+    <New>
+      <C ID="77" IsCompany="1">
+        <Field Name="FullName" Section="">Anegawa Enterprises</Field>
+        <Field Name="Surname" Section=""></Field>
+        <Field Name="GivenName" Section=""></Field>
+        <Field Name="MidName" Section=""></Field>
+        <Field Name="Title" Section=""></Field>
+        <Field Name="Notes" Section="">Japanese Groceries and Sundries</Field>
+        <Field Name="Phone" Section="Castle Cove Shop">94175452</Field>
+        <Field Name="Address" Section="Castle Cove Shop">
+          22 Helen St
+          Lane Cove
+          NSW 2066
+        </Field>
+        <Field Name="Web" Section="Castle Cove Shop">www.anegawa.citysearch.com.au</Field>
+        <Field Name="Phone" Section="Neutrialbay Shop">99044177</Field>
+        <Field Name="Address" Section="Neutrialbay Shop">7/17 Water Road</Field>
+      </C>
+      <C ID="78" IsCompany="1">
+        <Field Name="FullName" Section="">Australian Taxation Office</Field>
+        <Field Name="Surname" Section=""></Field>
+        <Field Name="GivenName" Section=""></Field>
+        <Field Name="MidName" Section=""></Field>
+        <Field Name="Title" Section=""></Field>
+        <Field Name="Notes" Section=""></Field>
+        <Field Name="Phone" Section="Work">132866</Field>
+        <Field Name="Web" Section="Work">http://www.ato.gov.au</Field>
+      </C>
+      <C ID="88" IsCompany="0">
+        <Field Name="FullName" Section="">Andy Smith</Field>
+        <Field Name="Surname" Section="">Smith</Field>
+        <Field Name="GivenName" Section="">Andy</Field>
+        <Field Name="MidName" Section=""></Field>
+        <Field Name="Title" Section=""></Field>
+        <Field Name="Notes" Section="">
+          To ring, click on any of phone numbers, then press F9 to launch Windows' default dialer.
+        </Field>
+        <Field Name="Phone" Section="Personal">81818181</Field>
+        <Field Name="Mobile" Section="Personal">0401323434</Field>
+        <Field Name="Fax" Section="Personal">32323232</Field>
+        <Field Name="Skype" Section="Personal">e3432342</Field>
+        <Field Name="ICQ" Section="Personal">34234323</Field>
+        <Field Name="AIM" Section="Personal">90kkljk90809</Field>
+        <Field Name="MSN" Section="Personal">343@dfsd.com</Field>
+        <Field Name="Email" Section="Personal">andysmith@here.com</Field>
+        <Field Name="Yahoo" Section="Personal">sffsdfdyahoo</Field>
+        <Field Name="Birthday" Section="Personal">1963-05-16</Field>
+        <Field Name="Photo" Section="Personal">Andy Smith20070806234021.GIF</Field>
+        <Field Name="Job Title" Section="Work">Manager</Field>
+        <Field Name="Phone" Section="Work">(02)  82838883</Field>
+        <Field Name="Pager" Section="Work">0401323434</Field>
+        <Field Name="Web" Section="Work">http://www.Fenter.com</Field>
+      </C>
+      <C ID="89" IsCompany="0">
+        <Field Name="FullName" Section="">Andy Will</Field>
+        <Field Name="Surname" Section="">Will</Field>
+        <Field Name="GivenName" Section="">Andy</Field>
+        <Field Name="MidName" Section=""></Field>
+        <Field Name="Title" Section=""></Field>
+        <Field Name="Notes" Section="">It is assumed that each section has only a sing-line address or multi-line address. The map services support both formats.</Field>
+        <Field Name="Phone" Section="Personal">81667181</Field>
+        <Field Name="Fax" Section="Personal">3268276</Field>
+        <Field Name="Email" Section="Personal">andyw@there.com</Field>
+        <Field Name="Unit" Section="Personal">Unit 20, Building B</Field>
+        <Field Name="Street" Section="Personal">1100  North Dustin  Lane</Field>
+        <Field Name="City" Section="Personal">Chandler</Field>
+        <Field Name="Photo" Section="Personal">http://somewhere.com/kk.jpg</Field>
+        <Field Name="State" Section="Personal">Arizona</Field>
+        <Field Name="Postcode" Section="Personal">85226</Field>
+        <Field Name="Country" Section="Personal">US</Field>
+        <Field Name="Birthday" Section="Personal">1981-04-08</Field>
+        <Field Name="Phone" Section="Work">20 828878</Field>
+        <Field Name="Department" Section="Work">Marketing</Field>
+        <Field Name="Address" Section="Work">800 W Tyson St,Chandler, AZ 85225</Field>
+      </C>
+    </New>>
+  </Changes>
+</OpenContactsChangeLog>

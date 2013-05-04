@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SyncML PUBLIC "-//SYNCML//DTD SYNCML 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/OMA-TS-SyncML_RepPro_DTD-V1_2.dtd">
+<SyncML xmlns="syncml:SYNCML1.2">
+  <SyncHdr>
+    <VerDTD>1.2</VerDTD>
+    <VerProto>SyncML/1.2</VerProto>
+    <SessionID>1260700752</SessionID>
+    <MsgID>2</MsgID>
+    <Target>
+      <LocURI>fol-WklKSUFOLVBDOnppamlhbg==</LocURI>
+    </Target>
+    <Source>
+      <LocURI>http://sync.soocial.com</LocURI>
+    </Source>
+    <Meta>
+      <MaxMsgSize xmlns="syncml:metinf">10240</MaxMsgSize>
+      <MaxObjSize xmlns="syncml:metinf">4194304</MaxObjSize>
+    </Meta>
+  </SyncHdr>
+  <SyncBody>
+    <Status>
+      <CmdID>1</CmdID>
+      <MsgRef>2</MsgRef>
+      <CmdRef>0</CmdRef>
+      <Cmd>SyncHdr</Cmd>
+      <TargetRef>http://sync.soocial.com</TargetRef>
+      <SourceRef>fol-WklKSUFOLVBDOnppamlhbg==</SourceRef>
+      <Data>200</Data>
+    </Status>
+    <Status>
+      <CmdID>2</CmdID>
+      <MsgRef>2</MsgRef>
+      <CmdRef>3</CmdRef>
+      <Cmd>Sync</Cmd>
+      <TargetRef>contacts</TargetRef>
+      <SourceRef>contact</SourceRef>
+      <Data>403</Data>
+    </Status>
+    <Sync>
+      <CmdID>3</CmdID>
+      <Target>
+        <LocURI>contact</LocURI>
+      </Target>
+      <Source>
+        <LocURI>contacts</LocURI>
+      </Source>
+      <NumberOfChanges>0</NumberOfChanges>
+    </Sync>
+  </SyncBody>
+</SyncML>

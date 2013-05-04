@@ -1,0 +1,21 @@
+<Meta>
+<Format xmlns='syncml:metinf'>b64</Format>
+<Type xmlns='syncml:metinf'>text/x-s4j-sifc</Type>
+<FieldLevel xmlns="syncml:metinf"/>
+<Anchor xmlns='syncml:metinf'>
+<Last xmlns='syncml:metinf'>20000824T133000Z</Last>
+<Next xmlns='syncml:metinf'>20000824T221300Z</Next>
+</Anchor>
+<Version xmlns='syncml:metinf'>20000301T133000Z</Version>
+<Mark xmlns='syncml:metinf'>unread</Mark>
+<MaxMsgSize xmlns='syncml:metinf'>1023</MaxMsgSize>
+<MaxObjSize xmlns='syncml:metinf'>10240</MaxObjSize>
+<Mem xmlns='syncml:metinf'>
+<SharedMem xmlns='syncml:metinf'/>
+<FreeMem xmlns='syncml:metinf'>8100</FreeMem>
+<FreeID xmlns='syncml:metinf'>81</FreeID>
+</Mem>
+<NextNonce
+xmlns='syncml:metinf'>QWxhZGRpbjpvcGVuIHNlc2FtZQ==</NextNonce>
+<Size xmlns='syncml:metinf'>10</Size>
+</Meta>

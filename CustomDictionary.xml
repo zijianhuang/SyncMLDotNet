@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <Words>
+    <Recognized>
+      <Word>SyncML</Word>
+      <Word>Chal</Word>
+      <Word>Info</Word>
+      <Word>Sync</Word>
+      <Word>Sifc</Word>
+      <Word>Fonlow</Word>
+      <Word>devinf</Word>
+      <Word>Fw</Word>
+      <Word>OEM</Word>
+      <Word>UTC</Word>
+      <Word>Ver</Word>
+      <Word>Mem</Word>
+      <Word>Rx</Word>
+      <Word>Tx</Word>
+      <Word>GUID</Word>
+      <Word>param</Word>
+      <Word>val</Word>
+      <Word>resp</Word>
+      <Word>DTD</Word>
+      <Word>cred</Word>
+      <Word>uc</Word>
+      <Word>vcard</Word>
+      <Word>MD5</Word>
+      <Word>Sif</Word>
+      <Word>sifc</Word>
+    </Recognized>
+  </Words>
+</Dictionary>

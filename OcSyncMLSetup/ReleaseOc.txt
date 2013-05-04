@@ -1,0 +1,4 @@
+This is a release of SyncML Client for Open Contacts, the primary application using the API. 
+
+The official web site of this application is at
+http://www.fonlow.com/opencontacts/SyncMLClient/

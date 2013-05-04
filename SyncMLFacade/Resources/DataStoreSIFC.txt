@@ -1,0 +1,4 @@
+<DataStore><SourceRef>scard</SourceRef><DisplayName>Sif-C Source</DisplayName><Rx-Pref><CTType>text/x-s4j-sifc</CTType><VerCT></VerCT></Rx-Pref><Rx>
+<CTType>text/x-s4j-sifc</CTType><VerCT></VerCT></Rx><Tx-Pref><CTType>text/x-s4j-sifc</CTType><VerCT></VerCT>
+</Tx-Pref><Tx><CTType>text/x-s4j-sifc</CTType><VerCT></VerCT></Tx><SyncCap><SyncType>1</SyncType><SyncType>2</SyncType>
+<SyncType>3</SyncType><SyncType>4</SyncType><SyncType>5</SyncType><SyncType>6</SyncType></SyncCap></DataStore>

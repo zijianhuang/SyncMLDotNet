@@ -1,0 +1,43 @@
+<SyncML xmlns='SYNCML:SYNCML1.1'>
+  <SyncHdr>
+    <VerDTD>1.1</VerDTD>
+    <VerProto>SyncML/1.1</VerProto>
+    <SessionID>1</SessionID>
+    <MsgID>2</MsgID>
+    <Target>
+      <LocURI>http://www.syncml.org/sync-server</LocURI>
+    </Target>
+    <Source>
+      <LocURI>IMEI:493005100592800</LocURI>
+    </Source>
+  </SyncHdr>
+  <SyncBody>
+    <Status>
+      <CmdID>1</CmdID>
+      <MsgRef>1</MsgRef>
+      <CmdRef>0</CmdRef>
+      <Cmd>SyncHdr</Cmd>
+      <TargetRef>IMEI:493005100592800</TargetRef>
+      <SourceRef> http://www.syncml.org/sync-server </SourceRef>
+      <Data>212</Data>
+    </Status>
+    <Status>
+      <CmdID>2</CmdID>
+      <MsgRef>1</MsgRef>
+      <CmdRef>5</CmdRef>
+      <Cmd>Alert</Cmd>
+      <TargetRef>./dev-contacts</TargetRef>
+      <SourceRef>./contacts/james_bond</SourceRef>
+      <Data>200</Data>
+      <Item>
+        <Data>
+          <Anchor xmlns="syncml:metinf">
+            <Next>200005022T093223Z </Next>
+          </Anchor>
+        </Data>
+      </Item>
+    </Status>
+    <Final/>
+  </SyncBody>
+</SyncML>
+

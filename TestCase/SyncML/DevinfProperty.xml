@@ -1,0 +1,10 @@
+<Property>
+<PropName>TEL</PropName>
+<MaxOccur>3</MaxOccur>
+<PropParam>
+<ParamName>TYPE</ParamName>
+<ValEnum>VOICE,HOME</ValEnum>
+<ValEnum>FAX,HOME</ValEnum>
+<ValEnum>VOICE,CELL</ValEnum>
+</PropParam>
+</Property>

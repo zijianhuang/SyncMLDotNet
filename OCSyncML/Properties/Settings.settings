@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fonlow.SyncML.Windows.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BasicURI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:8080/funambol/ds</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tttttttt</Value>
+    </Setting>
+    <Setting Name="UseProxy" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Proxy" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogWinPosition" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">200, 100</Value>
+    </Setting>
+    <Setting Name="LogWinSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">700, 600</Value>
+    </Setting>
+    <Setting Name="RememberPassword" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DeviceAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FonlowSyncMLClientGuid</Value>
+    </Setting>
+    <Setting Name="LastAnchorTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">1899-11-24</Value>
+    </Setting>
+    <Setting Name="LastAnchor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="VendorName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Fonlow IT</Value>
+    </Setting>
+    <Setting Name="ModelName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Fonlow SyncML Client</Value>
+    </Setting>
+    <Setting Name="ModelVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">999</Value>
+    </Setting>
+    <Setting Name="ServerContactSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">scard</Value>
+    </Setting>
+    <Setting Name="ServerContactTypeVer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2.1</Value>
+    </Setting>
+    <Setting Name="ContactExchangeType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SifC</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

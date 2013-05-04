@@ -1,0 +1,29 @@
+<SyncML>
+    <SyncHdr>
+        <VerDTD>1.1</VerDTD>
+        <VerProto>SyncML/1.1</VerProto>
+        <SessionID>12345678</SessionID>
+        <MsgID>3</MsgID>
+        <Target><LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI></Target>
+    <Source><LocURI>fjg-QFhng2</LocURI></Source>
+    </SyncHdr>
+    <SyncBody>
+        <Status>
+            <CmdID>1</CmdID>
+            <MsgRef>2</MsgRef>
+            <CmdRef>0</CmdRef>
+            <Cmd>SyncHdr</Cmd>
+            <TargetRef>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</TargetRef>
+            <SourceRef>fjg-QFhng2</SourceRef>
+            <Data>200</Data>
+        </Status>
+        <Alert>
+            <CmdID>2</CmdID>
+            <Data>222</Data>
+            <Item>
+                <Target><LocURI>http://localhost:8080/funambol/ds;jsessionid=9FFCE11143AE1A0087DB9C89FC558D54</LocURI></Target>
+                <Source><LocURI>fjg-QFhng2</LocURI></Source>
+            </Item>
+        </Alert>
+    </SyncBody>
+</SyncML>

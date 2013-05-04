@@ -1,0 +1,11 @@
+<SyncBody>
+<Status>
+<CmdID>8765</CmdID>
+<MsgRef>1</MsgRef>
+<CmdRef>1234</CmdRef>
+<Cmd>Add</Cmd>
+<TargetRef>./bruce1</TargetRef>
+<SourceRef>IMEI:001004FF1234567</SourceRef>
+<Data>401</Data>
+</Status>
+</SyncBody>
