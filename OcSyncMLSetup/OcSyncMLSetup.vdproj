@@ -15,32 +15,86 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "OwnerKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_10EDD43FD02148B79254CC9C7B00E4A8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_18F02832DCEE81836380FC00D8CC519F"
+        "MsmKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
         "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_22FB43C6C4C3DF13FC0D738571A2A631"
-        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_22FB43C6C4C3DF13FC0D738571A2A631"
+        "MsmKey" = "8:_199E128B69119DDFAC7F56018168AE93"
         "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_31712952751B3C94B88B92CFC1EA5A23"
+        "MsmKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "OwnerKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "OwnerKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_199E128B69119DDFAC7F56018168AE93"
         "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31D1FFEB4D70CCAA783713E1AA30EA1B"
+        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31D1FFEB4D70CCAA783713E1AA30EA1B"
+        "OwnerKey" = "8:_8239F43DB8E11FF04C2E9D1AE0E3BF85"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_46B5922268FC4EAF0A3FDD0DFEDE9441"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_46B5922268FC4EAF0A3FDD0DFEDE9441"
+        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_46B5922268FC4EAF0A3FDD0DFEDE9441"
+        "OwnerKey" = "8:_716F935253EF1FF409767FD4C5E79A8E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,8 +105,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_692FF8DD924072115605F272DA04BD28"
-        "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
+        "MsmKey" = "8:_6680B7C72BE38B03B24FB0D301788367"
+        "OwnerKey" = "8:_31D1FFEB4D70CCAA783713E1AA30EA1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_716F935253EF1FF409767FD4C5E79A8E"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_716F935253EF1FF409767FD4C5E79A8E"
+        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,26 +129,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7A6A00F7A6D06FF533D4E7FC00EAAFA1"
+        "MsmKey" = "8:_8239F43DB8E11FF04C2E9D1AE0E3BF85"
         "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7A6A00F7A6D06FF533D4E7FC00EAAFA1"
+        "MsmKey" = "8:_9C525E2BFADECC5DDEDCBBAEDA3DE679"
         "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7F609D3B018B5E7CDA62F8C79F8C3D6D"
-        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8048DAD05339BE3F8585653410DE9CFC"
-        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmKey" = "8:_9C525E2BFADECC5DDEDCBBAEDA3DE679"
+        "OwnerKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,38 +153,92 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A54B4874F54984CF67854CEA52B68DCA"
-        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B11559076D678E81928B18E4A606BDAC"
-        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E11F1BBBFB27EC049F198B4EB954B4CF"
+        "MsmKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
         "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E9D415FEA00EA19C14C4C8D10D464A44"
+        "MsmKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
+        "OwnerKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
         "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E9D415FEA00EA19C14C4C8D10D464A44"
+        "MsmKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
+        "OwnerKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
+        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
+        "OwnerKey" = "8:_8239F43DB8E11FF04C2E9D1AE0E3BF85"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
         "OwnerKey" = "8:_A86055F08E9F419EAC3703C094C34A98"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_9C525E2BFADECC5DDEDCBBAEDA3DE679"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,7 +250,73 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_11F50C549792663FE0B3AC1F6CBB1C24"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0A7556BBDDB100632054AA0E8A7D787C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9C525E2BFADECC5DDEDCBBAEDA3DE679"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_78F62E35116B4CFE9A32CCBA86F3E4E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8239F43DB8E11FF04C2E9D1AE0E3BF85"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_31D1FFEB4D70CCAA783713E1AA30EA1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DAA1ED544E409F73E19646D570FF2FFB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_199E128B69119DDFAC7F56018168AE93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_716F935253EF1FF409767FD4C5E79A8E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_46B5922268FC4EAF0A3FDD0DFEDE9441"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B09EFF056A8ABBF16557592887D2E030"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FD33CB939E755E3E6520997F43FC5914"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -166,10 +346,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
                     {
-                    "Name" = "8:.NET Framework 3.5 SP1"
-                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
@@ -258,6 +438,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0A7556BBDDB100632054AA0E8A7D787C"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.SyncMLFacade, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0A7556BBDDB100632054AA0E8A7D787C"
+                    {
+                    "Name" = "8:Fonlow.SyncML.SyncMLFacade.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.SyncMLFacade.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_10EDD43FD02148B79254CC9C7B00E4A8"
             {
             "SourcePath" = "8:..\\Icons\\sync.ico"
@@ -276,6 +487,130 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_11F50C549792663FE0B3AC1F6CBB1C24"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.MultiSyncUI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_11F50C549792663FE0B3AC1F6CBB1C24"
+                    {
+                    "Name" = "8:Fonlow.SyncML.MultiSyncUI.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.MultiSyncUI.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_199E128B69119DDFAC7F56018168AE93"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.SyncMLDataSourceShared, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_199E128B69119DDFAC7F56018168AE93"
+                    {
+                    "Name" = "8:Fonlow.SyncML.SyncMLDataSourceShared.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.SyncMLDataSourceShared.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_31D1FFEB4D70CCAA783713E1AA30EA1B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.OpenContacts.Interop, Version=1.2.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_31D1FFEB4D70CCAA783713E1AA30EA1B"
+                    {
+                    "Name" = "8:Fonlow.OpenContacts.Interop.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.OpenContacts.Interop.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_46B5922268FC4EAF0A3FDD0DFEDE9441"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vCard, Version=1.1.0.0, Culture=neutral, PublicKeyToken=14211f6543d49911, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_46B5922268FC4EAF0A3FDD0DFEDE9441"
+                    {
+                    "Name" = "8:vCard.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:vCard.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6089DAE416FA4705AF51E36BE8198D96"
@@ -298,6 +633,119 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6680B7C72BE38B03B24FB0D301788367"
+            {
+            "SourcePath" = "8:opencontacts.exe"
+            "TargetName" = "8:opencontacts.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_716F935253EF1FF409767FD4C5E79A8E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vCardSifc, Version=1.1.0.0, Culture=neutral, PublicKeyToken=14211f6543d49911, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_716F935253EF1FF409767FD4C5E79A8E"
+                    {
+                    "Name" = "8:vCardSifc.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:vCardSifc.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8239F43DB8E11FF04C2E9D1AE0E3BF85"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.OCPlatformProvider, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_8239F43DB8E11FF04C2E9D1AE0E3BF85"
+                    {
+                    "Name" = "8:Fonlow.SyncML.OCPlatformProvider.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.OCPlatformProvider.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9C525E2BFADECC5DDEDCBBAEDA3DE679"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.CommonUI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9C525E2BFADECC5DDEDCBBAEDA3DE679"
+                    {
+                    "Name" = "8:Fonlow.SyncML.CommonUI.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.CommonUI.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A395CDC7A8C14A49B4FF2C0A636D011A"
             {
             "SourcePath" = "8:..\\OCSyncMLExtraFiles\\ChangeLogXMLToSifc.xsl"
@@ -316,6 +764,99 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B09EFF056A8ABBF16557592887D2E030"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.SyncMLElements, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B09EFF056A8ABBF16557592887D2E030"
+                    {
+                    "Name" = "8:Fonlow.SyncML.SyncMLElements.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.SyncMLElements.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DAA1ED544E409F73E19646D570FF2FFB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.OCLocalDataSource, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DAA1ED544E409F73E19646D570FF2FFB"
+                    {
+                    "Name" = "8:Fonlow.SyncML.OCLocalDataSource.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.OCLocalDataSource.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD33CB939E755E3E6520997F43FC5914"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Fonlow.SyncML.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aeaa906b09cd6374, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FD33CB939E755E3E6520997F43FC5914"
+                    {
+                    "Name" = "8:Fonlow.SyncML.Common.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Fonlow.SyncML.Common.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_92EE9886732845299D53F554FD8F0B53"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
