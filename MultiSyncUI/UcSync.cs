@@ -52,62 +52,21 @@ namespace Fonlow.SyncML.MultiSync
             toolTip1.SetToolTip(btnSync, TypeDescriptor.GetConverter(syncItem.SyncDirection).ConvertToString(syncItem.SyncDirection));
         }
 
-        /// <summary>
-        /// Create a mainform as a component of client codes. 
-        /// Client codes will create ILocalDataSource object.
-        /// </summary>
-        /// <param name="syncDataSource"></param>
-        public UcSync(ILocalDataSource syncDataSource, string syncItemPropertyName, SyncSettingsBase syncSettings)
-            : this()
-        {
-            if (syncSettings == null)
-                throw new ArgumentNullException("syncSettings");
-
-            this.syncItem = syncSettings[syncItemPropertyName] as SyncItem;
-            this.syncItemPropertyName = syncItemPropertyName;
-            System.Diagnostics.Debug.Assert(syncItem != null, "what, not syncItem?");
-            this.syncSettings = syncSettings;
-            localDataSource = syncDataSource;
-            ShowLastSyncInfo();
-            ButtonLabel = syncItem.DisplayName;
-        }
 
         /// <summary>
         /// Create a mainform as a component of client codes. 
         /// Client codes should give an assembly with an ILocalDataSource class.
         /// </summary>
-        public UcSync(string syncItemPropertyName, SyncSettingsBase syncSettings)
+        public UcSync(SyncItem syncItem, SyncSettingsBase syncSettings)
             : this()
         {
             if (syncSettings == null)
                 throw new ArgumentNullException("syncSettings");
 
-            this.syncItem = syncSettings[syncItemPropertyName] as SyncItem;
-            this.syncItemPropertyName = syncItemPropertyName;
+            this.syncItem = syncItem;
             System.Diagnostics.Debug.Assert(syncItem != null, "what, not syncItem?");
             this.syncSettings = syncSettings;
-            localDataSourceAssembly = syncItem.LocalDataSourceAssembly;
-            ShowLastSyncInfo();
-            ButtonLabel = syncItem.DisplayName;
-        }
-
-        string syncItemPropertyName;
-
-        /// <summary>
-        /// This is mostly used for constructing with a known localDataSource in an integrated solution.
-        /// An example is CX.
-        /// </summary>
-        public UcSync(Type localDataSourceType, string syncItemPropertyName, SyncSettingsBase syncSettings)
-            : this()
-        {
-            if (syncSettings == null)
-                throw new ArgumentNullException("syncSettings");
-
-            this.syncItem = syncSettings[syncItemPropertyName] as SyncItem;
-            this.syncItemPropertyName = syncItemPropertyName;
-            System.Diagnostics.Debug.Assert(syncItem != null, "what, not syncItem?");
-            this.syncSettings = syncSettings;
-            this.localDataSourceType = localDataSourceType;
+            
             ShowLastSyncInfo();
             ButtonLabel = syncItem.DisplayName;
         }
@@ -127,9 +86,6 @@ namespace Fonlow.SyncML.MultiSync
             btnSync.Image = image;
         }
 
-        Type localDataSourceType;
-
-        string localDataSourceAssembly;
 
         void ShowLastSyncInfo()
         {
@@ -161,15 +117,16 @@ namespace Fonlow.SyncML.MultiSync
 
         private SyncMLFacade facade;
 
-        ILocalDataSource localDataSource;
+        
 
         private SyncMLFacade CreateFacadeForSyncSession()
         {
             SyncMLFacade r;
+            ILocalDataSource localDataSource;
 
             try
             {
-                localDataSource = LoadLocalDataSource();
+                localDataSource = CreateLocalDataSource();
             }
             catch (NullReferenceException e)
             {
@@ -183,13 +140,19 @@ namespace Fonlow.SyncML.MultiSync
 
             r = new SyncMLFacade(localDataSource);
 
+            return InitSyncMLFacade(r) ? r : null;
+        }
+
+        bool InitSyncMLFacade(SyncMLFacade  r)
+        {
             r.User = syncSettings.User;
             //    facade.ContactMediumType = ContactExchangeType.Vcard21;
-            string password = ObtainPassword();
+            string password = ObtainPasswordFromSettingsOrUx();
             if (String.IsNullOrEmpty(password))
-                return null;
+                return false;
             else
                 r.Password = password;
+
             r.BasicUriText = syncSettings.BasicUri;
 
             r.DeviceAddress = syncSettings.DeviceAddress;
@@ -220,7 +183,6 @@ namespace Fonlow.SyncML.MultiSync
             r.GracefulStopEvent += new EventHandler<EventArgs>(facade_GracefulStopEvent);
             #endregion
 
-
             System.Net.WebProxy proxy;
             if (syncSettings.UseProxy)
             {
@@ -232,8 +194,7 @@ namespace Fonlow.SyncML.MultiSync
 
             r.Proxy = proxy;
 
-
-            return r;
+            return true;
         }
 
         /// <summary>
@@ -245,7 +206,7 @@ namespace Fonlow.SyncML.MultiSync
             Assembly assembly;
             try
             {
-                assembly = Assembly.Load(localDataSourceAssembly);
+                assembly = Assembly.Load(syncItem.LocalDataSourceAssembly);
             }
             catch (System.IO.FileLoadException e)
             {
@@ -258,7 +219,7 @@ namespace Fonlow.SyncML.MultiSync
                 return null;
             }
 
-            Trace.TraceInformation("Local data source is from this assembly: " + localDataSourceAssembly);
+            Trace.TraceInformation("Local data source is from this assembly: " + syncItem.LocalDataSourceAssembly);
             //           Trace.Assert(assembly != null, "Assembly with LocalDataSourceAssembly must be defined");
             if (assembly == null)
             {
@@ -280,17 +241,20 @@ namespace Fonlow.SyncML.MultiSync
         /// Or return an external ILocalDataSource object given by a client.
         /// </summary>
         /// <returns></returns>
-        private ILocalDataSource LoadLocalDataSource()
+        private ILocalDataSource CreateLocalDataSource()
         {
-            if (!String.IsNullOrEmpty(localDataSourceAssembly))
+            Type localDataSourceType=null;
+
+            if (!String.IsNullOrEmpty(syncItem.LocalDataSourceAssembly))
             {
                 localDataSourceType = FindLocalDataSourceTypeInAssembly();
+
+                if (localDataSourceType == null)
+                {
+                    return null;
+                }
             }
 
-            if (localDataSourceType == null)
-            {
-                return null;
-            }
 
             try
             {
@@ -315,7 +279,7 @@ namespace Fonlow.SyncML.MultiSync
             }
         }
 
-        private string ObtainPassword()
+        private string ObtainPasswordFromSettingsOrUx()
         {
             if (!String.IsNullOrEmpty(syncSettings.Password))
             {
@@ -542,9 +506,8 @@ namespace Fonlow.SyncML.MultiSync
             ///Apparetly reference to complex type of ApplicationSettingsBase works properly only in the same class and in the same thread
             ///otherwise, the changes to properties of the complex type can not be detected by ApplicationSettingsBase.
             ///This function is called in another thread of the Facade. So I need to use propertyName to make the dirty flag work properly.
-            SyncItem p = syncSettings[syncItemPropertyName] as SyncItem;
-            p.LastAnchorTime = e.Time;
-            p.LastAnchor = e.LastAnchor;
+            syncItem.LastAnchorTime = e.Time;
+            syncItem.LastAnchor = e.LastAnchor;
             syncSettings.Save();
             AppendStatusText("Last sync: " + syncItem.LastAnchorTime.ToString("yyyy-MM-dd HH:mm:ss"));
             ShowLastSyncInfo();
@@ -562,7 +525,7 @@ namespace Fonlow.SyncML.MultiSync
         {
             if (this.InvokeRequired)
             {
-                ActionHandler d = new ActionHandler(ShowWaitCursor);
+                Action d = () => { ShowWaitCursor(); };
                 this.Invoke(d);
             }
             else
@@ -575,7 +538,7 @@ namespace Fonlow.SyncML.MultiSync
         {
             if (this.InvokeRequired)
             {
-                ActionHandler d = new ActionHandler(ShowDefaultCursor);
+                Action d = () => { ShowDefaultCursor(); };
                 this.Invoke(d);
             }
             else
@@ -633,8 +596,7 @@ namespace Fonlow.SyncML.MultiSync
             facade = CreateFacadeForSyncSession();
             if (facade != null)
             {
-                facade.SyncType = syncType;
-                return facade.LogOnAndSyncAsync();
+                return facade.LogOnAndSyncAsync(syncType);
             }
             else
             {
@@ -659,21 +621,14 @@ namespace Fonlow.SyncML.MultiSync
             return Sync(SyncType.OneWayFromClient);
         }
 
+        /// <summary>
+        /// Basiclly RefreshFromClient with empty data in order to delete all on server,
+        /// then run slow sync to add to the server.
+        /// This is because some SyncML servers do not support Refresh from Client.
+        /// </summary>
         private IAsyncResult RefreshFromClient()
         {
-            SetControlEnabled(btnSync, false);//will be enabled when sync is finished.
-            SetControlVisible(btnStop, true);
-            facade = CreateFacadeForSyncSession();
-            if (facade != null)
-            {
-                return facade.LogOnAndRefreshFromClientAsync();
-            }
-            else
-            {
-                SetControlEnabled(btnSync, true);//will be enabled when sync is finished.
-                SetControlVisible(btnStop, false);
-            }
-            return null;
+            return Sync(SyncType.RefreshFromClient);
         }
 
         private IAsyncResult SyncFromServer()
@@ -685,30 +640,6 @@ namespace Fonlow.SyncML.MultiSync
         {
             return Sync(SyncType.RefreshFromServer);
         }
-
-        /*private void ExecuteSlowSync()
-        {
-            if (MessageBox.Show(this, "Slow Sync will exchange all info between the local and the server. Do you want to continue?",
-    "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                ResetLastAnchor();
-                SlowSync();
-            }
-        }*/
-
-        /*private void syncFromClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("This operation will send modified content to the server, and will not receive modifications from server. Both sides might then lost sync. Do you want to continue?",
-                "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                SyncFromClient();
-        }
-
-        private void refreshFromServerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("This operation will download all content from the server, which will overwrite all data in local database. Do you want to continue?",
-                "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                RefreshFromServer();
-        }*/
 
     }
 

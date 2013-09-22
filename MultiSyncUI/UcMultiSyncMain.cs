@@ -205,7 +205,7 @@ namespace Fonlow.SyncML.MultiSync
                 SyncItem syncItem = settings[syncItemPropertyName] as SyncItem;
                 if (syncItem.Enabled)
                 {
-                    UcSync syncUc = new UcSync(syncItemPropertyName, settings);
+                    UcSync syncUc = new UcSync(syncItem, settings);
                     syncUc.Dock = DockStyle.None;
                     syncUc.Location = new Point(0, 0);
                     syncUc.Width = ClientSize.Width;
@@ -228,7 +228,7 @@ namespace Fonlow.SyncML.MultiSync
                     SyncItem item = settings[itemName] as SyncItem;
                     if (item.Enabled)
                     {
-                        UcSync syncUc = new UcSync(itemName, settings);
+                        UcSync syncUc = new UcSync(item, settings);
                         syncUc.Dock = DockStyle.None;
                         syncUc.Location = new Point(0, y);
                         syncUc.Width = ClientSize.Width;

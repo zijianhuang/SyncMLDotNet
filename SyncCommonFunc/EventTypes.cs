@@ -8,7 +8,6 @@ namespace Fonlow.SyncML.Common
     public delegate void ProcessTextHandler(string text);
     public delegate void ProcessIntegerHandler(int number);
     public delegate void ProcessCallback(IAsyncResult asyncResult);
-    public delegate void ActionHandler();
     public delegate void InitProgressBarHandler(InitProgressBarEventArgs e);
 
 
