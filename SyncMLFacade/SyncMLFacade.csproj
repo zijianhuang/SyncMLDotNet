@@ -97,10 +97,6 @@
       <Project>{1C6C8F32-DFAB-47D8-8893-354560DBE84B}</Project>
       <Name>SyncCommonFunc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SyncCommonUI\SyncCommonUI.csproj">
-      <Project>{41447516-B4F7-4104-8FFA-6689EFD3F699}</Project>
-      <Name>SyncCommonUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SyncMLDataSourceShared\SyncMLDataSourceShared.csproj">
       <Project>{B2A358B7-7EE6-4F9F-B903-317BF9F773E0}</Project>
       <Name>SyncMLDataSourceShared</Name>
