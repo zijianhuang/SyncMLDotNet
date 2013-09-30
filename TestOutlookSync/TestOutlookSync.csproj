@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="CalendarTest.cs" />
     <Compile Include="NotesTest.cs" />
+    <Compile Include="ContactsIntegrationTests.cs" />
     <Compile Include="OutlookContactsTest.cs" />
     <Compile Include="OutlookItemsTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

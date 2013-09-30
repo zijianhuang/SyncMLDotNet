@@ -112,8 +112,8 @@ namespace Fonlow.SyncML.Common
 
         [UserScopedSettingAttribute()]
         [Category(GeneralCategory)]
-        [DisplayName("Location")]
-        [Description("Service provider's SyncML server location")]
+        [DisplayName("Host")]
+        [Description("Service provider's SyncML server host")]
         [DefaultSettingValue("http://localhost:8080/funambol/ds")]
         public string BasicUri
         {

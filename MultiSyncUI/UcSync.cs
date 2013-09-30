@@ -64,7 +64,6 @@ namespace Fonlow.SyncML.MultiSync
                 throw new ArgumentNullException("syncSettings");
 
             this.syncItem = syncItem;
-            System.Diagnostics.Debug.Assert(syncItem != null, "what, not syncItem?");
             this.syncSettings = syncSettings;
             
             ShowLastSyncInfo();
@@ -143,7 +142,7 @@ namespace Fonlow.SyncML.MultiSync
             return InitSyncMLFacade(r) ? r : null;
         }
 
-        bool InitSyncMLFacade(SyncMLFacade  r)
+         bool InitSyncMLFacade(SyncMLFacade  r)
         {
             r.User = syncSettings.User;
             //    facade.ContactMediumType = ContactExchangeType.Vcard21;
@@ -457,11 +456,6 @@ namespace Fonlow.SyncML.MultiSync
         }
         #endregion
 
-        private void HandleOperationMessage(object sender, StatusEventArgs e)
-        {
-            AppendStatusText(e.Text);
-        }
-
         /// <summary>
         /// Optional text box to display status text.
         /// </summary>
@@ -492,6 +486,14 @@ namespace Fonlow.SyncML.MultiSync
             }
         }
 
+        #region Facade event handlers
+
+        private void HandleOperationMessage(object sender, StatusEventArgs e)
+        {//todo: this may be replaced by TraceSource
+            AppendStatusText(e.Text);
+        }
+
+
         private void HandleStartOperation(object sender, StatusEventArgs e)
         {
             AppendStatusText(e.Text);
@@ -521,6 +523,9 @@ namespace Fonlow.SyncML.MultiSync
             SetControlVisible(btnStop, false);
         }
 
+
+
+
         private void ShowWaitCursor()
         {
             if (this.InvokeRequired)
@@ -547,7 +552,9 @@ namespace Fonlow.SyncML.MultiSync
             }
         }
 
-        private void btnSync_Click(object sender, EventArgs e)
+        #endregion
+
+         private void btnSync_Click(object sender, EventArgs e)
         {
             Sync();
         }

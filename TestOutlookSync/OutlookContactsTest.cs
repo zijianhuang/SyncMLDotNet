@@ -54,20 +54,20 @@ namespace TestOutlookSync
 
         [TestMethod]
         [Description("Check Outlook contacts")]
-        public void AddContact()
+        public void AddContactToOutlook()
         {
             XElement x = XElement.Load(MockPath+"sifc.xml");
             Application app = new Application();
             OutlookContactsWithSifC agent = new OutlookContactsWithSifC(app);
             OutlookContacts outlookAgent = new OutlookContacts(app);
             
-            string entryId = outlookAgent.GetEntryIdByDisplayName("Ing John Patrick Doe Sn");
+            string entryId = outlookAgent.GetEntryIdByDisplayName("Ing John Patrick Doe Sn");//Delete it if exists
             if (entryId != null)
             {
                 bool deletionOK = outlookAgent.DeleteItem(entryId);
                 Assert.IsTrue(deletionOK);
             }
-            agent.AddItem(x.ToString());
+            agent.AddItem(x.ToString());//Add to outlook
             entryId = outlookAgent.GetEntryIdByDisplayName("Ing John Patrick Doe Sn");
             Assert.IsTrue(entryId != null);
         }
@@ -121,7 +121,7 @@ namespace TestOutlookSync
             Application app = new Application();
             OutlookContactsWithSifC agent = new OutlookContactsWithSifC(app);
             OutlookContacts outlookAgent = new OutlookContacts(app);
-            AddContact();
+            AddContactToOutlook();
             string existingEntryId = outlookAgent.GetEntryIdByDisplayName("Ing John Patrick Doe Sn");
 
             XElement x = XElement.Load(MockPath + "sifc.xml");
