@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupOutlookSyncMLAddin2", "SetupOutlookSyncMLAddin2\SetupOutlookSyncMLAddin2.vdproj", "{EC3E735B-CEEF-4839-856E-92BC943A33D5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OcSyncMLSetup", "OcSyncMLSetup\OcSyncMLSetup.vdproj", "{59CFC028-D5F2-4452-9598-24C766567460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC3E735B-CEEF-4839-856E-92BC943A33D5}.Debug|Default.ActiveCfg = Debug
+		{EC3E735B-CEEF-4839-856E-92BC943A33D5}.Debug|Default.Build.0 = Debug
+		{EC3E735B-CEEF-4839-856E-92BC943A33D5}.Release|Default.ActiveCfg = Release
+		{EC3E735B-CEEF-4839-856E-92BC943A33D5}.Release|Default.Build.0 = Release
+		{59CFC028-D5F2-4452-9598-24C766567460}.Debug|Default.ActiveCfg = Debug
+		{59CFC028-D5F2-4452-9598-24C766567460}.Debug|Default.Build.0 = Debug
+		{59CFC028-D5F2-4452-9598-24C766567460}.Release|Default.ActiveCfg = Release
+		{59CFC028-D5F2-4452-9598-24C766567460}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
