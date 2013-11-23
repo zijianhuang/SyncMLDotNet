@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fonlow.SyncML.SyncMLElements</name>
+    </assembly>
+    <members>
+        <member name="T:Fonlow.SyncML.Elements.AccessBody">
+            <summary>
+            Access different parts of the body of SyncML.
+            Collection returned may be empty, and single command returned may be null.
+            ((Alert | Atomic | Copy | Exec | Get | Map | Move | Put | Results | Search| Sequence | Status | Sync | Add | Replace | Delete)+, Final?)
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.AccessBodyCommand`1">
+            <summary>
+            Provide basic generic function to class AccessBody.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.AccessBodyCommand`1.GetCommand(Fonlow.SyncML.Elements.SyncMLSyncML)">
+            <summary>
+            Get a syncML command.
+            </summary>
+            <param name="syncml"></param>
+            <returns>Null if no command expected.</returns>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.AccessBodyCommand`1.GetCommands(Fonlow.SyncML.Elements.SyncMLSyncML)">
+            <summary>
+            Get collection of command T.
+            </summary>
+            <param name="syncml">SyncML message</param>
+            <returns>Collection of coimmand T. If no command, the collection is empty.</returns>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLElement">
+            <summary>
+            Basic type of all elements
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLElement.Xml">
+            <summary>
+            XML of whole element. Each element class will produce XmlText from memebers.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSimpleElement">
+            <summary>
+            For elements with text only
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLSimpleElement.Content">
+            <summary>
+            Text contained.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLComplexElement">
+            <summary>
+            For elements with children elements and attributes.
+            The derived classes use the following conventions to map the schema of SyncML schema to object models:
+            1. Xml element to property
+            2. For optional property, the Getter will always check whether the storage is null. If null, create one.
+            3. For optional property, XmlText will always check whether the property is null. If null, return empty string.
+            4. For property, the Setter will throw exception if assigned with null.
+            5. For multiple elements of the same name, use Collection (readonly property)
+            6. The default constructor is hidden, and 2 static Create functions will be implemented.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.SyncMLComplexElement.#ctor(System.String)">
+            <summary>
+            Create element with default SyncML1.2 namespace.
+            </summary>
+            <param name="elementName"></param>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLCommand">
+            <summary>
+            Parent class of SyncML commands, with common properties
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.ElementReader">
+            <summary>
+            Helper class to read sub elements with the same namespace of the parent.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSimpleElementFactory">
+            <summary>
+            Create a simple SyncML element for XML.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfFilter_Rx">
+             <summary>
+             Specifies the supported filter grammars that can be received by the data store.
+             </summary>
+            <ParentElements> Datastore</ParentElements>
+            <Restrictions> If a device supports filtering for a specific data store, then at least one Filter-Rx element MUST be present
+            and it MUST support at least the “syncml:filtertype-cgi” grammar. The following example shows the minimum requirements
+            for a device that supports filtering on a specific data store.</Restrictions>
+            <ContentModel>Filter-Rx (CTType, VerCT)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfFilterCap">
+             <summary>
+             Indicates the filtering capabilities.
+             </summary>
+            <ParentElements> Datastore</ParentElements>
+            <ContentModel>FilterCap (CTType, VerCT, FilterKeyword*, PropName*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfSyncCap">
+             <summary>
+             Specifies the synchronization capabilities of the given local datastore.
+             </summary>
+            <ParentElements>DataStore</ParentElements> 
+            <ContentModel>(SyncType+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfExt">
+             <summary>
+             Specifies the non-standard, experimental extensions supported by the device. The
+             extensions are specified in terms of the XML element type name and the value.
+             </summary>
+            <ContentModel>(XNam, Xval*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfPropParam">
+             <summary>
+             Specifies a supported parameter of a given property
+             </summary>
+             Usage: 
+            <ContentModel>PropParam (ParamName, DataType?, ValEnum*, DisplayName?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfProperty">
+             <summary>
+             Specifies a supported property of a given content type.
+             </summary>
+            <ParentElements> CTCap</ParentElements>
+            <ContentModel>Property (PropName, DataType?, MaxOccur?, MaxSize?, NoTruncate?, ValEnum*,DisplayName?, PropParam*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfRx">
+            <summary>
+            Content Model:(CTType, VerCT)
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfRx_Pref">
+            <summary>
+            Content Model:(CTType, VerCT)
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfTx">
+            <summary>
+            Content Model:(CTType, VerCT)
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfTx_Pref">
+            <summary>
+            Content Model:(CTType, VerCT)
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfDSMem">
+             <summary>
+             Specifies the maximum memory and item identifier for a given local datastore.
+             </summary>
+            <ParentElements> DataStore</ParentElements>
+            <ContentModel>(SharedMem?, MaxMem?, MaxID?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfDataStore">
+             <summary>
+             Specifies the properties of a given local datastore.
+             </summary>
+             Usage: 
+            <ContentModel>
+            (SourceRef, DisplayName?, MaxGUIDSize?, Rx-Pref, Rx*, Tx-Pref,Tx*, CTCap+, DSMem?, SupportHierarchicalSync?, SyncCap, 
+            Filter-Rx*,FilterCap*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevInf">
+             <summary>
+             Specifies the root or document element type of the Device Information document.
+             </summary>
+             Usage: 
+            <ContentModel>VerDTD, Man, Mod, OEM?, FwV, SwV, HwV, DevID, DevTyp, UTC?,
+            SupportLargeObjs?, SupportNumberOfChanges?, DataStore+, Ext*
+              </ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.DevinfCTCap">
+             <summary>
+             Specifies the content type capabilities of the device.
+             </summary>
+            <ContentModel>CTCap ( CTType, VerCT, FieldLevel?, Property+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLCmdID">
+             <summary>
+             Specifies a SyncML message-unique command identifier.
+             </summary>
+            <ParentElements>
+            Add, Alert, Atomic, Copy, Delete, Exec, Get, Map, Put, Replace,
+            Results, Search, Sequence, Status, Sync
+            </ParentElements>
+            <ContentModel>(#PCDATA)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLAdd">
+             <summary>
+             Specifies the SyncML command to add data to a data collection.
+             </summary>
+            <ParentElements> Atomic, Sequence, Sync, SyncBody.</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Cred?, Meta?, Item+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLUpdateBase">
+            <summary>
+            Base class for SyncMLAdd and SyncMLReplace as well as SyncMLDelete
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLReplace">
+             <summary>
+             Specifies the SyncML command to replace data.
+             </summary>
+            <ParentElements> Atomic, Sequence, Sync, SyncBody.</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Cred?, Meta?, Item+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLDelete">
+             <summary>
+             Specifies the SyncML command to delete data from a data collection.
+             </summary>
+            <ParentElements> Atomic, Sequence, Sync, SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Archive?, SftDel?, Cred?, Meta?, Item+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLCred">
+             <summary>
+             Specifies an authentication credential for the originator.
+             </summary>
+            <ParentElements> Add, Alert, Copy, Delete, Exec, Get, Put, Map, Replace, Search,Status, Sync, SyncHdr</ParentElements>
+            <ContentModel>(Meta?, Data)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLItem">
+             <summary>
+             Specifies a container for item data.
+             </summary>
+            <ParentElements> Add, Alert, Copy, Delete, Exec, Get, Put, Replace, Results,Status</ParentElements>
+            <ContentModel>(Target?, Source?, Meta?, Data?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSource">
+            <summary>
+            Specifies source routing or mapping information.
+            </summary>
+            <ParentElements>Parent Elements: Item, Map, MapItem, Search, Sync, SyncHdr</ParentElements>
+            <ContentModel>(LocURI, LocName?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLTarget">
+            <summary>
+            Usage: Specifies target routing or mapping information.
+            </summary>
+            <ParentElements>Parent Elements: Item, Map, MapItem, Search, Sync, SyncHdr</ParentElements>
+            <ContentModel>(LocURI, LocName?, Filter?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLLocURI">
+            <summary>
+            Specifies the target or source specific address.
+            </summary>
+            <ParentElements>Target, Source</ParentElements>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLLocName">
+             <summary>
+            Specifies the display name for the target or source address.
+             </summary>
+             <ParentElements>Target, Source</ParentElements>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLMapItem">
+             <summary>
+             
+             </summary>
+             <ParentElements> Map</ParentElements>
+            <ContentModel>(Target, Source)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLMap">
+             <summary>
+             Specifies the SyncML command used to update identifier maps.
+             </summary>
+             Usage: 
+            <ParentElements> Atomic, Sequence, SyncBody</ParentElements>
+            <ContentModel>(CmdID, Target, Source, Cred?, Meta?, MapItem+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLMeta">
+             <summary>
+             Specifies meta-information about the parent element type.
+             </summary>
+            <ParentElements> Add, Atomic, Chal, Copy, Cred, Delete, Get, Item, Map, Put,Replace, Results, Search, Sequence, Sync</ParentElements>
+            <ContentModel>(#PCDATA)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLData">
+             <summary>
+             Specifies discrete SyncML data.
+             </summary>
+            <ParentElements> Alert, Cred, Item, Status, Search</ParentElements>
+            <ContentModel>(#PCDATA)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLChal">
+             <summary>
+             Specifies an authentication challenge. The receiver of the challenge specifies
+             </summary>
+            <ParentElements>Status</ParentElements> 
+            <ContentModel>(Meta)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLCmd">
+             <summary>
+             Specifies the name of the SyncML command referenced by a Status element type.
+             </summary>
+            <ParentElements> Status</ParentElements>
+            <Restrictions> The value MUST be one of Add, Alert, Atomic, Copy, Delete, Exec,Get, Map, Put, 
+            Replace, Results, Search, Sequence, Status, Sync.</Restrictions>
+            <ContentModel>(#PCDATA)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLCmdRef">
+             <summary>
+             Specifies the CmdID referenced by a Status element type.
+             </summary>
+            <ParentElements> Results, Status</ParentElements>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLPut">
+             <summary>
+             Specifies the SyncML command to transfer data items to a recipient network device or database.
+            <ParentElements> SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Lang?, Cred?, Meta?, Item+)</ContentModel>
+             </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLGet">
+             <summary>
+             Specifies the SyncML command to retrieve data from the recipient.
+             </summary>
+            <ParentElements> SyncBody, Sequence, Atomic</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Lang?, Cred?, Meta?, Item+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLHdr">
+             <summary>
+             Specifies the container for the revisioning, routing information in the SyncML message.
+             </summary>
+            <ParentElements> SyncML</ParentElements>
+            <ContentModel>(VerDTD, VerProto, SessionID, MsgID, Target, Source, RespURI?, NoResp?,Cred?, Meta?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLBody">
+             <summary>
+             Specifies the container for the body or contents of the SyncML message.
+             </summary>
+             Usage: 
+            <ParentElements> SyncML</ParentElements>
+            <ContentModel>((Alert | Atomic | Copy | Exec | Get | Map | Put | Results | Search |Sequence | Status | Sync | Add | Replace | Delete)+, Final?)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLStatus">
+            <summary>
+            Specifies the request status code for a corresponding SyncML command.
+            </summary>
+            <ParentElements> SyncBody</ParentElements>
+            <ContentModel>(CmdID, MsgRef, CmdRef, Cmd, TargetRef*, SourceRef*, Cred?, Chal?, Data,Item*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLAlert">
+             <summary>
+             Specifies the SyncML command for sending custom content information to the recipient. 
+             The command provides a mechanism for communicating content information,such as state 
+             information or notifications to an application on the recipient device. In addition, 
+             this command provides a "standard way to specify non-standard" extended commands, beyond 
+             those defined in this specification.
+             
+             Alert types (Alert code values) are defined in http://www.syncml.org/docs/OMA-TS-DS_DataSyncRep-V1_2_1-20070810-A page 81
+             </summary>
+             <ParentElements> Atomic, Sequence, SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Cred?, Data?, Correlator?, Item*)</ContentModel>
+            <Restriction>http://www.syncml.org/docs/syncml_sync_represent_v11_20020215.pdf page 35
+            </Restriction>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLAlert.Correlator">
+            <summary>
+            The Correlator element type MUST be identical to the Correlator value of an Exec command if the alert is sent as an
+            asynchronous response to that Exec command.
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLAlert.NoResp">
+            <summary>
+            If specified, the optional NoResp element type indicates that a response status code MUST
+            NOT be returned for the command.
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLAlert.Cred">
+            <summary>
+            The optional Cred element type specifies the authentication credential to be used for the
+            command. If not present, the default authentication credential is taken from the SyncHdr
+            element type. If a Cred element type is not present in any of these other element types,
+            then the command is specified without an authentication credential.
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLAlert.Data">
+            <summary>
+            The optional Data element type specifies the type of alert.
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Elements.SyncMLAlert.ItemCollection">
+            <summary>
+            Optionally, one or more Item element types MUST be specified. The Item element type
+            specifies parameters for the Alert command. The Target and Source specified within
+            the Item element type MUST be an absolute URI.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLResults">
+             <summary>
+             Specifies the SyncML command that is used to return the results of a Search or Get command.
+             </summary>
+            <ParentElements> SyncBody</ParentElements>  
+            <ContentModel>(CmdID, MsgRef?, CmdRef, Meta?, TargetRef?, SourceRef?, Item+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSequence">
+             <summary>
+             Specifies the SyncML command to order the processing of a set of SyncML commands.
+             </summary>
+            <ParentElements> Atomic, Sync, SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Meta?, (Add | Replace | Delete | Copy | Atomic | Map |Sync | Get | Alert | Exec)+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSync">
+             <summary>
+             Specifies the SyncML command that indicates a data synchronization operation.
+             </summary>
+            <ParentElements> Atomic, Sequence, SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Cred?, Target?, Source?, Meta?, NumberOfChanges?, (Add | Atomic | Copy |Delete | Sequence | Replace)*)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLAtomic">
+             <summary>
+             Specifies the SyncML command to request that the subordinate commands be executed as a set or not at all.
+             </summary>
+            <ParentElements> Sequence, Sync, SyncBody</ParentElements>
+            <ContentModel>(CmdID, NoResp?, Meta?, (Add | Delete | Copy | Atomic | Map | Replace |Sequence | Sync | Get | Exec | Alert)+)
+                          (CmdID, NoResp?, Meta?, (Add | Delete | Copy | Atomic | Map | Move |Replace | Sequence | Sync | Get | Exec | Alert)+)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.SyncMLSyncML">
+             <summary>
+             Specifies the container for a SyncML Message.
+             </summary>
+            <ParentElements> None. This is the root or document element.</ParentElements>
+            <ContentModel>(SyncHdr, SyncBody)</ContentModel>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.SyncMLSyncML.Create(System.Xml.Linq.XElement)">
+            <summary>
+            Generate a SyncMLSyncML object throught the XML data.
+            </summary>
+            <param name="xmlData">XML data.</param>
+            <returns>Return null if fail.</returns>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.ElementNames">
+            <summary>
+            Contain strings of SyncML elements.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.MetaAnchor">
+            <summary>
+            Specifies the synchronization state information (i.e., sync anchor) for the currentsynchronization session.
+            </summary>
+            <ParentElements>MetInf</ParentElements> 
+            <ContentModel>(Last?, Next)</ContentModel>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.MetaAnchor.Create(System.String,System.String)">
+            <summary>
+            Create next and optional last.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.MetaEMI">
+            <summary>
+            EMI might not need to be supported.
+            Specifies the non-standard, experimental meta information (EMI) extensions supported by the device. The extensions
+            are specified in terms of the XML element type name and the value.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.MetaMark">
+            <summary>
+            Restrictions: The content information for this element type SHOULD BE 
+            one of draft, final, delete, undelete, read, unread.
+            When this meta-information is specified repetitively in a hierarchically of element types
+            (e.g., in a SyncML collection, as well as the items in the collection), then the metainformation
+            specified in the lowest level element type takes precedence.
+            This element type is used to set the meta-information characteristics of a data object, such
+            as the draft/final, delete/undelete, read/unread marks on a folder item or mail item.
+            
+            At the moment, the class does not check assigned content.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.MetaMem">
+             <summary>
+             Specifies the maximum free memory and item identifier for a source (e.g., a datastore or a device.
+             </summary>
+            <ContentModel>(SharedMem?, FreeMem, FreeID)</ContentModel>
+        </member>
+        <member name="T:Fonlow.SyncML.Elements.MetaParser">
+            <summary>
+            Retrieve meta elements from a Meta container.
+            SyncMLMeta may hold meta data of sync commands or device info, so it is not elegant to design SyncMLMeta as SyncMLComplexElement.
+            The parser assume the data is about sync commands only, no device info.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Elements.MetaParser.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="metaXml">Meta data including the Meta tag.</param>
+        </member>
+    </members>
+</doc>

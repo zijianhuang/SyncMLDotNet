@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fonlow.SyncML.CommonUI</name>
+    </assembly>
+    <members>
+        <member name="F:Fonlow.SyncML.Windows.UCAbout.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.UCAbout.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.UCAbout.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Windows.CommonForm">
+            <summary>
+            Host custom user control that will fill entire form. It can be used for non-modal and modal windows.
+            The size of the form will adapt the size of the user control docked.
+            The client codes should generally call the user control to get modal result.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.CommonForm.AddControl(System.Windows.Forms.UserControl,System.String)">
+            <summary>
+            Add a UserControl and dock.Fill. This should be called once.
+            More calls attempting to add controls will be ignored.
+            </summary>
+            <param name="uc"></param>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.CommonForm.AddControlForDialog(System.Windows.Forms.UserControl,System.String)">
+            <summary>
+            Add a UserControl and dock.Fill, change style to conventional dialog. This should be called once.
+            More calls attempting to add controls will be ignored.
+            </summary>
+        </member>
+        <member name="F:Fonlow.SyncML.Windows.CommonForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.CommonForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.CommonForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Windows.FormLog">
+            <summary>
+            Log window for sync projects.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.FormLog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:Fonlow.SyncML.Windows.FormLog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.FormLog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Fonlow.SyncML.Windows.MemoTraceListener">
+            <summary>
+            Listen to trace and append message to memo box.
+            The memo box is handled properly in asynchronous manner.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.MemoTraceListener.ProcessTextDelegate(System.String)">
+            <summary>
+            Provide async/threaded call upon box for Trace and Debug
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:Fonlow.SyncML.Windows.UCPassword">
+            <summary>
+            UI for inputting password.
+            </summary>
+        </member>
+        <member name="F:Fonlow.SyncML.Windows.UCPassword.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.UCPassword.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Fonlow.SyncML.Windows.UCPassword.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Fonlow.SyncML.Windows.UCPassword.Password">
+            <summary>
+            Return null if cancelled.
+            </summary>
+        </member>
+    </members>
+</doc>
