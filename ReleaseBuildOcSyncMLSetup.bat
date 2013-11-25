@@ -1,2 +1,0 @@
-@echo Build SyncMLDotNet in default directories
-msbuild Products\OcSyncMLSetup\OcSyncMLSetup.vdproj /target:rebuild /p:configuration=release /p:Platform="Any CPU" /p:WarningLevel=3 /p:OutDir=%~dp0Products\Release\
