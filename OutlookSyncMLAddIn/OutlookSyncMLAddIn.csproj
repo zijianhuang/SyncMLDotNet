@@ -222,6 +222,7 @@
     <Compile Include="..\OutlookInfo.cs">
       <Link>Properties\OutlookInfo.cs</Link>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -10,3 +10,4 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Fonlow.SyncML.OutlookSync.DeletionLogForCalendar+Nested.#.cctor()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses", Scope = "type", Target = "Fonlow.SyncML.OutlookSync.DeletionLogForCalendar+Nested")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1725:ParameterNamesShouldMatchBaseDeclaration", MessageId = "1#", Scope = "member", Target = "Fonlow.SyncML.OutlookSync.OutlookToSyncMLICal.#AddContentToCommand(Fonlow.SyncML.Elements.SyncMLUpdateBase,Microsoft.Office.Interop.Outlook.AppointmentItem)")]

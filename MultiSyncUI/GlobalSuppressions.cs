@@ -14,3 +14,4 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "Fonlow.SyncML.MultiSync.UcSync.#ObtainPassword()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "Fonlow.SyncML.MultiSync.UcOptions.#ShowModal(System.Configuration.ApplicationSettingsBase)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "Fonlow.SyncML.MultiSync.UcMultiSyncMain.#ShowAbout()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "Fonlow.SyncML.MultiSync.UcSync.#ObtainPasswordFromSettingsOrUx()")]
