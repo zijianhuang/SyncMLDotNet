@@ -6,9 +6,7 @@ using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
 using Fonlow.SyncML.Common;
 using DDay.iCal;
-using DDay.iCal.Components;
-using DDay.iCal.DataTypes;
-using DDay.iCal.Serialization;
+using DDay.iCal.Serialization.iCalendar;
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -45,28 +43,30 @@ namespace Fonlow.SyncML.OutlookSync
             using (iCalendar calendar = new iCalendar())
             {
                 calendar.ProductID = SyncConstants.ProdId;
-                Event icalEvent = new Event(calendar);
+                Event icalEvent = new Event();
 
                 try
                 {
                     icalEvent.Description = item.Body;
                     icalEvent.Summary = item.Subject;
-                    icalEvent.Start = DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc); // item.StartUTC does not have Kind specified.
-                    icalEvent.End = DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc);
-                    icalEvent.Duration = new Duration(new TimeSpan(0, item.Duration, 0));
+                    icalEvent.Start = new iCalDateTime( DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc)); // item.StartUTC does not have Kind specified.
+                    icalEvent.End =new iCalDateTime( DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc));
+                    icalEvent.Duration = new TimeSpan(0, item.Duration, 0);
                     icalEvent.IsAllDay = item.AllDayEvent;
                     if (!String.IsNullOrEmpty(item.Categories))
-                        icalEvent.Categories = new TextCollection[] { new TextCollection(item.Categories) };//icalendar.categories is sensitive to null.
+                        icalEvent.Categories = item.Categories.Split(new string[] { ",", ", ", ",  " }, StringSplitOptions.RemoveEmptyEntries);
                     icalEvent.Location = item.Location;
                     if (item.ReminderSet)
                     {
-                        Alarm alarm = new Alarm(icalEvent);
+                        Alarm alarm = new Alarm();
                         alarm.Trigger = new Trigger(new TimeSpan(0, -item.ReminderMinutesBeforeStart, 0)); //Alarm.Trigger is null by default.
+                        icalEvent.Alarms.Add(alarm);
                     }
                     icalEvent.AddProperty("X-FONLOW-BILLINGINFO", item.BillingInformation);
                     icalEvent.AddProperty("X-FONLOW-COMPANIES", item.Companies);
                     icalEvent.AddProperty("X-FONLOW-MILEAGE", item.Mileage);
                     icalEvent.AddProperty("X-FONLOW-NOAGING", item.NoAging ? "1" : "0");
+                    calendar.Events.Add(icalEvent);
                 }
                 catch (System.NullReferenceException e)
                 {
@@ -87,37 +87,46 @@ namespace Fonlow.SyncML.OutlookSync
             try
             {
                // System.Diagnostics.Trace.TraceInformation("metaData: " + metaData);
-                using (var reader =new System.IO.StringReader(meta))
-                using (iCalendar calendar = iCalendar.LoadFromStream(reader))
+                using (var reader =new System.IO.StringReader(meta))                
                 {
-                    Event icalEvent = calendar.Events[0];
+                    var calendarCollection = iCalendar.LoadFromStream(reader);
+                    var calendar = calendarCollection.FirstOrDefault();
+                    if (calendar == null)
+                    {
+                        System.Diagnostics.Trace.TraceWarning("Hey, calendarCollection is empty.");
+                        return;
+
+                    }
+
+                    var icalEvent = calendar.Events[0] as Event;//1.0 is harder to use. The returned interface rather than object is really bad, so I have to type cast to obtain properties not included in IEvent, or 
+                    //I have to use a few interface references.
 
                     item.Subject = icalEvent.Summary;
                     item.Body = icalEvent.Description;
                     item.StartUTC = icalEvent.Start.UTC;
                     item.EndUTC = icalEvent.End.UTC;
-
+                    
                     // item.Duration =  no need to define as duration is End - Start
                     item.AllDayEvent = icalEvent.IsAllDay;
-                    item.Categories = TextCollectionsToString(icalEvent.Categories);
+                    item.Categories = String.Join("," ,icalEvent.Categories);
                     item.Location = icalEvent.Location;
-                    //item.priority? not yet supported by DDay.iCal
+                    
                     if (icalEvent.Alarms.Count > 0)
                     {
-                        Alarm alarm = icalEvent.Alarms.First();
+                        var alarm = icalEvent.Alarms.First();
                         item.ReminderSet = true;
                         item.ReminderMinutesBeforeStart = -(alarm.Trigger.Duration.Value.Minutes + alarm.Trigger.Duration.Value.Hours * 60);
                     }
 
 
                     if (icalEvent.Properties["X-FONLOW-BILLINGINFO"] != null)
-                        item.BillingInformation = icalEvent.Properties["X-FONLOW-BILLINGINFO"].Value;
+                        item.BillingInformation = icalEvent.Properties["X-FONLOW-BILLINGINFO"].Value.ToString();
                     if (icalEvent.Properties["X-FONLOW-MILEAGE"] != null)
-                        item.Mileage = icalEvent.Properties["X-FONLOW-MILEAGE"].Value;
+                        item.Mileage = icalEvent.Properties["X-FONLOW-MILEAGE"].Value.ToString();
                     if (icalEvent.Properties["X-FONLOW-COMPANIES"] != null)
-                        item.Companies = icalEvent.Properties["X-FONLOW-COMPANIES"].Value;
+                        item.Companies = icalEvent.Properties["X-FONLOW-COMPANIES"].Value.ToString();
                     if (icalEvent.Properties["X-FONLOW-NOAGING"] != null)
-                        item.NoAging = icalEvent.Properties["X-FONLOW-NOAGING"].Value == "1";
+                        item.NoAging = icalEvent.Properties["X-FONLOW-NOAGING"].Value.ToString() == "1";
                     /* no need to check  if (icalEvent.RRule != null)
                               {
                                   DDay.iCal.DataTypes.RecurrencePattern pattern = icalEvent.RRule[0];
@@ -193,20 +202,6 @@ namespace Fonlow.SyncML.OutlookSync
             }
         }*/
 
-        private static string TextCollectionsToString(TextCollection[] collections)
-        {
-            if (collections == null)
-                return String.Empty;
-
-            StringBuilder builder = new StringBuilder();
-            foreach (TextCollection collection in collections)
-            {
-                builder.Append(collection);
-                builder.Append(",");
-            }
-            builder.Remove(builder.Length - 1, 1);
-            return builder.ToString();
-        }
 
     }
 

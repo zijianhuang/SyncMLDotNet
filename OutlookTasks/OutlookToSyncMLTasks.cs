@@ -8,8 +8,7 @@ using Fonlow.SyncML.Common;
 using Fonlow.SyncML.Elements;
 using System.Xml.Xsl;
 using System.Collections.Specialized;
-using DDay.iCal.DataTypes;
-using DDay.iCal.Components;
+
 
 
 namespace Fonlow.SyncML.OutlookSync

@@ -55,6 +55,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DDay.Collections">
+      <HintPath>..\3rdParty\DDAYICAL\DDay.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="DDay.iCal, Version=0.80.0.0, Culture=neutral, PublicKeyToken=1790ba318ebc5d56, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\3rdParty\DDAYICAL\DDay.iCal.dll</HintPath>

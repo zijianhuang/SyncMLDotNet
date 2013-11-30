@@ -9,8 +9,6 @@ using Fonlow.SyncML.Elements;
 using Fonlow.SyncML.Common;
 using System.IO;
 using System;
-using DDay.iCal.DataTypes;
-using DDay.iCal.Components;
 using DDay.iCal;
 
 namespace TestOutlookSync
@@ -140,19 +138,19 @@ namespace TestOutlookSync
             Assert.IsTrue(entryId != null);
 
             TaskItem task = outlookAgent.GetItemByEntryId(entryId);
-
-            iCalendar calendar = iCalendar.LoadFromFile(MockPath + "todo.ics");
-            Todo todo = calendar.Todos[0];
+            var collection = iCalendar.LoadFromFile(MockPath + "todo.ics");
+            var calendar = collection.FirstOrDefault();
+            var todo = calendar.Todos[0];
             CompareIcalTodoAndAppointment(todo, task);
         }
 
-        void CompareIcalTodoAndAppointment(Todo todo, TaskItem task)
+        void CompareIcalTodoAndAppointment(ITodo todo, TaskItem task)
         {
             Assert.AreEqual(todo.Start.Date, task.StartDate);
             Assert.AreEqual(todo.Due.Date, task.DueDate);
-            Assert.IsTrue(todo.Description.Value.Replace('\n', ' ') == task.Body.Replace("\r\n", " "));
-            Assert.AreEqual(todo.Percent_Complete.Value, task.PercentComplete);
-            Alarm alarm = todo.Alarms.FirstOrDefault();
+            Assert.IsTrue(todo.Description.Replace('\n', ' ') == task.Body.Replace("\r\n", " "));
+            Assert.AreEqual(todo.PercentComplete, task.PercentComplete);
+            var alarm = todo.Alarms.FirstOrDefault();
             Assert.IsTrue((alarm != null) == task.ReminderSet);
             //    if (alarm != null)
             //       Assert.Equals(alarm.Trigger.DateTime.Value.ToLocalTime(), task.ReminderTime);
@@ -175,13 +173,16 @@ namespace TestOutlookSync
 
             TaskItem task = outlookAgent.GetItemByEntryId(entryId);
 
-            iCalendar calendar = iCalendar.LoadFromFile(MockPath + "todo.ics");
-            Todo todo = calendar.Todos[0];
+            var collection = iCalendar.LoadFromFile(MockPath + "todo.ics");
+            var calendar = collection.FirstOrDefault();
+            var todo = calendar.Todos[0];
             CompareIcalTodoAndAppointment(todo, task);
 
+            System.Threading.Thread.Sleep(5000);//Silly, outlook will take a few seconds to finish the creation of the task object. Without such waiting, readind the item may be incorrect.
             //Test ReadItemToText()
             string icalText = agent.ReadItemToText(task);
-            calendar = iCalendar.LoadFromStream(new StringReader(icalText));
+            collection=iCalendar.LoadFromStream(new StringReader(icalText));
+            calendar = collection.FirstOrDefault();
             todo = calendar.Todos[0];
             CompareIcalTodoAndAppointment(todo, task);
         }

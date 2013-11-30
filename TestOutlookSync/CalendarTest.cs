@@ -9,8 +9,6 @@ using Fonlow.SyncML.Elements;
 using Fonlow.SyncML.Common;
 using System.IO;
 using System;
-using DDay.iCal.DataTypes;
-using DDay.iCal.Components;
 using DDay.iCal;
 
 namespace TestOutlookSync
@@ -182,21 +180,22 @@ namespace TestOutlookSync
 
             AppointmentItem appointment = outlookAgent.GetItemByEntryId(entryId);
 
-            iCalendar calendar = iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
-            Event icalEvent = calendar.Events[0];
+            var calendarCollection =  iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
+            var calendar = calendarCollection.FirstOrDefault();
+            var icalEvent = calendar.Events[0];
             CompareIcalEventAndAppointment(icalEvent, appointment);
         }
 
-        void CompareIcalEventAndAppointment(Event icalEvent, AppointmentItem appointment)
+        void CompareIcalEventAndAppointment(IEvent icalEvent, AppointmentItem appointment)
         {
             Assert.IsTrue(icalEvent.Start.UTC == appointment.StartUTC);
             Assert.IsTrue(icalEvent.End.UTC == appointment.EndUTC);
             Assert.IsTrue(icalEvent.IsAllDay == appointment.AllDayEvent);
             Assert.IsTrue(icalEvent.Location == appointment.Location);
-            Assert.IsTrue(icalEvent.Description.Value.Replace('\n', ' ') == appointment.Body.Replace("\r\n", " "));
+            Assert.IsTrue(icalEvent.Description.Replace('\n', ' ') == appointment.Body.Replace("\r\n", " "));
             //     Assert.IsTrue(icalEvent == appointment);
 
-            Alarm alarm = icalEvent.Alarms.FirstOrDefault();
+            var alarm = icalEvent.Alarms.FirstOrDefault();
             Assert.IsTrue((alarm != null) == appointment.ReminderSet);
             if (alarm != null)
                 Assert.IsTrue(-(alarm.Trigger.Duration.Value.Minutes + alarm.Trigger.Duration.Value.Hours * 60) == appointment.ReminderMinutesBeforeStart);
@@ -219,13 +218,15 @@ namespace TestOutlookSync
 
             AppointmentItem appointment = outlookAgent.GetItemByEntryId(entryId);
 
-            iCalendar calendar = iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
-            Event icalEvent = calendar.Events[0];
+            var calendarCollection = iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
+            var calendar = calendarCollection.FirstOrDefault();
+            var icalEvent = calendar.Events[0];
             CompareIcalEventAndAppointment(icalEvent, appointment);
 
             //Test ReadItemToText()
             string icalText = agent.ReadItemToText(appointment);
-            calendar = iCalendar.LoadFromStream(new StringReader(icalText));
+            calendarCollection = iCalendar.LoadFromStream(new StringReader(icalText));
+            calendar = calendarCollection.FirstOrDefault();
             icalEvent = calendar.Events[0];
             CompareIcalEventAndAppointment(icalEvent, appointment);
         }
