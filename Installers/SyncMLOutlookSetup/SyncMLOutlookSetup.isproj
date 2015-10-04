@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\..\MsOutlookSync\MsOutlookSync.csproj">
+			<Name>MsOutlookSync</Name>
+			<Project>{B658979F-7B55-4EF3-831C-A6BDFC855173}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\OutlookCalendar\OutlookCalendar.csproj">
+			<Name>OutlookCalendar</Name>
+			<Project>{4A7F7A21-A8C2-40E7-9446-15168E18E444}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\OutlookContacts\OutlookContacts.csproj">
+			<Name>OutlookContacts</Name>
+			<Project>{F008961E-387D-4AC1-A5C7-BABF093853DA}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\OutlookNotes\OutlookNotes.csproj">
+			<Name>OutlookNotes</Name>
+			<Project>{B5B67EE1-DC8D-45DA-BEBC-72DC50673579}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\OutlookSyncMLAddIn\OutlookSyncMLAddIn.csproj">
+			<Name>OutlookSyncMLAddIn</Name>
+			<Project>{2DB036E6-57DA-4E23-B700-22DA88823D1F}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\OutlookTasks\OutlookTasks.csproj">
+			<Name>OutlookTasks</Name>
+			<Project>{F1B91A6A-73AA-4A71-9AC9-B667BC751A90}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

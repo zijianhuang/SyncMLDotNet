@@ -1,0 +1,10 @@
+http://www.codeproject.com/Articles/31407/Wix-WixSharp-managed-interface-for-WiX
+
+https://www.dseichter.de/blog/2012/08/06/inno-setup-for-office-addins/
+
+
+https://msdn.microsoft.com/en-us/library/vstudio/cc442767%28v=vs.120%29.aspx
+use InstallShield LE to create
+
+
+
