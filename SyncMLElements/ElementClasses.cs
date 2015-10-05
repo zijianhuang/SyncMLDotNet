@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Xml.Linq;
@@ -33,7 +30,7 @@ namespace Fonlow.SyncML.Elements
     ///<ContentModel>(#PCDATA)</ContentModel>
     public class SyncMLCmdID : SyncMLSimpleElement
     {
-        public SyncMLCmdID():base(ElementNames.CmdID)
+        public SyncMLCmdID() : base(ElementNames.CmdID)
         {
 
         }
@@ -51,16 +48,16 @@ namespace Fonlow.SyncML.Elements
         {
             if (xmlData == null)
                 return null;
-            
+
             SyncMLAdd r = new SyncMLAdd();
             XNamespace ns = xmlData.Name.Namespace;
-            r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns+ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
-            if (items!= null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement element in items)
@@ -78,7 +75,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLAdd():base(ElementNames.Add)
+        private SyncMLAdd() : base(ElementNames.Add)
         {
 
         }
@@ -121,12 +118,12 @@ namespace Fonlow.SyncML.Elements
             SyncMLReplace r = new SyncMLReplace();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
-            if (items  != null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement element in items)
@@ -144,7 +141,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLReplace():base(ElementNames.Replace)
+        private SyncMLReplace() : base(ElementNames.Replace)
         {
 
         }
@@ -186,14 +183,14 @@ namespace Fonlow.SyncML.Elements
             SyncMLDelete r = new SyncMLDelete();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Archive = SyncMLSimpleElementFactory.Create<SyncMLArchive>(xmlData.Element(ns+ElementNames.Archive));
-            r.SftDel = SyncMLSimpleElementFactory.Create<SyncMLSftDel>(xmlData.Element(ns+ElementNames.SftDel));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Archive = SyncMLSimpleElementFactory.Create<SyncMLArchive>(xmlData.Element(ns + ElementNames.Archive));
+            r.SftDel = SyncMLSimpleElementFactory.Create<SyncMLSftDel>(xmlData.Element(ns + ElementNames.SftDel));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
-            if (items!= null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement item in items)
@@ -212,7 +209,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLDelete():base(ElementNames.Delete)
+        private SyncMLDelete() : base(ElementNames.Delete)
         {
 
         }
@@ -270,7 +267,7 @@ namespace Fonlow.SyncML.Elements
             : base(elementName)
         { }
 
-        protected SyncMLUpdateBase(XNamespace sp, string localName):base(sp, localName)
+        protected SyncMLUpdateBase(XNamespace sp, string localName) : base(sp, localName)
         { }
 
         internal SyncMLNoResp noResp;
@@ -309,7 +306,7 @@ namespace Fonlow.SyncML.Elements
 
     public class SyncMLNoResp : SyncMLSimpleElement
     {
-        public SyncMLNoResp():base(ElementNames.NoResp)
+        public SyncMLNoResp() : base(ElementNames.NoResp)
         {
 
         }
@@ -339,7 +336,7 @@ namespace Fonlow.SyncML.Elements
             SyncMLCred r = new SyncMLCred();
             XNamespace ns = xmlData.Name.Namespace;
             r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
-            r.Data =SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns+ElementNames.Data));
+            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns + ElementNames.Data));
             return r;
         }
 
@@ -352,7 +349,7 @@ namespace Fonlow.SyncML.Elements
 
 
 
-        private SyncMLCred():base(ElementNames.Cred)
+        private SyncMLCred() : base(ElementNames.Cred)
         {
 
         }
@@ -417,9 +414,9 @@ namespace Fonlow.SyncML.Elements
             SyncMLItem r = new SyncMLItem();
             XNamespace ns = xmlData.Name.Namespace;
             r.Target = SyncMLTarget.Create(xmlData.Element(ns + ElementNames.Target));
-            r.Source = SyncMLSource.Create(xmlData.Element(ns+ElementNames.Source));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
-            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns+ElementNames.Data));
+            r.Source = SyncMLSource.Create(xmlData.Element(ns + ElementNames.Source));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
+            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns + ElementNames.Data));
 
             return r;
         }
@@ -430,7 +427,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLItem():base(ElementNames.Item)
+        private SyncMLItem() : base(ElementNames.Item)
         {
 
         }
@@ -501,7 +498,7 @@ namespace Fonlow.SyncML.Elements
             SyncMLSource r = new SyncMLSource();
             XNamespace ns = xmlData.Name.Namespace;
             r.LocURI = SyncMLSimpleElementFactory.Create<SyncMLLocURI>(xmlData.Element(ns + ElementNames.LocURI));
-            r.LocName = SyncMLSimpleElementFactory.Create<SyncMLLocName>(xmlData.Element(ns+ElementNames.LocName));
+            r.LocName = SyncMLSimpleElementFactory.Create<SyncMLLocName>(xmlData.Element(ns + ElementNames.LocName));
             return r;
         }
 
@@ -562,7 +559,7 @@ namespace Fonlow.SyncML.Elements
             SyncMLTarget r = new SyncMLTarget();
             XNamespace ns = xmlData.Name.Namespace;
             r.LocURI = SyncMLSimpleElementFactory.Create<SyncMLLocURI>(xmlData.Element(ns + ElementNames.LocURI));
-            r.LocName = SyncMLSimpleElementFactory.Create<SyncMLLocName>(xmlData.Element(ns+ElementNames.LocName));
+            r.LocName = SyncMLSimpleElementFactory.Create<SyncMLLocName>(xmlData.Element(ns + ElementNames.LocName));
             return r;
         }
 
@@ -643,7 +640,7 @@ namespace Fonlow.SyncML.Elements
             SyncMLMapItem r = new SyncMLMapItem();
             XNamespace ns = xmlData.Name.Namespace;
             r.Target = SyncMLTarget.Create(xmlData.Element(ns + ElementNames.Target));
-            r.Source = SyncMLSource.Create(xmlData.Element(ns+ElementNames.Source));
+            r.Source = SyncMLSource.Create(xmlData.Element(ns + ElementNames.Source));
             return r;
         }
 
@@ -655,7 +652,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLMapItem():base(ElementNames.MapItem)
+        private SyncMLMapItem() : base(ElementNames.MapItem)
         {
 
         }
@@ -702,13 +699,13 @@ namespace Fonlow.SyncML.Elements
             SyncMLMap r = new SyncMLMap();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.Target = SyncMLTarget.Create(xmlData.Element(ns+ElementNames.Target));
-            r.Source = SyncMLSource.Create(xmlData.Element(ns+ElementNames.Source));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.Target = SyncMLTarget.Create(xmlData.Element(ns + ElementNames.Target));
+            r.Source = SyncMLSource.Create(xmlData.Element(ns + ElementNames.Source));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.MapItem);
-            if (items!=null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.MapItem);
+            if (items != null)
             {
                 r.mapItemCollection = new Collection<SyncMLMapItem>();
                 foreach (XElement item in items)
@@ -728,7 +725,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLMap():base(ElementNames.Map)
+        private SyncMLMap() : base(ElementNames.Map)
         {
 
         }
@@ -798,7 +795,7 @@ namespace Fonlow.SyncML.Elements
     ///<ContentModel>(#PCDATA)</ContentModel>
     public class SyncMLMeta : SyncMLSimpleElement
     {
-        public SyncMLMeta():base(ElementNames.Meta)
+        public SyncMLMeta() : base(ElementNames.Meta)
         {
 
         }
@@ -820,7 +817,7 @@ namespace Fonlow.SyncML.Elements
     ///<ContentModel>(#PCDATA)</ContentModel>
     public class SyncMLData : SyncMLSimpleElement
     {
-        public SyncMLData():base(ElementNames.Data)
+        public SyncMLData() : base(ElementNames.Data)
         {
 
         }
@@ -851,7 +848,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLChal():base(ElementNames.Chal)
+        private SyncMLChal() : base(ElementNames.Chal)
         {
 
         }
@@ -862,8 +859,9 @@ namespace Fonlow.SyncML.Elements
             {
                 Element.RemoveAll();
                 if (meta != null)
-                     Element.Add(meta.Xml);
-                return Element; }
+                    Element.Add(meta.Xml);
+                return Element;
+            }
         }
 
         private SyncMLMeta meta;
@@ -1041,7 +1039,7 @@ namespace Fonlow.SyncML.Elements
     /// </summary>
     public class SyncMLPut : SyncMLCommand
     {
-        private SyncMLPut():base(ElementNames.Put)
+        private SyncMLPut() : base(ElementNames.Put)
         {
         }
 
@@ -1053,13 +1051,13 @@ namespace Fonlow.SyncML.Elements
             SyncMLPut r = new SyncMLPut();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Lang = SyncMLSimpleElementFactory.Create<SyncMLLang>(xmlData.Element(ns+ElementNames.Lang));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Lang = SyncMLSimpleElementFactory.Create<SyncMLLang>(xmlData.Element(ns + ElementNames.Lang));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
-            if (items!= null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement item in items)
@@ -1147,7 +1145,7 @@ namespace Fonlow.SyncML.Elements
     ///<ContentModel>(CmdID, NoResp?, Lang?, Cred?, Meta?, Item+)</ContentModel>
     public class SyncMLGet : SyncMLCommand
     {
-        private SyncMLGet():base(ElementNames.Get)
+        private SyncMLGet() : base(ElementNames.Get)
         {
         }
 
@@ -1159,13 +1157,13 @@ namespace Fonlow.SyncML.Elements
             SyncMLGet r = new SyncMLGet();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Lang = SyncMLSimpleElementFactory.Create<SyncMLLang>(xmlData.Element(ns+ElementNames.Lang));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Lang = SyncMLSimpleElementFactory.Create<SyncMLLang>(xmlData.Element(ns + ElementNames.Lang));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
-            if (items!=null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement item in items)
@@ -1265,7 +1263,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLHdr():base(ElementNames.SyncHdr)
+        private SyncMLHdr() : base(ElementNames.SyncHdr)
         {
 
         }
@@ -1277,17 +1275,17 @@ namespace Fonlow.SyncML.Elements
 
             SyncMLHdr r = new SyncMLHdr();
             XNamespace ns = xmlData.Name.Namespace;
-            r.VerDTD = SyncMLSimpleElementFactory.Create<SyncMLVerDTD>(xmlData.Element(ns+ElementNames.VerDTD));
-            r.VerProto = SyncMLSimpleElementFactory.Create<SyncMLVerProto>(xmlData.Element(ns+ElementNames.VerProto));
-            r.SessionID = SyncMLSimpleElementFactory.Create<SyncMLSessionID>(xmlData.Element(ns+ElementNames.SessionID));
-            r.MsgID = SyncMLSimpleElementFactory.Create<SyncMLMsgID>(xmlData.Element(ns+ElementNames.MsgID));
-            r.RespURI = SyncMLSimpleElementFactory.Create<SyncMLRespURI>(xmlData.Element(ns+ElementNames.RespURI));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.VerDTD = SyncMLSimpleElementFactory.Create<SyncMLVerDTD>(xmlData.Element(ns + ElementNames.VerDTD));
+            r.VerProto = SyncMLSimpleElementFactory.Create<SyncMLVerProto>(xmlData.Element(ns + ElementNames.VerProto));
+            r.SessionID = SyncMLSimpleElementFactory.Create<SyncMLSessionID>(xmlData.Element(ns + ElementNames.SessionID));
+            r.MsgID = SyncMLSimpleElementFactory.Create<SyncMLMsgID>(xmlData.Element(ns + ElementNames.MsgID));
+            r.RespURI = SyncMLSimpleElementFactory.Create<SyncMLRespURI>(xmlData.Element(ns + ElementNames.RespURI));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
-            r.Source = SyncMLSource.Create(xmlData.Element(ns+ElementNames.Source));
-            r.Target = SyncMLTarget.Create(xmlData.Element(ns+ElementNames.Target));
+            r.Source = SyncMLSource.Create(xmlData.Element(ns + ElementNames.Source));
+            r.Target = SyncMLTarget.Create(xmlData.Element(ns + ElementNames.Target));
 
             return r;
         }
@@ -1406,7 +1404,7 @@ namespace Fonlow.SyncML.Elements
 
             SyncMLBody r = new SyncMLBody();
             IEnumerable<XElement> nodes = xmlData.Elements();
-            if (nodes!=null)
+            if (nodes != null)
             {
                 r.commands = new Collection<SyncMLComplexElement>();
                 foreach (XElement node in nodes)
@@ -1424,7 +1422,7 @@ namespace Fonlow.SyncML.Elements
                         case "Get": r.Commands.Add(SyncMLGet.Create(node)); break;
                         case "Final": r.Final = SyncMLSimpleElementFactory.Create<SyncMLFinal>(node); break;
                         default:
-                            Trace.TraceInformation("Not support this command: "+ node.Name.ToString());
+                            Trace.TraceInformation("Not support this command: " + node.Name.ToString());
                             break;
                     }
                 }
@@ -1440,7 +1438,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLBody():base(ElementNames.SyncBody)
+        private SyncMLBody() : base(ElementNames.SyncBody)
         {
         }
 
@@ -1461,7 +1459,7 @@ namespace Fonlow.SyncML.Elements
 
         public void MarkFinal()
         {
-            if (final == null) 
+            if (final == null)
                 final = new SyncMLFinal();
         }
 
@@ -1506,7 +1504,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLStatus():base(ElementNames.Status)
+        private SyncMLStatus() : base(ElementNames.Status)
         {
 
         }
@@ -1518,14 +1516,14 @@ namespace Fonlow.SyncML.Elements
             SyncMLStatus r = new SyncMLStatus();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.MsgRef = SyncMLSimpleElementFactory.Create<SyncMLMsgRef>(xmlData.Element(ns+ElementNames.MsgRef));
-            r.CmdRef = SyncMLSimpleElementFactory.Create<SyncMLCmdRef>(xmlData.Element(ns+ElementNames.CmdRef));
-            r.Cmd = SyncMLSimpleElementFactory.Create<SyncMLCmd>(xmlData.Element(ns+ElementNames.Cmd));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Chal = SyncMLChal.Create(xmlData.Element(ns+ElementNames.Chal));
-            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns+ElementNames.Data));
+            r.MsgRef = SyncMLSimpleElementFactory.Create<SyncMLMsgRef>(xmlData.Element(ns + ElementNames.MsgRef));
+            r.CmdRef = SyncMLSimpleElementFactory.Create<SyncMLCmdRef>(xmlData.Element(ns + ElementNames.CmdRef));
+            r.Cmd = SyncMLSimpleElementFactory.Create<SyncMLCmd>(xmlData.Element(ns + ElementNames.Cmd));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Chal = SyncMLChal.Create(xmlData.Element(ns + ElementNames.Chal));
+            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns + ElementNames.Data));
 
-            IEnumerable<XElement> itemsTarget = xmlData.Elements(ns+ElementNames.TargetRef);
+            IEnumerable<XElement> itemsTarget = xmlData.Elements(ns + ElementNames.TargetRef);
             if (itemsTarget != null)
             {
                 r.targetRefCollection = new Collection<SyncMLTargetRef>();
@@ -1535,7 +1533,7 @@ namespace Fonlow.SyncML.Elements
                 }
             }
 
-            IEnumerable<XElement> itemsSource = xmlData.Elements(ns+ElementNames.SourceRef);
+            IEnumerable<XElement> itemsSource = xmlData.Elements(ns + ElementNames.SourceRef);
             if (itemsSource != null)
             {
                 r.sourceRefCollection = new Collection<SyncMLSourceRef>();
@@ -1545,7 +1543,7 @@ namespace Fonlow.SyncML.Elements
                 }
             }
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
             if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
@@ -1681,11 +1679,11 @@ namespace Fonlow.SyncML.Elements
             SyncMLAlert r = new SyncMLAlert();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns+ElementNames.Data));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Data = SyncMLSimpleElementFactory.Create<SyncMLData>(xmlData.Element(ns + ElementNames.Data));
 
-            IEnumerable<XElement> items = xmlData.Elements(ns+ElementNames.Item);
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
             if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
@@ -1705,7 +1703,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLAlert():base(ElementNames.Alert)
+        private SyncMLAlert() : base(ElementNames.Alert)
         {
 
         }
@@ -1809,7 +1807,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLResults():base(ElementNames.Results)
+        private SyncMLResults() : base(ElementNames.Results)
         {
 
         }
@@ -1822,14 +1820,14 @@ namespace Fonlow.SyncML.Elements
             SyncMLResults r = new SyncMLResults();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.MsgRef = SyncMLSimpleElementFactory.Create<SyncMLMsgRef>(xmlData.Element(ns+ElementNames.MsgRef));
-            r.CmdRef = SyncMLSimpleElementFactory.Create<SyncMLCmdRef>(xmlData.Element(ns+ElementNames.CmdRef));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
-            r.TargetRef = SyncMLSimpleElementFactory.Create<SyncMLTargetRef>(xmlData.Element(ns+ElementNames.TargetRef));
-            r.SourceRef = SyncMLSimpleElementFactory.Create<SyncMLSourceRef>(xmlData.Element(ns+ElementNames.SourceRef));
+            r.MsgRef = SyncMLSimpleElementFactory.Create<SyncMLMsgRef>(xmlData.Element(ns + ElementNames.MsgRef));
+            r.CmdRef = SyncMLSimpleElementFactory.Create<SyncMLCmdRef>(xmlData.Element(ns + ElementNames.CmdRef));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
+            r.TargetRef = SyncMLSimpleElementFactory.Create<SyncMLTargetRef>(xmlData.Element(ns + ElementNames.TargetRef));
+            r.SourceRef = SyncMLSimpleElementFactory.Create<SyncMLSourceRef>(xmlData.Element(ns + ElementNames.SourceRef));
 
-            IEnumerable<XElement>  items = xmlData.Elements(ns+ElementNames.Item);
-            if (items!= null)
+            IEnumerable<XElement> items = xmlData.Elements(ns + ElementNames.Item);
+            if (items != null)
             {
                 r.itemCollection = new Collection<SyncMLItem>();
                 foreach (XElement item in items)
@@ -1928,7 +1926,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLSequence():base(ElementNames.Sequence)
+        private SyncMLSequence() : base(ElementNames.Sequence)
         {
 
         }
@@ -1941,11 +1939,11 @@ namespace Fonlow.SyncML.Elements
             SyncMLSequence r = new SyncMLSequence();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
             IEnumerable<XElement> nodes = xmlData.Elements();
-            if (nodes!=null)
+            if (nodes != null)
             {
                 r.commands = new Collection<SyncMLCommand>();
                 foreach (XElement node in nodes)
@@ -1961,8 +1959,8 @@ namespace Fonlow.SyncML.Elements
                         case ElementNames.CmdID: break;//handled
                         case ElementNames.NoResp: break; //handled
                         case ElementNames.Meta: break;//handled
-                        default: 
-                            Debug.Assert(false, "Invalid element: "+node.Name.ToString());
+                        default:
+                            Debug.Assert(false, "Invalid element: " + node.Name.ToString());
                             break;
                     }
                 }
@@ -2036,7 +2034,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLSync():base(ElementNames.Sync)
+        private SyncMLSync() : base(ElementNames.Sync)
         {
 
         }
@@ -2048,16 +2046,16 @@ namespace Fonlow.SyncML.Elements
             SyncMLSync r = new SyncMLSync();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
-            r.NumberOfChanges = SyncMLSimpleElementFactory.Create<SyncMLNumberOfChanges>(xmlData.Element(ns+ElementNames.NumberOfChanges));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
+            r.NumberOfChanges = SyncMLSimpleElementFactory.Create<SyncMLNumberOfChanges>(xmlData.Element(ns + ElementNames.NumberOfChanges));
 
-            r.Cred = SyncMLCred.Create(xmlData.Element(ns+ElementNames.Cred));
-            r.Target = SyncMLTarget.Create(xmlData.Element(ns+ElementNames.Target));
-            r.Source = SyncMLSource.Create(xmlData.Element(ns+ElementNames.Source));
+            r.Cred = SyncMLCred.Create(xmlData.Element(ns + ElementNames.Cred));
+            r.Target = SyncMLTarget.Create(xmlData.Element(ns + ElementNames.Target));
+            r.Source = SyncMLSource.Create(xmlData.Element(ns + ElementNames.Source));
 
             IEnumerable<XElement> nodes = xmlData.Elements();
-            if (nodes!=null)
+            if (nodes != null)
             {
                 r.commands = new Collection<SyncMLCommand>();
                 foreach (XElement node in nodes)
@@ -2178,7 +2176,7 @@ namespace Fonlow.SyncML.Elements
             return r;
         }
 
-        private SyncMLAtomic():base(ElementNames.Atomic)
+        private SyncMLAtomic() : base(ElementNames.Atomic)
         {
 
         }
@@ -2190,11 +2188,11 @@ namespace Fonlow.SyncML.Elements
             SyncMLAtomic r = new SyncMLAtomic();
             XNamespace ns = xmlData.Name.Namespace;
             r.CmdID = SyncMLSimpleElementFactory.Create<SyncMLCmdID>(xmlData.Element(ns + ElementNames.CmdID));
-            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns+ElementNames.NoResp));
-            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns+ElementNames.Meta));
+            r.NoResp = SyncMLSimpleElementFactory.Create<SyncMLNoResp>(xmlData.Element(ns + ElementNames.NoResp));
+            r.Meta = SyncMLSimpleElementFactory.Create<SyncMLMeta>(xmlData.Element(ns + ElementNames.Meta));
 
             IEnumerable<XElement> nodes = xmlData.Elements();
-            if (nodes!=null)
+            if (nodes != null)
             {
                 r.commands = new Collection<SyncMLCommand>();
                 foreach (XElement node in nodes)
@@ -2213,7 +2211,7 @@ namespace Fonlow.SyncML.Elements
                         case ElementNames.NoResp: break; //handled
                         case ElementNames.Meta: break;//handled
                         default:
-                            Debug.Assert(false, "Invalid element: "+node.Name.ToString());
+                            Debug.Assert(false, "Invalid element: " + node.Name.ToString());
                             break;
                     }
                 }
@@ -2293,8 +2291,8 @@ namespace Fonlow.SyncML.Elements
 
             SyncMLSyncML r = new SyncMLSyncML();
             XNamespace ns = xmlData.Name.Namespace;
-            r.Hdr = SyncMLHdr.Create(xmlData.Element(ns+ElementNames.SyncHdr));
-            r.Body = SyncMLBody.Create(xmlData.Element(ns+ElementNames.SyncBody));
+            r.Hdr = SyncMLHdr.Create(xmlData.Element(ns + ElementNames.SyncHdr));
+            r.Body = SyncMLBody.Create(xmlData.Element(ns + ElementNames.SyncBody));
 
             if ((r.Hdr == null) || (r.Body == null))
                 return null;
@@ -2317,13 +2315,13 @@ namespace Fonlow.SyncML.Elements
 
         }
 
-    /*    public static SyncMLSyncML Create(string xmlString)
-        {
-            if (String.IsNullOrEmpty(xmlString))
-                return null;
+        /*    public static SyncMLSyncML Create(string xmlString)
+            {
+                if (String.IsNullOrEmpty(xmlString))
+                    return null;
 
-            return Create(new SyncMLNavigator(xmlString));
-        }*/
+                return Create(new SyncMLNavigator(xmlString));
+            }*/
 
         public override XElement Xml
         {

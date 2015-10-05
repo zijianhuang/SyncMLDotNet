@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Linq;
 using System.Text;
 using Fonlow.SyncML.Elements;
 using Fonlow.SyncML.Common;
@@ -25,10 +23,10 @@ namespace Fonlow.SyncML.OutlookSync
         /// This constructor basically wire all needed components. A derived class should deside what concrete components to use.
         /// </summary>
         ///<param name="app">Outllok application generally from Outlook plug-in.</param>
-        protected OutlookDataSourceBase(Application app, 
-            OutlookToSyncMLX<T> outlookToSyncMLX, 
+        protected OutlookDataSourceBase(Application app,
+            OutlookToSyncMLX<T> outlookToSyncMLX,
             SyncMLXToOutlook<T> syncMLToOutlook,
-            OutlookItems<T> outlookContacts, 
+            OutlookItems<T> outlookContacts,
             DeletionLog deletionLog)
         {
             OutlookApp = app;
@@ -46,15 +44,14 @@ namespace Fonlow.SyncML.OutlookSync
         private OutlookToSyncMLX<T> outlookToSyncMLX;
         private OutlookItems<T> outlookItems;
 
-    //    public string ExchangeType { get; set; } //dummy
 
         public NameValueCollection ApplySyncCommands(IList<SyncMLCommand> commands, string lastAnchorTimeText)
         {
             if (commands == null)
             {
                 throw new ArgumentNullException("commands");
-            } 
-            
+            }
+
             if (commands.Count > 0)
             {
                 //Step2: Apply the change log XML to local address book

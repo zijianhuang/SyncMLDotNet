@@ -45,23 +45,23 @@ namespace Fonlow.SyncML.OutlookSync
 
         protected override bool IsItemIncludedInSync(AppointmentItem item)
         {
-                switch (filter)
-                {
-                    case CalendarPeriod.All:
-                        return true;
-                    case CalendarPeriod.FutureOnly:
-                        return item.Start >= DateTime.Now;
-                    case CalendarPeriod.SinceLastWeek:
-                        return item.Start >= DateFunctions.StartDateOfLastWeek;
-                    case CalendarPeriod.SinceLast2Weeks:
-                        return item.Start >= DateFunctions.StartDateOfLast2Weeks;
-                    case CalendarPeriod.SinceLastMonth:
-                        return item.Start >= DateFunctions.StartDateOfLastMonth;
-                    case CalendarPeriod.SinceLast3Months:
-                        return item.Start >= DateFunctions.StartDateOfLast3Months;
-                    case CalendarPeriod.SinceLast6Months:
-                        return item.Start >= DateFunctions.StartDateOfLast6Months;
-                }
+            switch (filter)
+            {
+                case CalendarPeriod.All:
+                    return true;
+                case CalendarPeriod.FutureOnly:
+                    return item.Start >= DateTime.Now;
+                case CalendarPeriod.SinceLastWeek:
+                    return item.Start >= DateFunctions.StartDateOfLastWeek;
+                case CalendarPeriod.SinceLast2Weeks:
+                    return item.Start >= DateFunctions.StartDateOfLast2Weeks;
+                case CalendarPeriod.SinceLastMonth:
+                    return item.Start >= DateFunctions.StartDateOfLastMonth;
+                case CalendarPeriod.SinceLast3Months:
+                    return item.Start >= DateFunctions.StartDateOfLast3Months;
+                case CalendarPeriod.SinceLast6Months:
+                    return item.Start >= DateFunctions.StartDateOfLast6Months;
+            }
 
             return false;
         }

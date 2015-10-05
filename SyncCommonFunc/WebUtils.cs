@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Net;
-using System.ComponentModel;
 using System.IO;
 using System.Diagnostics;
 
@@ -58,7 +56,7 @@ namespace Fonlow.SyncML.Common
                 request.CookieContainer.Add(cookies);
 
             Debug.WriteLine("Send Header:" + request.Headers.ToString());
-         //   Debug.WriteLine("Sending data: " + data);
+            //   Debug.WriteLine("Sending data: " + data);
 
             byte[] postData = Encoding.UTF8.GetBytes(data);
             request.ContentLength = postData.Length;

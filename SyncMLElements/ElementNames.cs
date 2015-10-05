@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Linq;
-namespace Fonlow.SyncML.Elements
+﻿namespace Fonlow.SyncML.Elements
 {
     /// <summary>
     /// Contain strings of SyncML elements.

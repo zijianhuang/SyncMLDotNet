@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject>SyncML Outlook Plugin</subject>
+		<subject>Fonlow SyncML Outlook Plugin</subject>
 		<author>##ID_STRING3##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -1152,10 +1152,11 @@
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
 		<row><td>FONLOW</td><td>ProgramFilesFolder</td><td>Fonlow</td><td/><td>0</td><td/></row>
+		<row><td>FONLOW_SYNCML_OUTLOOK_PLUGIN</td><td>FONLOW</td><td>FONLOW~1|Fonlow SyncML Outlook Plugin</td><td/><td>0</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>SYNCML_OUTLOOK_PLUGIN</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>FONLOW_SYNCML_OUTLOOK_PLUGIN</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -3755,7 +3756,7 @@
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>623068203</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>623070251</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>http://www.Fonlow.com</td><td>0</td><td/><td>623102286</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>Fonlow</td><td>0</td><td/><td>623102286</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>Zijian Huang</td><td>0</td><td/><td>757308590</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>623068203</td></row>
 	</table>
 
@@ -4002,7 +4003,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{6BD14CAD-C7AB-49F1-BAF4-F30CBA77B717}</td></row>
 		<row><td>ISUSSignature</td><td>{F97BB50D-F779-4799-9EE3-2B4F53D84D6A}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewSystemSearch,viewISToday,viewProject</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewSystemSearch,viewISToday,viewProject,viewVRoots,viewTextMessages,viewCustomActions,viewRelease</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4378,7 +4379,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{D1161558-75A3-4C3E-A203-030071A8E416}</td><td/></row>
-		<row><td>ProductName</td><td>SyncML Outlook Plugin</td><td/></row>
+		<row><td>ProductName</td><td>Fonlow SyncML Outlook Plugin</td><td/></row>
 		<row><td>ProductVersion</td><td>3.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>

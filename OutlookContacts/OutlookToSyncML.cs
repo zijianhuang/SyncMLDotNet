@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
-using Fonlow.SyncML.Common;
 using Fonlow.SyncML.Elements;
-using System.Xml.Xsl;
-using System.Collections.Specialized;
 using Fonlow.VCard;
 
 
@@ -45,7 +40,7 @@ namespace Fonlow.SyncML.OutlookSync
             command.ItemCollection.Add(item);
         }
 
-        static readonly XElement typeOfText= XElement.Parse("<Type xmlns='syncml:metinf'>text/x-s4j-sifc</Type>");
+        static readonly XElement typeOfText = XElement.Parse("<Type xmlns='syncml:metinf'>text/x-s4j-sifc</Type>");
 
         protected override XElement TypeOfText
         {
@@ -87,7 +82,7 @@ namespace Fonlow.SyncML.OutlookSync
             command.ItemCollection.Add(item);
         }
 
-        static readonly XElement typeOfText= XElement.Parse("<Type xmlns='syncml:metinf'>text/x-vcard</Type>");
+        static readonly XElement typeOfText = XElement.Parse("<Type xmlns='syncml:metinf'>text/x-vcard</Type>");
 
         protected override XElement TypeOfText
         {

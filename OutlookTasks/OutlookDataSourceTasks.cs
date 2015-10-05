@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Linq;
-using System.Text;
-using Fonlow.SyncML.Elements;
-using Fonlow.SyncML.Common;
-using Microsoft.Office.Interop.Outlook;
-using System.Collections.Specialized;
+﻿using Microsoft.Office.Interop.Outlook;
 
 namespace Fonlow.SyncML.OutlookSync
 {

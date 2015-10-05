@@ -10,7 +10,7 @@ namespace Fonlow.SyncML.OutlookSync
 {
     public class OutlookCalendarWithSifE : OutlookItemsWithSyncContent<AppointmentItem>
     {
-        public OutlookCalendarWithSifE(Application app )
+        public OutlookCalendarWithSifE(Application app)
             : base(app.GetNamespace("MAPI").GetDefaultFolder(OlDefaultFolders.olFolderCalendar) as Folder)
         {
         }
@@ -56,23 +56,23 @@ namespace Fonlow.SyncML.OutlookSync
             DataUtility.CreateElement("End", item.EndUTC.ToString(isoFormat))
                      );
 
-          /* no need to check  if (item.IsRecurring)
-            {
-                RecurrencePattern pattern = item.GetRecurrencePattern();
-                element.Add(
-                    DataUtility.CreateElement("DayOfMonth", pattern.DayOfMonth.ToString()),
-                    DataUtility.CreateElement("DayOfWeekMask", ((int)pattern.DayOfWeekMask).ToString()),
-                    DataUtility.CreateElement("Interval", pattern.Interval.ToString()),
-                    DataUtility.CreateElement("Instance", pattern.Instance.ToString()),
-                    DataUtility.CreateElement("MonthOfYear", pattern.MonthOfYear.ToString()),
-                    DataUtility.CreateElement("NoEndDate", pattern.NoEndDate ? "1" : "0"),
-                    DataUtility.CreateElement("Occurrences", pattern.Occurrences.ToString()),
-                    DataUtility.CreateElement("PatternStartDate", pattern.PatternStartDate.ToUniversalTime().ToString(isoFormat)),
-                    DataUtility.CreateElement("PatternEndDate", pattern.PatternEndDate.ToUniversalTime().ToString(isoFormat)),
-                    DataUtility.CreateElement("RecurrenceType", ((int)pattern.RecurrenceType).ToString())
-                    );
-            }*/
-            
+            /* no need to check  if (item.IsRecurring)
+              {
+                  RecurrencePattern pattern = item.GetRecurrencePattern();
+                  element.Add(
+                      DataUtility.CreateElement("DayOfMonth", pattern.DayOfMonth.ToString()),
+                      DataUtility.CreateElement("DayOfWeekMask", ((int)pattern.DayOfWeekMask).ToString()),
+                      DataUtility.CreateElement("Interval", pattern.Interval.ToString()),
+                      DataUtility.CreateElement("Instance", pattern.Instance.ToString()),
+                      DataUtility.CreateElement("MonthOfYear", pattern.MonthOfYear.ToString()),
+                      DataUtility.CreateElement("NoEndDate", pattern.NoEndDate ? "1" : "0"),
+                      DataUtility.CreateElement("Occurrences", pattern.Occurrences.ToString()),
+                      DataUtility.CreateElement("PatternStartDate", pattern.PatternStartDate.ToUniversalTime().ToString(isoFormat)),
+                      DataUtility.CreateElement("PatternEndDate", pattern.PatternEndDate.ToUniversalTime().ToString(isoFormat)),
+                      DataUtility.CreateElement("RecurrenceType", ((int)pattern.RecurrenceType).ToString())
+                      );
+              }*/
+
             return element.ToString(SaveOptions.DisableFormatting);
 
         }
@@ -101,7 +101,7 @@ namespace Fonlow.SyncML.OutlookSync
                 item.Categories = DataUtility.GetXElementValueSafely(sif, "Categories");
                 item.Companies = DataUtility.GetXElementValueSafely(sif, "Companies");
                 item.Importance = (OlImportance)DataUtility.ParseInt(DataUtility.GetXElementValueSafely(sif, "Importance"));
-               // item.IsRecurring = DataUtility.ParseBool(DataUtility.GetXElementValueSafely(sif, "IsRecurring"));no need to check in sync for recurrence events.
+                // item.IsRecurring = DataUtility.ParseBool(DataUtility.GetXElementValueSafely(sif, "IsRecurring"));no need to check in sync for recurrence events.
                 item.Location = DataUtility.GetXElementValueSafely(sif, "Location");
                 item.MeetingStatus = (OlMeetingStatus)DataUtility.ParseInt(DataUtility.GetXElementValueSafely(sif, "MeetingStatus"));
                 item.Mileage = DataUtility.GetXElementValueSafely(sif, "Mileage");
@@ -116,56 +116,56 @@ namespace Fonlow.SyncML.OutlookSync
 
                 item.Sensitivity = (OlSensitivity)DataUtility.ParseInt(DataUtility.GetXElementValueSafely(sif, "Sensitivity"));
 
-             /* no need to check  if (DataUtility.ParseBool(sif, "IsRecurring")) //Task has similar pattern
-                {
-                    RecurrencePattern pattern = item.GetRecurrencePattern();
-                    pattern.RecurrenceType = (OlRecurrenceType)DataUtility.ParseInt(sif, "RecurrenceType");//this must be first
-                    switch (pattern.RecurrenceType)
-                    {
-                        case OlRecurrenceType.olRecursDaily:
-                            pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
-                            pattern.Interval = DataUtility.ParseInt(sif, "Interval");
-                            break;
-                        case OlRecurrenceType.olRecursMonthNth:
-                            pattern.Interval = DataUtility.ParseInt(sif, "Interval");
-                            pattern.Instance = DataUtility.ParseInt(sif, "Instance"); //say the 2nd Sunday in March
-                            pattern.DayOfMonth = DataUtility.ParseInt(sif, "DayOfMonth");
-                            break;
-                        case OlRecurrenceType.olRecursMonthly:
-                            pattern.Interval = DataUtility.ParseInt(sif, "Interval");
-                            pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
-                            break;
-                        case OlRecurrenceType.olRecursWeekly:
-                            pattern.Interval = DataUtility.ParseInt(sif, "Interval");
-                            pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
-                            break;
-                        case OlRecurrenceType.olRecursYearNth:
-                            pattern.Interval = DataUtility.ParseInt(sif, "Interval");
-                            pattern.Instance = DataUtility.ParseInt(sif, "Instance");
-                            pattern.MonthOfYear = DataUtility.ParseInt(sif, "MonthOfYear");
-                            break;
-                        case OlRecurrenceType.olRecursYearly:
-                            pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
-                            pattern.MonthOfYear = DataUtility.ParseInt(sif, "MonthOfYear");
-                            break;
-                        default:
-                            break;
-                    }
+                /* no need to check  if (DataUtility.ParseBool(sif, "IsRecurring")) //Task has similar pattern
+                   {
+                       RecurrencePattern pattern = item.GetRecurrencePattern();
+                       pattern.RecurrenceType = (OlRecurrenceType)DataUtility.ParseInt(sif, "RecurrenceType");//this must be first
+                       switch (pattern.RecurrenceType)
+                       {
+                           case OlRecurrenceType.olRecursDaily:
+                               pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
+                               pattern.Interval = DataUtility.ParseInt(sif, "Interval");
+                               break;
+                           case OlRecurrenceType.olRecursMonthNth:
+                               pattern.Interval = DataUtility.ParseInt(sif, "Interval");
+                               pattern.Instance = DataUtility.ParseInt(sif, "Instance"); //say the 2nd Sunday in March
+                               pattern.DayOfMonth = DataUtility.ParseInt(sif, "DayOfMonth");
+                               break;
+                           case OlRecurrenceType.olRecursMonthly:
+                               pattern.Interval = DataUtility.ParseInt(sif, "Interval");
+                               pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
+                               break;
+                           case OlRecurrenceType.olRecursWeekly:
+                               pattern.Interval = DataUtility.ParseInt(sif, "Interval");
+                               pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
+                               break;
+                           case OlRecurrenceType.olRecursYearNth:
+                               pattern.Interval = DataUtility.ParseInt(sif, "Interval");
+                               pattern.Instance = DataUtility.ParseInt(sif, "Instance");
+                               pattern.MonthOfYear = DataUtility.ParseInt(sif, "MonthOfYear");
+                               break;
+                           case OlRecurrenceType.olRecursYearly:
+                               pattern.DayOfWeekMask = (OlDaysOfWeek)DataUtility.ParseInt(sif, "DayOfWeekMask");
+                               pattern.MonthOfYear = DataUtility.ParseInt(sif, "MonthOfYear");
+                               break;
+                           default:
+                               break;
+                       }
 
-                    //                pattern.NoEndDate = DataUtility.ParseBool(sif, "NoEndDate"); No need to set
-                    //If the PatternEndDate property or the Occurrences property is set, the pattern is considered to be finite 
-                    //and the NoEndDate property is False. If neither PatternEndDate nor Occurrences is set, the pattern is considered 
-                    //infinite and NoEndDate is True.
-                    //pattern.Occurrences = DataUtility.ParseInt(sif, "Occurrences"); no need to set
+                       //                pattern.NoEndDate = DataUtility.ParseBool(sif, "NoEndDate"); No need to set
+                       //If the PatternEndDate property or the Occurrences property is set, the pattern is considered to be finite 
+                       //and the NoEndDate property is False. If neither PatternEndDate nor Occurrences is set, the pattern is considered 
+                       //infinite and NoEndDate is True.
+                       //pattern.Occurrences = DataUtility.ParseInt(sif, "Occurrences"); no need to set
 
-                    pattern.PatternStartDate = DataUtility.ParseDateTime(sif, "PatternStartDate");
-                    DateTime d = DataUtility.ParseDateTime(sif, "PatternEndDate");
-                    if (d != new DateTime(4501, 1, 1))
-                        pattern.PatternEndDate = d;//must be the end
-                   
-                } */
+                       pattern.PatternStartDate = DataUtility.ParseDateTime(sif, "PatternStartDate");
+                       DateTime d = DataUtility.ParseDateTime(sif, "PatternEndDate");
+                       if (d != new DateTime(4501, 1, 1))
+                           pattern.PatternEndDate = d;//must be the end
+
+                   } */
             }
-            catch (System.NullReferenceException e)
+            catch (NullReferenceException e)
             {
                 System.Diagnostics.Trace.TraceInformation("WirteMetaToItem: " + e.ToString() + "~" + e.Message);
             }

@@ -1,33 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Configuration;
-using Fonlow.SyncML.MultiSync;
 using Fonlow.SyncML.Common;
-using Fonlow.Configuration;
 
 namespace Fonlow.SyncML.OutlookSync
 {
-
-    //public class OutlookSyncMLProgramSettingsProvider : UserSettingsFileProviderBase
-    //{
-    //    protected override string SectionName
-    //    {
-    //        get { return "Fonlow.SyncML.OutlookSync.OutlookSyncSettings"; }
-    //    }
-
-    //    protected override string UserConfigFilePath
-    //    {
-    //        get { return @"C:\Users\AndySuperCo\AppData\Roaming\Fonlow\SyncMLAddinForOutlook\user.config"; }
-    //    }
-    //}
-
-    //[SettingsProvider(typeof(OutlookSyncMLProgramSettingsProvider))]
     public class OutlookSyncSettings : SyncSettingsBase
     {
-        
+
         #region Singleton
         private static OutlookSyncSettings defaultInstance = ((OutlookSyncSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new OutlookSyncSettings())));
 
@@ -40,7 +19,7 @@ namespace Fonlow.SyncML.OutlookSync
         }
         #endregion;
 
-         OutlookSyncSettings()
+        OutlookSyncSettings()
         {
 
         }

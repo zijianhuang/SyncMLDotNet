@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
 using System.Collections.ObjectModel;
 using System.Xml.Linq;
 
@@ -294,8 +291,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfFilter_Rx r = new DevinfFilter_Rx();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             return r;
         }
 
@@ -352,17 +349,17 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfFilterCap r = new DevinfFilterCap();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             r.filterKeywordCollection = new Collection<DevinfFilterKeyword>();
             r.propNameCollection = new Collection<DevinfPropName>();
-            IEnumerable<XElement> keywordNodes = ElementReader.Elements(xmlData,ElementNames.FilterKeyword);
+            IEnumerable<XElement> keywordNodes = ElementReader.Elements(xmlData, ElementNames.FilterKeyword);
             foreach (XElement node in keywordNodes)
             {
                 r.FilterKeywordCollection.Add(SyncMLSimpleElementFactory.Create<DevinfFilterKeyword>(node));
             }
 
-            IEnumerable<XElement> propNameNodes = ElementReader.Elements(xmlData,ElementNames.PropName);
+            IEnumerable<XElement> propNameNodes = ElementReader.Elements(xmlData, ElementNames.PropName);
             foreach (XElement node in propNameNodes)
             {
                 r.PropNameCollection.Add(SyncMLSimpleElementFactory.Create<DevinfPropName>(node));
@@ -485,7 +482,7 @@ namespace Fonlow.SyncML.Elements
 
             DevinfSyncCap r = new DevinfSyncCap();
             r.syncTypeCollection = new Collection<DevinfSyncType>();
-            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData,ElementNames.SyncType);
+            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData, ElementNames.SyncType);
             foreach (XElement node in nodes)
             {
                 r.syncTypeCollection.Add(SyncMLSimpleElementFactory.Create<DevinfSyncType>(node));
@@ -539,8 +536,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfExt r = new DevinfExt();
-            r.XNam = SyncMLSimpleElementFactory.Create<DevinfXNam>(ElementReader.Element(xmlData,ElementNames.XNam));
-            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData,ElementNames.XVal);
+            r.XNam = SyncMLSimpleElementFactory.Create<DevinfXNam>(ElementReader.Element(xmlData, ElementNames.XNam));
+            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData, ElementNames.XVal);
             r.xValCollection = new Collection<DevinfXVal>();
             foreach (XElement node in nodes)
             {
@@ -630,11 +627,11 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfPropParam r = new DevinfPropParam();
-            r.ParamName = SyncMLSimpleElementFactory.Create<DevinfParamName>(ElementReader.Element(xmlData,ElementNames.ParamName));
-            r.DataType = SyncMLSimpleElementFactory.Create<DevinfDataType>(ElementReader.Element(xmlData,ElementNames.DataType));
-            r.DisplayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData,ElementNames.DisplayName));
+            r.ParamName = SyncMLSimpleElementFactory.Create<DevinfParamName>(ElementReader.Element(xmlData, ElementNames.ParamName));
+            r.DataType = SyncMLSimpleElementFactory.Create<DevinfDataType>(ElementReader.Element(xmlData, ElementNames.DataType));
+            r.DisplayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData, ElementNames.DisplayName));
             r.valEnumCollection = new Collection<DevinfValEnum>();
-            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData,ElementNames.ValEnum);
+            IEnumerable<XElement> nodes = ElementReader.Elements(xmlData, ElementNames.ValEnum);
             foreach (XElement node in nodes)
             {
                 r.ValEnumCollection.Add(SyncMLSimpleElementFactory.Create<DevinfValEnum>(node));
@@ -730,20 +727,20 @@ namespace Fonlow.SyncML.Elements
         public static DevinfProperty Create(XElement xmlData)
         {
             DevinfProperty r = new DevinfProperty();
-            r.propName = SyncMLSimpleElementFactory.Create<DevinfPropName>(ElementReader.Element(xmlData,ElementNames.PropName));
-            r.dataType = SyncMLSimpleElementFactory.Create<DevinfDataType>(ElementReader.Element(xmlData,ElementNames.DataType));
-            r.maxOccur = SyncMLSimpleElementFactory.Create<DevinfMaxOccur>(ElementReader.Element(xmlData,ElementNames.MaxOccur));
-            r.maxSize = SyncMLSimpleElementFactory.Create<DevinfMaxSize>(ElementReader.Element(xmlData,ElementNames.MaxSize));
-            r.noTruncate = SyncMLSimpleElementFactory.Create<DevinfNoTruncate>(ElementReader.Element(xmlData,ElementNames.NoTruncate));
-            r.displayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData,ElementNames.DisplayName));
+            r.propName = SyncMLSimpleElementFactory.Create<DevinfPropName>(ElementReader.Element(xmlData, ElementNames.PropName));
+            r.dataType = SyncMLSimpleElementFactory.Create<DevinfDataType>(ElementReader.Element(xmlData, ElementNames.DataType));
+            r.maxOccur = SyncMLSimpleElementFactory.Create<DevinfMaxOccur>(ElementReader.Element(xmlData, ElementNames.MaxOccur));
+            r.maxSize = SyncMLSimpleElementFactory.Create<DevinfMaxSize>(ElementReader.Element(xmlData, ElementNames.MaxSize));
+            r.noTruncate = SyncMLSimpleElementFactory.Create<DevinfNoTruncate>(ElementReader.Element(xmlData, ElementNames.NoTruncate));
+            r.displayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData, ElementNames.DisplayName));
             r.valEnumCollection = new Collection<DevinfValEnum>();
             r.propParamCollection = new Collection<DevinfPropParam>();
-            IEnumerable<XElement> valEnumNodes = ElementReader.Elements(xmlData,ElementNames.ValEnum);
+            IEnumerable<XElement> valEnumNodes = ElementReader.Elements(xmlData, ElementNames.ValEnum);
             foreach (XElement node in valEnumNodes)
             {
                 r.ValEnumCollection.Add(SyncMLSimpleElementFactory.Create<DevinfValEnum>(node));
             }
-            IEnumerable<XElement> propParamNodes = ElementReader.Elements(xmlData,ElementNames.PropParam);
+            IEnumerable<XElement> propParamNodes = ElementReader.Elements(xmlData, ElementNames.PropParam);
             foreach (XElement node in propParamNodes)
             {
                 r.PropParamCollection.Add(DevinfPropParam.Create(node));
@@ -846,8 +843,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfRx r = new DevinfRx();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             return r;
         }
 
@@ -905,8 +902,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfRx_Pref r = new DevinfRx_Pref();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             return r;
         }
 
@@ -964,8 +961,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfTx r = new DevinfTx();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             return r;
         }
 
@@ -1023,8 +1020,8 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfTx_Pref r = new DevinfTx_Pref();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
             return r;
         }
 
@@ -1082,9 +1079,9 @@ namespace Fonlow.SyncML.Elements
                 return null;
 
             DevinfDSMem r = new DevinfDSMem();
-            r.SharedMem = SyncMLSimpleElementFactory.Create<DevinfSharedMem>(ElementReader.Element(xmlData,ElementNames.SharedMem));
-            r.MaxMem = SyncMLSimpleElementFactory.Create<DevinfMaxMem>(ElementReader.Element(xmlData,ElementNames.MaxMem));
-            r.MaxID = SyncMLSimpleElementFactory.Create<DevinfMaxID>(ElementReader.Element(xmlData,ElementNames.MaxID));
+            r.SharedMem = SyncMLSimpleElementFactory.Create<DevinfSharedMem>(ElementReader.Element(xmlData, ElementNames.SharedMem));
+            r.MaxMem = SyncMLSimpleElementFactory.Create<DevinfMaxMem>(ElementReader.Element(xmlData, ElementNames.MaxMem));
+            r.MaxID = SyncMLSimpleElementFactory.Create<DevinfMaxID>(ElementReader.Element(xmlData, ElementNames.MaxID));
             return r;
 
         }
@@ -1182,43 +1179,43 @@ namespace Fonlow.SyncML.Elements
         {
             if (xmlData == null)
                 return null;
-            
+
             DevinfDataStore r = new DevinfDataStore();
-            r.SourceRef = SyncMLSimpleElementFactory.Create<DevinfSourceRef>(ElementReader.Element(xmlData,ElementNames.SourceRef));
-            r.DisplayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData,ElementNames.DisplayName));
-            r.MaxGUIDSize = SyncMLSimpleElementFactory.Create<DevinfMaxGUIDSize>(ElementReader.Element(xmlData,ElementNames.MaxGUIDSize));
-            r.RxPref = DevinfRx_Pref.Create(ElementReader.Element(xmlData,ElementNames.Rx_Pref));
-            r.Tx_Pref = DevinfTx_Pref.Create(ElementReader.Element(xmlData,ElementNames.Tx_Pref));
-            r.DSMem = DevinfDSMem.Create(ElementReader.Element(xmlData,ElementNames.DSMem));
-            r.SupportHierarchicalSync = SyncMLSimpleElementFactory.Create<DevinfSupportHierarchicalSync>(ElementReader.Element(xmlData,"SupportHierarchicalSync"));
-            r.SyncCap = DevinfSyncCap.Create(ElementReader.Element(xmlData,ElementNames.SyncCap));
+            r.SourceRef = SyncMLSimpleElementFactory.Create<DevinfSourceRef>(ElementReader.Element(xmlData, ElementNames.SourceRef));
+            r.DisplayName = SyncMLSimpleElementFactory.Create<DevinfDisplayName>(ElementReader.Element(xmlData, ElementNames.DisplayName));
+            r.MaxGUIDSize = SyncMLSimpleElementFactory.Create<DevinfMaxGUIDSize>(ElementReader.Element(xmlData, ElementNames.MaxGUIDSize));
+            r.RxPref = DevinfRx_Pref.Create(ElementReader.Element(xmlData, ElementNames.Rx_Pref));
+            r.Tx_Pref = DevinfTx_Pref.Create(ElementReader.Element(xmlData, ElementNames.Tx_Pref));
+            r.DSMem = DevinfDSMem.Create(ElementReader.Element(xmlData, ElementNames.DSMem));
+            r.SupportHierarchicalSync = SyncMLSimpleElementFactory.Create<DevinfSupportHierarchicalSync>(ElementReader.Element(xmlData, "SupportHierarchicalSync"));
+            r.SyncCap = DevinfSyncCap.Create(ElementReader.Element(xmlData, ElementNames.SyncCap));
 
             r.rxCollection = new Collection<DevinfRx>();
-            IEnumerable<XElement> rxNodes = ElementReader.Elements(xmlData,ElementNames.Rx);
+            IEnumerable<XElement> rxNodes = ElementReader.Elements(xmlData, ElementNames.Rx);
             foreach (XElement node in rxNodes)
             {
                 r.RxCollection.Add(DevinfRx.Create(node));
             }
             r.txCollection = new Collection<DevinfTx>();
-            IEnumerable<XElement> txNodes = ElementReader.Elements(xmlData,ElementNames.Tx);
+            IEnumerable<XElement> txNodes = ElementReader.Elements(xmlData, ElementNames.Tx);
             foreach (XElement node in txNodes)
             {
                 r.TxCollection.Add(DevinfTx.Create(node));
             }
             r.ctCapCollection = new Collection<DevinfCTCap>();
-            IEnumerable<XElement> ctCapNodes = ElementReader.Elements(xmlData,ElementNames.CTCap);
+            IEnumerable<XElement> ctCapNodes = ElementReader.Elements(xmlData, ElementNames.CTCap);
             foreach (XElement node in ctCapNodes)
             {
                 r.CTCapCollection.Add(DevinfCTCap.Create(node));
             }
             r.filter_RxCollection = new Collection<DevinfFilter_Rx>();
-            IEnumerable<XElement> filterRxNodes = ElementReader.Elements(xmlData,ElementNames.Filter_Rx);
+            IEnumerable<XElement> filterRxNodes = ElementReader.Elements(xmlData, ElementNames.Filter_Rx);
             foreach (XElement node in filterRxNodes)
             {
                 r.Filter_RxCollection.Add(DevinfFilter_Rx.Create(node));
             }
             r.filterCapCollection = new Collection<DevinfFilterCap>();
-            IEnumerable<XElement> filterCapNodes = ElementReader.Elements(xmlData,ElementNames.FilterCap);
+            IEnumerable<XElement> filterCapNodes = ElementReader.Elements(xmlData, ElementNames.FilterCap);
             foreach (XElement node in filterCapNodes)
             {
                 r.FilterCapCollection.Add(DevinfFilterCap.Create(node));
@@ -1396,21 +1393,21 @@ namespace Fonlow.SyncML.Elements
             if (xmlData == null)
                 return null;
             DevInf r = new DevInf();
-            r.Man = SyncMLSimpleElementFactory.Create<DevinfMan>(ElementReader.Element(xmlData,ElementNames.Man));
-            r.VerDTD = SyncMLSimpleElementFactory.Create<DevinfVerDTD>(ElementReader.Element(xmlData,ElementNames.VerDTD));
-            r.Mod = SyncMLSimpleElementFactory.Create<DevinfMod>(ElementReader.Element(xmlData,ElementNames.Mod));
-            r.FwV = SyncMLSimpleElementFactory.Create<DevinfFwV>(ElementReader.Element(xmlData,ElementNames.FwV));
-            r.SwV = SyncMLSimpleElementFactory.Create<DevinfSwV>(ElementReader.Element(xmlData,ElementNames.SwV));
-            r.HwV = SyncMLSimpleElementFactory.Create<DevinfHwV>(ElementReader.Element(xmlData,ElementNames.HwV));
-            r.DevID = SyncMLSimpleElementFactory.Create<DevinfDevID>(ElementReader.Element(xmlData,ElementNames.DevID));
-            r.DevTyp = SyncMLSimpleElementFactory.Create<DevinfDevTyp>(ElementReader.Element(xmlData,ElementNames.DevTyp));
-            r.OEM = SyncMLSimpleElementFactory.Create<DevinfOEM>(ElementReader.Element(xmlData,ElementNames.OEM));
-            r.UTC = SyncMLSimpleElementFactory.Create<DevinfUTC>(ElementReader.Element(xmlData,ElementNames.UTC));
-            r.SupportLargeObjs = SyncMLSimpleElementFactory.Create<DevinfSupportLargeObjs>(ElementReader.Element(xmlData,ElementNames.SupportLargeObjs));
-            r.SupportNumberOfChanges = SyncMLSimpleElementFactory.Create<DevinfSupportNumberOfChanges>(ElementReader.Element(xmlData,ElementNames.SupportNumberOfChanges));
+            r.Man = SyncMLSimpleElementFactory.Create<DevinfMan>(ElementReader.Element(xmlData, ElementNames.Man));
+            r.VerDTD = SyncMLSimpleElementFactory.Create<DevinfVerDTD>(ElementReader.Element(xmlData, ElementNames.VerDTD));
+            r.Mod = SyncMLSimpleElementFactory.Create<DevinfMod>(ElementReader.Element(xmlData, ElementNames.Mod));
+            r.FwV = SyncMLSimpleElementFactory.Create<DevinfFwV>(ElementReader.Element(xmlData, ElementNames.FwV));
+            r.SwV = SyncMLSimpleElementFactory.Create<DevinfSwV>(ElementReader.Element(xmlData, ElementNames.SwV));
+            r.HwV = SyncMLSimpleElementFactory.Create<DevinfHwV>(ElementReader.Element(xmlData, ElementNames.HwV));
+            r.DevID = SyncMLSimpleElementFactory.Create<DevinfDevID>(ElementReader.Element(xmlData, ElementNames.DevID));
+            r.DevTyp = SyncMLSimpleElementFactory.Create<DevinfDevTyp>(ElementReader.Element(xmlData, ElementNames.DevTyp));
+            r.OEM = SyncMLSimpleElementFactory.Create<DevinfOEM>(ElementReader.Element(xmlData, ElementNames.OEM));
+            r.UTC = SyncMLSimpleElementFactory.Create<DevinfUTC>(ElementReader.Element(xmlData, ElementNames.UTC));
+            r.SupportLargeObjs = SyncMLSimpleElementFactory.Create<DevinfSupportLargeObjs>(ElementReader.Element(xmlData, ElementNames.SupportLargeObjs));
+            r.SupportNumberOfChanges = SyncMLSimpleElementFactory.Create<DevinfSupportNumberOfChanges>(ElementReader.Element(xmlData, ElementNames.SupportNumberOfChanges));
             r.dataStoreCollection = new Collection<DevinfDataStore>();
             r.extCollection = new Collection<DevinfExt>();
-            IEnumerable<XElement> dataStoreNodes = ElementReader.Elements(xmlData,ElementNames.DataStore);
+            IEnumerable<XElement> dataStoreNodes = ElementReader.Elements(xmlData, ElementNames.DataStore);
             foreach (XElement node in dataStoreNodes)
             {
                 r.DataStoreCollection.Add(DevinfDataStore.Create(node));
@@ -1568,11 +1565,11 @@ namespace Fonlow.SyncML.Elements
         public static DevinfCTCap Create(XElement xmlData)
         {
             DevinfCTCap r = new DevinfCTCap();
-            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData,ElementNames.CTType));
-            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData,ElementNames.VerCT));
-            r.FieldLevel = SyncMLSimpleElementFactory.Create<DevinfFieldLevel>(ElementReader.Element(xmlData,ElementNames.FieldLevel));
+            r.CTType = SyncMLSimpleElementFactory.Create<DevinfCTType>(ElementReader.Element(xmlData, ElementNames.CTType));
+            r.VerCT = SyncMLSimpleElementFactory.Create<DevinfVerCT>(ElementReader.Element(xmlData, ElementNames.VerCT));
+            r.FieldLevel = SyncMLSimpleElementFactory.Create<DevinfFieldLevel>(ElementReader.Element(xmlData, ElementNames.FieldLevel));
             r.propertyCollection = new Collection<DevinfProperty>();
-            IEnumerable<XElement> propertyNodes = ElementReader.Elements(xmlData,ElementNames.Property);
+            IEnumerable<XElement> propertyNodes = ElementReader.Elements(xmlData, ElementNames.Property);
             foreach (XElement node in propertyNodes)
             {
                 r.PropertyCollection.Add(DevinfProperty.Create(node));

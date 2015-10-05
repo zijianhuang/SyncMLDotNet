@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using Microsoft.Office.Interop.Outlook;
-using Fonlow.SyncML.Common;
-using DDay.iCal;
+﻿using DDay.iCal;
 using DDay.iCal.Serialization.iCalendar;
+using Fonlow.SyncML.Common;
+using Microsoft.Office.Interop.Outlook;
+using System;
+using System.Linq;
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -49,8 +46,8 @@ namespace Fonlow.SyncML.OutlookSync
                 {
                     icalEvent.Description = item.Body;
                     icalEvent.Summary = item.Subject;
-                    icalEvent.Start = new iCalDateTime( DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc)); // item.StartUTC does not have Kind specified.
-                    icalEvent.End =new iCalDateTime( DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc));
+                    icalEvent.Start = new iCalDateTime(DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc)); // item.StartUTC does not have Kind specified.
+                    icalEvent.End = new iCalDateTime(DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc));
                     icalEvent.Duration = new TimeSpan(0, item.Duration, 0);
                     icalEvent.IsAllDay = item.AllDayEvent;
                     if (!String.IsNullOrEmpty(item.Categories))
@@ -77,8 +74,10 @@ namespace Fonlow.SyncML.OutlookSync
                     System.Diagnostics.Trace.TraceInformation("ReadItemToText: " + e.ToString() + "~" + e.Message);
                 }
 
-                iCalendarSerializer serializer = new iCalendarSerializer(calendar);
-                return serializer.SerializeToString();
+                //iCalendarSerializer serializer = new iCalendarSerializer(calendar);
+                //return serializer.SerializeToString();
+                iCalendarSerializer serializer = new iCalendarSerializer();
+                return serializer.SerializeToString(calendar);
             }
         }
 
@@ -86,8 +85,8 @@ namespace Fonlow.SyncML.OutlookSync
         {
             try
             {
-               // System.Diagnostics.Trace.TraceInformation("metaData: " + metaData);
-                using (var reader =new System.IO.StringReader(meta))                
+                // System.Diagnostics.Trace.TraceInformation("metaData: " + metaData);
+                using (var reader = new System.IO.StringReader(meta))
                 {
                     var calendarCollection = iCalendar.LoadFromStream(reader);
                     var calendar = calendarCollection.FirstOrDefault();
@@ -105,12 +104,12 @@ namespace Fonlow.SyncML.OutlookSync
                     item.Body = icalEvent.Description;
                     item.StartUTC = icalEvent.Start.UTC;
                     item.EndUTC = icalEvent.End.UTC;
-                    
+
                     // item.Duration =  no need to define as duration is End - Start
                     item.AllDayEvent = icalEvent.IsAllDay;
-                    item.Categories = String.Join("," ,icalEvent.Categories);
+                    item.Categories = String.Join(",", icalEvent.Categories);
                     item.Location = icalEvent.Location;
-                    
+
                     if (icalEvent.Alarms.Count > 0)
                     {
                         var alarm = icalEvent.Alarms.First();
@@ -177,30 +176,30 @@ namespace Fonlow.SyncML.OutlookSync
             return (OlDaysOfWeek)r;
         }*/
 
-     /*   private static OlRecurrenceType iCalFrequencyToOutlookRecurrenceType(FrequencyType frequencyType)
-        {
-            switch (frequencyType)
-            {
-                case FrequencyType.Daily:
+        /*   private static OlRecurrenceType iCalFrequencyToOutlookRecurrenceType(FrequencyType frequencyType)
+           {
+               switch (frequencyType)
+               {
+                   case FrequencyType.Daily:
+                       return OlRecurrenceType.olRecursDaily;
+                   case FrequencyType.Hourly:
+                       return OlRecurrenceType.olRecursDaily;
+                   case FrequencyType.Minutely:
                     return OlRecurrenceType.olRecursDaily;
-                case FrequencyType.Hourly:
-                    return OlRecurrenceType.olRecursDaily;
-                case FrequencyType.Minutely:
-                 return OlRecurrenceType.olRecursDaily;
-                case FrequencyType.Monthly:
-                    return OlRecurrenceType.olRecursMonthly;
-                case FrequencyType.None:
-                    return OlRecurrenceType.olRecursDaily;
-                case FrequencyType.Secondly:
-                    return OlRecurrenceType.olRecursDaily;
-                case FrequencyType.Weekly:
-                    return OlRecurrenceType.olRecursWeekly;
-                case FrequencyType.Yearly:
-                    return OlRecurrenceType.olRecursYearly;
-                default:
-                    return OlRecurrenceType.olRecursDaily;
-            }
-        }*/
+                   case FrequencyType.Monthly:
+                       return OlRecurrenceType.olRecursMonthly;
+                   case FrequencyType.None:
+                       return OlRecurrenceType.olRecursDaily;
+                   case FrequencyType.Secondly:
+                       return OlRecurrenceType.olRecursDaily;
+                   case FrequencyType.Weekly:
+                       return OlRecurrenceType.olRecursWeekly;
+                   case FrequencyType.Yearly:
+                       return OlRecurrenceType.olRecursYearly;
+                   default:
+                       return OlRecurrenceType.olRecursDaily;
+               }
+           }*/
 
 
     }

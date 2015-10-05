@@ -12,3 +12,5 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#SyncCompletionCallback(System.IAsyncResult)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "supportLargeObjs", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#LocalDevinf")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "supportNumberOfChanges", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#LocalDevinf")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "Loc", Scope = "resource", Target = "Fonlow.SyncML.Properties.Resources.resources")]
+

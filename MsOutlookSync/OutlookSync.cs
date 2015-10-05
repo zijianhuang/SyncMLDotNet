@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
-using System.Xml.Xsl;
-using System.Collections.Specialized;
 using Fonlow.SyncML.Common;
-using Fonlow.SyncML.Windows;
 using Fonlow.SyncML.MultiSync;
 using System.Reflection;
-using System.Diagnostics;
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -26,11 +20,8 @@ namespace Fonlow.SyncML.OutlookSync
         void syncForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             syncForm = null;
-         //   LoadSyncSettingsSafely();
-
         }
 
- //       OutlookDataSource localDataSource;
         System.Windows.Forms.Form syncForm;
         
         void LoadSyncForm()
@@ -66,7 +57,6 @@ namespace Fonlow.SyncML.OutlookSync
             {
                 if (disposing)
                 {
-                    //localDataSource.Dispose();
 
                     if (syncForm != null)
                         syncForm.Dispose();
@@ -81,25 +71,6 @@ namespace Fonlow.SyncML.OutlookSync
             GC.SuppressFinalize(this);
         }
 
-        //static void CopyUserConfigToAppData()
-        //{
-        //    string targetDir = (string)Microsoft.Win32.Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Outlook\Addins\FonlowSyncML.Addin", "TargetDir", String.Empty);
-        //    if (String.IsNullOrEmpty(targetDir))
-        //    {
-        //        Trace.TraceWarning("Cannot locate TargetDir in key FonlowSyncML.Addin, and the plugin will might not be loaded properly.");
-        //        return;
-        //    }
-
-        //    string installedUserConfigPath = targetDir + "User.config";
-        //    string userConfigDir = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Fonlow\\SyncMLAddinForOutlook";
-        //    string userConfigPath = userConfigDir+"\\FonlowSyncMLAddinForOutlook\\user.config";
-        //    //System.Windows.Forms.MessageBox.Show("userConfigPath: "+userConfigPath);
-        //    if (!System.IO.File.Exists(userConfigPath))
-        //    {
-        //        System.IO.Directory.CreateDirectory(userConfigDir);
-        //        System.IO.File.Copy(installedUserConfigPath, userConfigPath);
-        //    }
-        //}
     }
 
     /// <summary>
@@ -149,6 +120,8 @@ namespace Fonlow.SyncML.OutlookSync
             }
         }
 
+        static readonly Type typeofDeletionMonitorAttribute = typeof(DeletionMonitorAttribute);
+
         private static Type FindDeletionMonitorInAssembly(string localAssembly)
         {
             Assembly assembly = Assembly.Load(localAssembly);
@@ -159,7 +132,7 @@ namespace Fonlow.SyncML.OutlookSync
 
             foreach (Type t in assembly.GetTypes())
             {
-                if (t.IsClass && (t.GetCustomAttributes(typeof(DeletionMonitorAttribute), true).Count() > 0))
+                if (t.IsClass && (t.GetCustomAttributes(typeofDeletionMonitorAttribute, true).Count() > 0))
                 {
                     return t;
                 }

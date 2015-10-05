@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using System.IO;
 using System.Collections.Specialized;
-using System.Runtime.Remoting.Messaging;
 using System.Diagnostics;
 using Fonlow.SyncML.Common;
 using System.Collections.ObjectModel;
 using Fonlow.SyncML.Elements;
-using System.Linq;
 
 namespace Fonlow.SyncML
 {

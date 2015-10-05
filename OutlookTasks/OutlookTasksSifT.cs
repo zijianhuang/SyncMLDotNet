@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
-using Fonlow.SyncML.Common;
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -40,22 +36,22 @@ namespace Fonlow.SyncML.OutlookSync
                 DataUtility.CreateElement("BillingInformation", item.BillingInformation),
                 DataUtility.CreateElement("Companies", item.Companies),
                 DataUtility.CreateElement("Categories", item.Categories),
-                 DataUtility.CreateElement("Complete", item.Complete?"1":"0"),
+                 DataUtility.CreateElement("Complete", item.Complete ? "1" : "0"),
                 DataUtility.CreateElement("DueDate", item.DueDate.ToUniversalTime().ToString(isoFormat)),
                 DataUtility.CreateElement("DateCompleted", item.DateCompleted.ToString(isoFormat)),
            DataUtility.CreateElement("Body", item.Body),
                            DataUtility.CreateElement("Importance", ((int)item.Importance).ToString()),
                 DataUtility.CreateElement("Mileage", item.Mileage),
                 DataUtility.CreateElement("PercentComplete", item.PercentComplete.ToString()),
-                DataUtility.CreateElement("ReminderSet", item.ReminderSet?"1":"0"),
+                DataUtility.CreateElement("ReminderSet", item.ReminderSet ? "1" : "0"),
                 DataUtility.CreateElement("ReminderTime", item.ReminderTime.ToUniversalTime().ToString(isoFormat)),
                 DataUtility.CreateElement("ReminderSoundFile", item.ReminderSoundFile),
-                DataUtility.CreateElement("IsRecurring", item.IsRecurring?"1":"0"),
+                DataUtility.CreateElement("IsRecurring", item.IsRecurring ? "1" : "0"),
                 DataUtility.CreateElement("Sensitivity", ((int)item.Sensitivity).ToString()),
                 DataUtility.CreateElement("StartDate", item.StartDate.ToUniversalTime().ToString(isoFormat)),
                 DataUtility.CreateElement("Status", ((int)item.Status).ToString()),
                 DataUtility.CreateElement("Subject", item.Subject),
-                DataUtility.CreateElement("TeamTask", item.TeamTask?"1":"0"),
+                DataUtility.CreateElement("TeamTask", item.TeamTask ? "1" : "0"),
                 DataUtility.CreateElement("TotalWork", item.TotalWork.ToString())
               );
 
@@ -97,7 +93,7 @@ namespace Fonlow.SyncML.OutlookSync
             item.ReminderSet = DataUtility.ParseBool(sif, "ReminderSet");
             item.ReminderTime = DataUtility.ParseDateTime(sif, "ReminderTime");
             item.ReminderSoundFile = DataUtility.GetXElementValueSafely(sif, "ReminderSoundFile");
-           // item.IsRecurring = DataUtility.ParseBool(sif, "IsRecurring");
+            // item.IsRecurring = DataUtility.ParseBool(sif, "IsRecurring");
             item.Sensitivity = (OlSensitivity)DataUtility.ParseInt(sif, "Sensitivity");
             item.StartDate = DataUtility.ParseDate(sif, "StartDate");
             item.Status = (OlTaskStatus)DataUtility.ParseInt(sif, "Status");
@@ -106,7 +102,7 @@ namespace Fonlow.SyncML.OutlookSync
 
             if (DataUtility.ParseBool(sif, "IsRecurring"))
             {
-                 RecurrencePattern pattern = item.GetRecurrencePattern();
+                RecurrencePattern pattern = item.GetRecurrencePattern();
                 pattern.RecurrenceType = (OlRecurrenceType)DataUtility.ParseInt(sif, "RecurrenceType");//this must be first
                 switch (pattern.RecurrenceType)
                 {
@@ -140,7 +136,7 @@ namespace Fonlow.SyncML.OutlookSync
                         break;
                 }
 
-//                pattern.NoEndDate = DataUtility.ParseBool(sif, "NoEndDate"); No need to set
+                //                pattern.NoEndDate = DataUtility.ParseBool(sif, "NoEndDate"); No need to set
                 //If the PatternEndDate property or the Occurrences property is set, the pattern is considered to be finite 
                 //and the NoEndDate property is False. If neither PatternEndDate nor Occurrences is set, the pattern is considered 
                 //infinite and NoEndDate is True.
@@ -148,7 +144,7 @@ namespace Fonlow.SyncML.OutlookSync
 
                 pattern.PatternStartDate = DataUtility.ParseDateTime(sif, "PatternStartDate");
                 DateTime d = DataUtility.ParseDateTime(sif, "PatternEndDate");
-                if (d != new DateTime(4501,1,1))
+                if (d != new DateTime(4501, 1, 1))
                     pattern.PatternEndDate = d;//must be the end
 
             }

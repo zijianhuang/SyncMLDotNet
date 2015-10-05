@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Diagnostics;
 
@@ -23,7 +20,7 @@ namespace Fonlow.SyncML.Common
         /// <param name="topElement"></param>
         /// <param name="elementNames"></param>
         /// <returns>Elements or empty list.</returns>
-        public  static IEnumerable<XElement> SafeElementsQuery(XElement topElement, params string[] elementNames)
+        public static IEnumerable<XElement> SafeElementsQuery(XElement topElement, params string[] elementNames)
         {
             if (elementNames == null)
             {

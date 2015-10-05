@@ -15,7 +15,7 @@ namespace Fonlow.TestSyncMLElements
     /// Base class for TestFixture classes.
     /// </summary>
     /// 
-    [DeploymentItem(@"TestCase\SyncML\", @"SyncML")]
+    [DeploymentItem(@"..\..\..\TestCase\SyncML\", @"SyncML")]
     public class TestBase
     {
 

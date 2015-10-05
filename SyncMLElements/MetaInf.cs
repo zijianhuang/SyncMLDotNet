@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml;
-using System.Collections.ObjectModel;
 using System.Xml.Linq;
 
 namespace Fonlow.SyncML.Elements
 {
     public class MetaLast : SyncMLSimpleElement
     {
-        public MetaLast():base(ElementNames.SyncMLMetInf, ElementNames.Last)
+        public MetaLast() : base(ElementNames.SyncMLMetInf, ElementNames.Last)
         {
 
         }
@@ -17,7 +12,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaNext : SyncMLSimpleElement
     {
-        public MetaNext():base(ElementNames.SyncMLMetInf, ElementNames.Next)
+        public MetaNext() : base(ElementNames.SyncMLMetInf, ElementNames.Next)
         {
 
         }
@@ -30,7 +25,7 @@ namespace Fonlow.SyncML.Elements
     /// <ContentModel>(Last?, Next)</ContentModel>
     public class MetaAnchor : SyncMLComplexElement
     {
-        private MetaAnchor():base(ElementNames.SyncMLMetInf, ElementNames.Anchor) { }
+        private MetaAnchor() : base(ElementNames.SyncMLMetInf, ElementNames.Anchor) { }
 
         public static MetaAnchor Create()
         {
@@ -97,7 +92,7 @@ namespace Fonlow.SyncML.Elements
     /// </summary>
     public class MetaEMI : SyncMLSimpleElement
     {
-        public MetaEMI():base(ElementNames.SyncMLMetInf, ElementNames.EMI)
+        public MetaEMI() : base(ElementNames.SyncMLMetInf, ElementNames.EMI)
         {
 
         }
@@ -105,7 +100,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaFormat : SyncMLSimpleElement
     {
-        public MetaFormat():base(ElementNames.SyncMLMetInf, ElementNames.Format)
+        public MetaFormat() : base(ElementNames.SyncMLMetInf, ElementNames.Format)
         {
 
         }
@@ -113,7 +108,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaFieldLevel : SyncMLSimpleElement
     {
-        public MetaFieldLevel():base(ElementNames.SyncMLMetInf, ElementNames.FieldLevel)
+        public MetaFieldLevel() : base(ElementNames.SyncMLMetInf, ElementNames.FieldLevel)
         {
 
         }
@@ -121,7 +116,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaFreeID : SyncMLSimpleElement
     {
-        public MetaFreeID():base(ElementNames.SyncMLMetInf, ElementNames.FreeID)
+        public MetaFreeID() : base(ElementNames.SyncMLMetInf, ElementNames.FreeID)
         {
 
         }
@@ -129,7 +124,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaFreeMem : SyncMLSimpleElement
     {
-        public MetaFreeMem():base(ElementNames.SyncMLMetInf, ElementNames.FreeMem)
+        public MetaFreeMem() : base(ElementNames.SyncMLMetInf, ElementNames.FreeMem)
         {
 
         }
@@ -148,7 +143,7 @@ namespace Fonlow.SyncML.Elements
     /// </summary>
     public class MetaMark : SyncMLSimpleElement
     {
-        public MetaMark():base(ElementNames.SyncMLMetInf, ElementNames.Mark)
+        public MetaMark() : base(ElementNames.SyncMLMetInf, ElementNames.Mark)
         {
 
         }
@@ -156,7 +151,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaMaxMsgSize : SyncMLSimpleElement
     {
-        public MetaMaxMsgSize():base(ElementNames.SyncMLMetInf, ElementNames.MaxMsgSize)
+        public MetaMaxMsgSize() : base(ElementNames.SyncMLMetInf, ElementNames.MaxMsgSize)
         {
 
         }
@@ -164,7 +159,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaMaxObjSize : SyncMLSimpleElement
     {
-        public MetaMaxObjSize():base(ElementNames.SyncMLMetInf, ElementNames.MaxObjSize)
+        public MetaMaxObjSize() : base(ElementNames.SyncMLMetInf, ElementNames.MaxObjSize)
         {
 
         }
@@ -172,7 +167,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaNextNonce : SyncMLSimpleElement
     {
-        public MetaNextNonce():base(ElementNames.SyncMLMetInf, ElementNames.NextNonce)
+        public MetaNextNonce() : base(ElementNames.SyncMLMetInf, ElementNames.NextNonce)
         {
 
         }
@@ -180,7 +175,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaSharedMem : SyncMLSimpleElement
     {
-        public MetaSharedMem():base(ElementNames.SyncMLMetInf, ElementNames.SharedMem)
+        public MetaSharedMem() : base(ElementNames.SyncMLMetInf, ElementNames.SharedMem)
         {
 
         }
@@ -188,7 +183,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaSize : SyncMLSimpleElement
     {
-        public MetaSize():base(ElementNames.SyncMLMetInf, ElementNames.Size)
+        public MetaSize() : base(ElementNames.SyncMLMetInf, ElementNames.Size)
         {
 
         }
@@ -196,7 +191,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaType : SyncMLSimpleElement
     {
-        public MetaType():base(ElementNames.SyncMLMetInf, ElementNames.Type)
+        public MetaType() : base(ElementNames.SyncMLMetInf, ElementNames.Type)
         {
 
         }
@@ -204,7 +199,7 @@ namespace Fonlow.SyncML.Elements
 
     public class MetaVersion : SyncMLSimpleElement
     {
-        public MetaVersion():base(ElementNames.SyncMLMetInf, ElementNames.Version)
+        public MetaVersion() : base(ElementNames.SyncMLMetInf, ElementNames.Version)
         {
 
         }
@@ -216,7 +211,7 @@ namespace Fonlow.SyncML.Elements
     ///<ContentModel>(SharedMem?, FreeMem, FreeID)</ContentModel>
     public class MetaMem : SyncMLComplexElement
     {
-        private MetaMem():base(ElementNames.SyncMLMetInf, ElementNames.Mem) { }
+        private MetaMem() : base(ElementNames.SyncMLMetInf, ElementNames.Mem) { }
 
         public static MetaMem Create(XElement xmlData)
         {
@@ -225,7 +220,7 @@ namespace Fonlow.SyncML.Elements
 
             MetaMem r = new MetaMem();
             r.FreeMem = SyncMLSimpleElementFactory.Create<MetaFreeMem>(ElementReader.Element(xmlData, ElementNames.FreeMem));
-            r.FreeID = SyncMLSimpleElementFactory.Create<MetaFreeID>(ElementReader.Element(xmlData,ElementNames.FreeID));
+            r.FreeID = SyncMLSimpleElementFactory.Create<MetaFreeID>(ElementReader.Element(xmlData, ElementNames.FreeID));
             r.SharedMem = SyncMLSimpleElementFactory.Create<MetaSharedMem>(ElementReader.Element(xmlData, ElementNames.SharedMem));
             return r;
         }
@@ -301,12 +296,12 @@ namespace Fonlow.SyncML.Elements
 
         public MetaFormat GetMetaFormat()
         {
-            return SyncMLSimpleElementFactory.Create<MetaFormat>(navMeta.Element(metaNamespace+ElementNames.Format));
+            return SyncMLSimpleElementFactory.Create<MetaFormat>(navMeta.Element(metaNamespace + ElementNames.Format));
         }
 
         public MetaType GetMetaType()
         {
-            return SyncMLSimpleElementFactory.Create<MetaType>(navMeta.Element(metaNamespace+ElementNames.Type));
+            return SyncMLSimpleElementFactory.Create<MetaType>(navMeta.Element(metaNamespace + ElementNames.Type));
         }
 
         public MetaAnchor GetMetaAnchor()

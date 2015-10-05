@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
-using Fonlow.VCard;
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -14,7 +10,7 @@ namespace Fonlow.SyncML.OutlookSync
     public class OutlookContactsWithSifC : OutlookItemsWithSyncContent<ContactItem>
     {
         public OutlookContactsWithSifC(Application app)
-            :base(app.GetNamespace("MAPI").GetDefaultFolder(OlDefaultFolders.olFolderContacts) as Folder)
+            : base(app.GetNamespace("MAPI").GetDefaultFolder(OlDefaultFolders.olFolderContacts) as Folder)
         {
         }
 

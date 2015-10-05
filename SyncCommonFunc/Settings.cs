@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Configuration;
 using System.ComponentModel;
 using System.Drawing;
-using System.Reflection;
-using Fonlow.SyncML.Common;
 
 namespace Fonlow.SyncML.Common
 {
@@ -230,58 +226,6 @@ namespace Fonlow.SyncML.Common
         }
 
     }
-
-  /*  /// <summary>
-    /// Contain sync settings for multiple types of meta data.
-    /// The application should initialize those non-browsable properties.
-    /// </summary>
-    public class MultiSyncSettings : SyncSettingsBase
-    {
-        #region Singleton
-        public static MultiSyncSettings Default
-        {
-            get { return Nested.instance; }
-        }
-
-        class Nested
-        {
-            static Nested() { }
-            internal static readonly MultiSyncSettings instance = new MultiSyncSettings();
-        }
-        #endregion;
-
-        protected MultiSyncSettings()
-        {
-            //SyncItems = new SyncItems();
-        }
-
-        [UserScopedSettingAttribute()]
-        [DisplayName("Items")]
-        [Category("Sync")]
-        public SyncItems SyncItems
-        {
-            get
-            {
-                SyncItems items = this["SyncItems"] as SyncItems;
-                if (items == null)//When Reloading, property SyncItems may be assigned null if not in the persistent storage.
-                {
-                    SyncItems = new SyncItems();
-                }
-                return items;
-            }
-            set
-            {
-                if (value == null)
-                {
-                    SyncItems.Clear();
-                }
-                else
-                {
-                    this["SyncItems"] = value;
-                }
-            }
-        }
-    }*/
 
     public class ProgramSettings : ApplicationSettingsBase
     {

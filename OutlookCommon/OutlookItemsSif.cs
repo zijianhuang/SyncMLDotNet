@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
 
@@ -110,7 +109,7 @@ namespace Fonlow.SyncML.OutlookSync
     /// </summary>
     public static class DataUtility
     {
-        static DateTime outlookOKYear = DateTime.Today.AddYears(1000); 
+        static DateTime outlookOKYear = DateTime.Today.AddYears(1000);
         static DateTime outlookNullYear = new DateTime(4501, 01, 01);// Outlook Null year is actuall 4501-01-01 when being presented in C# codes.
 
         /// <summary>
@@ -183,19 +182,19 @@ namespace Fonlow.SyncML.OutlookSync
             }
             else
             {
-                if (DateTime.TryParseExact(text, new string[] { "yyyyMMddTHHmmssZ"},
+                if (DateTime.TryParseExact(text, new string[] { "yyyyMMddTHHmmssZ" },
                     System.Globalization.CultureInfo.CurrentCulture, System.Globalization.DateTimeStyles.NoCurrentDateDefault, out r))
                 {
                     //r is already converted to local time, and it is more consistent to keep it as UTC.
-                  //  r = r.ToUniversalTime();
+                    //  r = r.ToUniversalTime();
                     if (r == outlookNullYear)
                     {
                         System.Diagnostics.Trace.TraceInformation("Invalid date text: " + text + "~Today is used for further analysis.");
                         return DateTime.Today;
-               
+
                     }
                     else
-                      return r;
+                        return r;
                 }
                 else
                 {
@@ -231,7 +230,7 @@ namespace Fonlow.SyncML.OutlookSync
         public static DateTime ParseDate(XElement parentElement, string elementName)
         {
             DateTime date = ParseDateTime(GetXElementValueSafely(parentElement, elementName));
-            return (date == outlookNullYear)? outlookNullYear : date.Date;
+            return (date == outlookNullYear) ? outlookNullYear : date.Date;
         }
 
         public static bool ParseBool(string text)
@@ -247,8 +246,8 @@ namespace Fonlow.SyncML.OutlookSync
         public static int ParseInt(string text)
         {
             int r;
-            return String.IsNullOrEmpty(text)?0:
-                (int.TryParse(text, out r)?r:0); 
+            return String.IsNullOrEmpty(text) ? 0 :
+                (int.TryParse(text, out r) ? r : 0);
         }
 
         public static int ParseInt(XElement parentElement, string elementName)

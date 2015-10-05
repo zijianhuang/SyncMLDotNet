@@ -14,9 +14,9 @@ namespace TestOcLocalDataSource
     ///to contain all OCLocalDataSourceTest Unit Tests
     ///</summary>
     [TestClass()]
-    [DeploymentItem(@"TestCase\ChangeLog.xml")]
-    [DeploymentItem(@"TestCase\ChangeLog2.xml")]
-    [DeploymentItem(@"TestCase\ChangeLog3.xml")]
+    [DeploymentItem(@"..\..\..\TestCase\ChangeLog.xml")]
+    [DeploymentItem(@"..\..\..\TestCase\ChangeLog2.xml")]
+    [DeploymentItem(@"..\..\..\TestCase\ChangeLog3.xml")]
     public class OCLocalDataSourceTest
     {
 

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
 using System.ComponentModel;
 using System.Globalization;
-using System.Reflection;
 using System.Diagnostics;
 
 namespace Fonlow.SyncML.Common
@@ -22,7 +17,7 @@ namespace Fonlow.SyncML.Common
         /// It may be Contacts, Calendar, Note etc., up to the application to interpret.
         /// </summary>
         [Browsable(false)]
-        public string ItemType {get;set;}
+        public string ItemType { get; set; }
 
         /// <summary>
         /// Define the qualified name of the assembly with ILocalDataSource implementation.
@@ -39,7 +34,7 @@ namespace Fonlow.SyncML.Common
         /// makes this property to be represented in datagrid as a dropdown list.
         /// </summary>
         [DisplayName("Data format")]
-         public virtual string DataFormat { get; set; }
+        public virtual string DataFormat { get; set; }
 
         [DisplayName("Sync Direction")]
         public SyncType SyncDirection { get; set; }
@@ -186,7 +181,7 @@ namespace Fonlow.SyncML.Common
         {
             if (String.IsNullOrEmpty(csvValues))
             {
-                values=new string[]{};
+                values = new string[] { };
             }
             else
             {

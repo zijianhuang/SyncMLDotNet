@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Xml.Linq;
-using System.Text;
+﻿using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
 using System;
@@ -25,7 +22,7 @@ namespace Fonlow.Configuration
             //}
             ConfigurationFileMap fileMap = new ConfigurationFileMap(UserConfigFilePath);
             System.Configuration.Configuration config = ConfigurationManager.OpenMappedMachineConfiguration(fileMap);
-            
+
             UserSettingsGroup userSectionGroup = config.SectionGroups["userSettings"] as UserSettingsGroup;
             if (userSectionGroup == null)
             {

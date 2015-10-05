@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
 using Fonlow.SyncML.Common;
 using Microsoft.Office.Interop.Outlook;
 using DDay.iCal;
-using DDay.iCal.Serialization;
 using DDay.iCal.Serialization.iCalendar;
 
 namespace Fonlow.SyncML.OutlookSync
@@ -46,11 +42,11 @@ namespace Fonlow.SyncML.OutlookSync
                 {
                     todo.Summary = item.Subject;
                     todo.Description = item.Body;
-                    todo.Completed = new iCalDateTime( item.DateCompleted);
+                    todo.Completed = new iCalDateTime(item.DateCompleted);
                     todo.Due = new iCalDateTime(item.DueDate);
                     todo.Start = new iCalDateTime(item.StartDate);
                     if (!String.IsNullOrEmpty(item.Categories))
-                        todo.Categories = item.Categories.Split(new string[] { ",", ", ", ",  " }, StringSplitOptions.RemoveEmptyEntries); 
+                        todo.Categories = item.Categories.Split(new string[] { ",", ", ", ",  " }, StringSplitOptions.RemoveEmptyEntries);
                     //todo.Priority = item.SchedulePlusPriority;
                     todo.PercentComplete = item.PercentComplete;
                     //   todo.Class.Value = item.Sensitivity
@@ -58,10 +54,10 @@ namespace Fonlow.SyncML.OutlookSync
                     {
                         Alarm alarm = new Alarm();
                         alarm.Trigger = new Trigger(); //Alarm.Trigger is null by default.
-                        alarm.Trigger.DateTime = new iCalDateTime( item.ReminderTime);
+                        alarm.Trigger.DateTime = new iCalDateTime(item.ReminderTime);
                         todo.Alarms.Add(alarm);
                     }
-                    
+
                     todo.AddProperty("X-FONLOW-ACTUALWORK", item.ActualWork.ToString());
                     todo.AddProperty("X-FONLOW-TOTALWORK", item.TotalWork.ToString());
                     todo.AddProperty("X-FONLOW-BILLINGINFO", item.BillingInformation);
@@ -70,12 +66,12 @@ namespace Fonlow.SyncML.OutlookSync
                     todo.AddProperty("X-FONLOW-TEAMTASK", item.TeamTask ? "1" : "0");
 
                     calendar.Todos.Add(todo);
-                    iCalendarSerializer serializer = new iCalendarSerializer(calendar);
-                    return serializer.SerializeToString();
+                    iCalendarSerializer serializer = new iCalendarSerializer();
+                    return serializer.SerializeToString(calendar);
                 }
                 catch (System.NullReferenceException e)
                 {
-                    System.Diagnostics.Trace.TraceWarning("ReadItemToText: " + e.ToString() );
+                    System.Diagnostics.Trace.TraceWarning("ReadItemToText: " + e.ToString());
                     return String.Empty;
                 }
 
@@ -87,9 +83,9 @@ namespace Fonlow.SyncML.OutlookSync
             try
             {
                 System.Diagnostics.Debug.WriteLine("metaData: " + meta);
-                using (var reader =new System.IO.StringReader(meta))
+                using (var reader = new System.IO.StringReader(meta))
                 {
-                var calendarCollection = iCalendar.LoadFromStream(reader);
+                    var calendarCollection = iCalendar.LoadFromStream(reader);
                     var calendar = calendarCollection.FirstOrDefault();
                     if (calendar == null)
                     {
