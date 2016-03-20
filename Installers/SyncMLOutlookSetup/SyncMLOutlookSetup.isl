@@ -1897,8 +1897,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>fonlow.outlooksyncmladdin.dl</td><td>ISX_DEFAULTCOMPONENT</td><td>FONLOW~1.MAN|Fonlow.OutlookSyncMLAddIn.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\VSProjectsMy\SyncmlDotNetInGit\OutlookSyncMLAddIn\bin\Debug\Fonlow.OutlookSyncMLAddIn.dll.manifest</td><td>1</td><td/></row>
-		<row><td>fonlow.outlooksyncmladdin.vs</td><td>ISX_DEFAULTCOMPONENT</td><td>FONLOW~1.VST|Fonlow.OutlookSyncMLAddIn.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>C:\VSProjectsMy\SyncmlDotNetInGit\OutlookSyncMLAddIn\bin\Debug\Fonlow.OutlookSyncMLAddIn.vsto</td><td>1</td><td/></row>
+		<row><td>fonlow.outlooksyncmladdin.dl</td><td>ISX_DEFAULTCOMPONENT</td><td>FONLOW~1.MAN|Fonlow.OutlookSyncMLAddIn.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\VsProjects\SyncmlDotNetInGit\OutlookSyncMLAddIn\bin\Debug\Fonlow.OutlookSyncMLAddIn.dll.manifest</td><td>1</td><td/></row>
+		<row><td>fonlow.outlooksyncmladdin.vs</td><td>ISX_DEFAULTCOMPONENT</td><td>FONLOW~1.VST|Fonlow.OutlookSyncMLAddIn.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>C:\VsProjects\SyncmlDotNetInGit\OutlookSyncMLAddIn\bin\Debug\Fonlow.OutlookSyncMLAddIn.vsto</td><td>1</td><td/></row>
 		<row><td>msoutlooksync.primary_output</td><td>MsOutlookSync.Primary_output</td><td>MsOutlookSync.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;MsOutlookSync&gt;|Built</td><td>3</td><td/></row>
 		<row><td>outlookcalendar.primary_outp</td><td>OutlookCalendar.Primary_output</td><td>OutlookCalendar.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;OutlookCalendar&gt;|Built</td><td>3</td><td/></row>
 		<row><td>outlookcontacts.primary_outp</td><td>OutlookContacts.Primary_output</td><td>OutlookContacts.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;OutlookContacts&gt;|Built</td><td>3</td><td/></row>

@@ -32,10 +32,12 @@
     </TargetFrameworkProfile>
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>14.0</OldToolsVersion>
     <VSTO_TrustAssembliesLocation>true</VSTO_TrustAssembliesLocation>
-    <UpgradeBackupLocation>C:\VSProjectsMy\SyncmlDotNetInGit\Backup1\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl />
@@ -51,6 +53,7 @@
     <FriendlyName>OutlookSyncMLAddIn</FriendlyName>
     <OfficeApplicationDescription />
     <LoadBehavior>3</LoadBehavior>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -204,11 +207,15 @@
       <HintPath>..\3rdParty\PIA\Office14\Microsoft.Office.Tools.v4.0.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\3rdParty\PIA\Office14\Office.dll</HintPath>
     </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\3rdParty\PIA\Common\stdole.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
