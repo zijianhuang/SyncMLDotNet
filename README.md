@@ -1,7 +1,7 @@
 # SyncMLDotNet
-.NET components for synchronizing meta data with a SyncML server such as Funambol DS server. SyncML Client for Open Contacts and Addin for MS Outlook are utilizing the API
+.NET components for synchronizing meta data such as contacts, calendar, tasks and todo with a SyncML server such as Funambol DS server. SyncML Client for Open Contacts and Addin for MS Outlook are utilizing the API
 
-This project was originally hosted at https://sourceforge.net/projects/syncmldotnet/since 2008-04-15 and was moved to GitHub on 2016-04-14.
+This project was originally hosted at https://sourceforge.net/projects/syncmldotnet/ since 2008-04-15 and was moved to GitHub on 2016-04-14. And project documents are located in the Design folder and at http://zijianhuang.github.io/SyncMLDotNet/ .
 
 
 Features
