@@ -54,7 +54,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Fonlow.SyncML.OCLocalDataSource.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\webapiclientgen\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

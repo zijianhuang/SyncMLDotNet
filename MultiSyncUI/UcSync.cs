@@ -60,6 +60,8 @@ namespace Fonlow.SyncML.MultiSync
         public UcSync(SyncItem syncItem, SyncSettingsBase syncSettings)
             : this()
         {
+            if (syncItem == null)
+                throw new ArgumentNullException("syncItem");
             if (syncSettings == null)
                 throw new ArgumentNullException("syncSettings");
 

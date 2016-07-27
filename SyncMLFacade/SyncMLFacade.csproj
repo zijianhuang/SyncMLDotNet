@@ -56,7 +56,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Fonlow.SyncML.SyncMLFacade.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
-    <CodeAnalysisRuleSet>..\Syncml.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\webapiclientgen\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -13,4 +13,8 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "supportLargeObjs", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#LocalDevinf")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "supportNumberOfChanges", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#LocalDevinf")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "Loc", Scope = "resource", Target = "Fonlow.SyncML.Properties.Resources.resources")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "0#", Scope = "member", Target = "Fonlow.SyncML.SyncMLConnections.#.ctor(System.String,System.Net.WebProxy)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Scope = "member", Target = "Fonlow.SyncML.SyncMLConnections.#Uri")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Scope = "member", Target = "Fonlow.SyncML.SyncMLFacade.#BasicUriText")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Fonlow.SyncML.SyncMLSyncMessageBase.#GetStatusReport(Fonlow.SyncML.Elements.SyncMLStatus)")]
 

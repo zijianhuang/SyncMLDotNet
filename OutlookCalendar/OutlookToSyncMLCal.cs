@@ -29,16 +29,16 @@ namespace Fonlow.SyncML.OutlookSync
             return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + SifAgent.ReadItemToText(item);
         }
 
-        protected override void AddContentToCommand(SyncMLUpdateBase command, AppointmentItem contact)
+        protected override void AddContentToCommand(SyncMLUpdateBase command, AppointmentItem content)
         {
             command.Meta.Xml.Add(FormatOfBase64);
             command.Meta.Xml.Add(TypeOfText);
 
             SyncMLItem item = SyncMLItem.Create();
-            item.Source.LocURI.Content = contact.EntryID;
+            item.Source.LocURI.Content = content.EntryID;
 
             UTF8Encoding byteConverter = new UTF8Encoding();
-            byte[] buffer = byteConverter.GetBytes(GetItemData(contact));
+            byte[] buffer = byteConverter.GetBytes(GetItemData(content));
             item.Data.Content = Convert.ToBase64String(buffer);
 
             command.ItemCollection.Add(item);

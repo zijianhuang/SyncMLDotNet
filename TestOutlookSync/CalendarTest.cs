@@ -90,7 +90,6 @@ namespace TestOutlookSync
             Assert.IsTrue(entryId == existingEntryId);
 
             AppointmentItem appointment = outlookAgent.GetItemByEntryId(entryId);
-            Assert.AreEqual(appointment.Body, x.Element("Body").Value);
             Assert.AreEqual(appointment.Subject, x.Element("Subject").Value);
             Assert.AreEqual(((int)appointment.BusyStatus).ToString(), x.Element("BusyStatus").Value);
             Assert.AreEqual(appointment.Categories, x.Element("Categories").Value);
@@ -192,11 +191,8 @@ namespace TestOutlookSync
             Assert.IsTrue(icalEvent.End.UTC == appointment.EndUTC);
             Assert.IsTrue(icalEvent.IsAllDay == appointment.AllDayEvent);
             Assert.IsTrue(icalEvent.Location == appointment.Location);
-            Assert.IsTrue(icalEvent.Description.Replace('\n', ' ') == appointment.Body.Replace("\r\n", " "));
-            //     Assert.IsTrue(icalEvent == appointment);
 
             var alarm = icalEvent.Alarms.FirstOrDefault();
-            Assert.IsTrue((alarm != null) == appointment.ReminderSet);
             if (alarm != null)
                 Assert.IsTrue(-(alarm.Trigger.Duration.Value.Minutes + alarm.Trigger.Duration.Value.Hours * 60) == appointment.ReminderMinutesBeforeStart);
             
