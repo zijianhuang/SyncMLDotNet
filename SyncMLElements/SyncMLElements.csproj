@@ -45,7 +45,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRules>
     </CodeAnalysisRules>
-    <CodeAnalysisRuleSet>..\Syncml.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -55,7 +55,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Release\Fonlow.SyncML.SyncMLElements.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>..\..\webapiclientgen\Fonlow.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

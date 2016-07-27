@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Outlook;
+using Fonlow.SyncML.Common;
 
 namespace Fonlow.SyncML.OutlookSync
 {

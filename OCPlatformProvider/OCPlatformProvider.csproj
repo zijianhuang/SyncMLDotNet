@@ -43,7 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Syncml.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,7 +53,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Release\Fonlow.SyncML.OCPlatformProvider.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>..\..\webapiclientgen\Fonlow.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fonlow.OpenContacts.Interop, Version=1.2.0.0, Culture=neutral, PublicKeyToken=10c90a2fc24abc14, processorArchitecture=MSIL">

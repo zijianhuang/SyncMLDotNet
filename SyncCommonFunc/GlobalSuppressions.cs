@@ -33,3 +33,9 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods", Scope = "member", Target = "Fonlow.SyncML.Common.CalendarSyncItem.#Filter")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods", Scope = "member", Target = "Fonlow.SyncML.Common.DateFunctions.#StartDateOfLast2Weeks")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Scope = "member", Target = "Fonlow.SyncML.Common.SyncSettingsBase.#GetSyncItemNames()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "bool", Scope = "member", Target = "Fonlow.SyncML.Common.DataUtility.#ParseBool(System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "bool", Scope = "member", Target = "Fonlow.SyncML.Common.DataUtility.#ParseBool(System.Xml.Linq.XElement,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "int", Scope = "member", Target = "Fonlow.SyncML.Common.DataUtility.#ParseInt(System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "int", Scope = "member", Target = "Fonlow.SyncML.Common.DataUtility.#ParseInt(System.Xml.Linq.XElement,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Scope = "member", Target = "Fonlow.SyncML.Common.DataUtility.#GetXElementValueSafely(System.Xml.Linq.XElement,System.String)")]
+

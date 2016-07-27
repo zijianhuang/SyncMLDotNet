@@ -43,7 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Syncml.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -54,7 +54,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Release\Fonlow.SyncML.CommonUI.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>..\..\webapiclientgen\Fonlow.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
