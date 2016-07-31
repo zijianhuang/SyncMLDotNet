@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>SyncML Dot NET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">SyncML Dot NET</h1>
+    </section>
+	<h1>Install Funambol 10.0.2 on Windows</h1>
+	<ol>
+		<li>Download from <a href="https://sourceforge.net/projects/funambol/">
+		https://sourceforge.net/projects/funambol/</a></li>
+		<li>Run the setup program as admin, and it is recommended to install to 
+		somewhere like <a href="file:///c:/Funambol">c:\Funambol</a> rather than
+		<a href="file:///c:/Program">c:\Program</a> Files (x86)</li>
+		<li>In the last step of the setup program, don't run Funambol yet, but 
+		go to <a href="file:///C:/Funambol/tools/tomcat/webapps">
+		C:\Funambol\tools\tomcat\webapps</a>. If sub folder funambol does not 
+		exist, you will need to extract funambol.war to subfolder funambol.
+		<img src="images/funambolInstall.gif"></li>
+		<li>Then finish the setup program, and Funambol should be running.</li>
+	</ol>
+	<p>&nbsp;</p>
+	<p>If you somehow finished the setup program without extracting 
+	funambol.war. You may:</p>
+	<ol>
+		<li>Extract funambol.war as described above.</li>
+		<li>Go to <a href="file:///c:/funambol/bin">c:\funambol\bin</a>, and run 
+		StopAll.cmd</li>
+		<li>Then run StartAll.cmd</li>
+	</ol>
+	<p>If you want to run Funambol server at startup, you may add StartAll.cmd 
+	to Windows Task Scheduler.</p>
+	<p>There exist an admin tool in <a href="file:///c:/funambol/admin">
+	c:\funambol\admin</a>. The default password for admin is sa, and the default 
+	port is 8080.</p>
+	<p>For more details, please read the
+	<a href="http://download.forge.objectweb.org/sync4j/funambol-installation-and-administration-guide.pdf">
+	Funambol administration manual</a>.</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+  
+  </body>
+</html>
