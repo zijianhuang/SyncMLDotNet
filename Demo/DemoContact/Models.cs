@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+
 
 namespace DemoContact
 {
@@ -28,4 +30,25 @@ namespace DemoContact
 
         public DateTime? Modified { get; set; }
     }
+
+
+    [DataContract(Name ="Item")]
+    public class ContactLogItem
+    {
+        [DataMember]
+        public string Id { get; set; }
+
+        [DataMember]
+        public DateTime Modified { get; set; }
+    }
+
+
+    [DataContract]
+    public class ContactLog
+    {
+        [DataMember]
+        public ContactLogItem[] Items { get; set; }
+    }
+
+    public enum UpdateType { Unchanged, Added, Updated, Deleted};
 }

@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactsDataSource.cs" />
+    <Compile Include="ContactsProvider.cs" />
     <Compile Include="ContactWithSifC.cs" />
+    <Compile Include="DeltaCalculator.cs" />
+    <Compile Include="IContactsProvider.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,6 +53,14 @@
     <ProjectReference Include="..\..\SyncCommonFunc\SyncCommonFunc.csproj">
       <Project>{1c6c8f32-dfab-47d8-8893-354560dbe84b}</Project>
       <Name>SyncCommonFunc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SyncMLDataSourceShared\SyncMLDataSourceShared.csproj">
+      <Project>{b2a358b7-7ee6-4f9f-b903-317bf9f773e0}</Project>
+      <Name>SyncMLDataSourceShared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SyncMLElements\SyncMLElements.csproj">
+      <Project>{da16ab4b-8352-4a7d-89f2-2714e8d4678e}</Project>
+      <Name>SyncMLElements</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
