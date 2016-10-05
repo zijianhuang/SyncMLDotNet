@@ -51,7 +51,7 @@ namespace Fonlow.SyncML.OutlookSync
                     icalEvent.Duration = new TimeSpan(0, item.Duration, 0);
                     icalEvent.IsAllDay = item.AllDayEvent;
                     if (!String.IsNullOrEmpty(item.Categories))
-                        icalEvent.Categories = item.Categories.Split(new string[] { ",", ", ", ",  " }, StringSplitOptions.RemoveEmptyEntries);
+                        icalEvent.Categories = item.Categories.Split(new string[] { ",  ", ", ", "," }, StringSplitOptions.RemoveEmptyEntries);//the order of the separator is significant
                     icalEvent.Location = item.Location;
                     if (item.ReminderSet)
                     {

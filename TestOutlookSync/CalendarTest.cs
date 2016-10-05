@@ -159,6 +159,24 @@ namespace TestOutlookSync
 
         const string iCalSubject = "Outlook demo event";
 
+        void CompareIcalEventAndAppointment(IEvent icalEvent, AppointmentItem appointment)
+        {
+            Assert.IsTrue(icalEvent.Start.UTC == appointment.StartUTC);
+            Assert.IsTrue(icalEvent.End.UTC == appointment.EndUTC);
+            Assert.IsTrue(icalEvent.IsAllDay == appointment.AllDayEvent);
+            Assert.IsTrue(icalEvent.Location == appointment.Location);
+            var ar = icalEvent.Categories.ToArray();
+            var expected = String.Join(",", ar);
+            var actural = String.Join(",", appointment.Categories.Split(new string[] {",  ", ", ", "," }, StringSplitOptions.RemoveEmptyEntries));
+            Assert.AreEqual(expected, actural);
+
+            var alarm = icalEvent.Alarms.FirstOrDefault();
+            if (alarm != null)
+                Assert.IsTrue(-(alarm.Trigger.Duration.Value.Minutes + alarm.Trigger.Duration.Value.Hours * 60) == appointment.ReminderMinutesBeforeStart);
+            
+
+        }
+
         [TestMethod]
         public void TestAddCalendarICal()
         {
@@ -179,24 +197,10 @@ namespace TestOutlookSync
 
             AppointmentItem appointment = outlookAgent.GetItemByEntryId(entryId);
 
-            var calendarCollection =  iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
+            var calendarCollection = iCalendar.LoadFromFile(MockPath + "Outlook demo event.ics");
             var calendar = calendarCollection.FirstOrDefault();
             var icalEvent = calendar.Events[0];
             CompareIcalEventAndAppointment(icalEvent, appointment);
-        }
-
-        void CompareIcalEventAndAppointment(IEvent icalEvent, AppointmentItem appointment)
-        {
-            Assert.IsTrue(icalEvent.Start.UTC == appointment.StartUTC);
-            Assert.IsTrue(icalEvent.End.UTC == appointment.EndUTC);
-            Assert.IsTrue(icalEvent.IsAllDay == appointment.AllDayEvent);
-            Assert.IsTrue(icalEvent.Location == appointment.Location);
-
-            var alarm = icalEvent.Alarms.FirstOrDefault();
-            if (alarm != null)
-                Assert.IsTrue(-(alarm.Trigger.Duration.Value.Minutes + alarm.Trigger.Duration.Value.Hours * 60) == appointment.ReminderMinutesBeforeStart);
-            
-
         }
 
         [TestMethod]
@@ -205,7 +209,7 @@ namespace TestOutlookSync
             Application app = new Application();
             OutlookCalendarWithICal agent = new OutlookCalendarWithICal(app);
             OutlookCalendar outlookAgent = new OutlookCalendar(app, CalendarPeriod.All);
-            TestAddCalendarICal();
+         //   TestAddCalendarICal();
             string existingEntryId = outlookAgent.GetEntryIdByDisplayName(iCalSubject);
 
             string x = File.ReadAllText(MockPath + "Outlook demo event.ics");

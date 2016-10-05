@@ -46,7 +46,7 @@ namespace Fonlow.SyncML.OutlookSync
                     todo.Due = new iCalDateTime(item.DueDate);
                     todo.Start = new iCalDateTime(item.StartDate);
                     if (!String.IsNullOrEmpty(item.Categories))
-                        todo.Categories = item.Categories.Split(new string[] { ",", ", ", ",  " }, StringSplitOptions.RemoveEmptyEntries);
+                        todo.Categories = item.Categories.Split(new string[] { ",  ", ", ", "," }, StringSplitOptions.RemoveEmptyEntries);
                     //todo.Priority = item.SchedulePlusPriority;
                     todo.PercentComplete = item.PercentComplete;
                     //   todo.Class.Value = item.Sensitivity
