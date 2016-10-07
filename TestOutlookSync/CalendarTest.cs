@@ -169,6 +169,8 @@ namespace TestOutlookSync
             var expected = String.Join(",", ar);
             var actural = String.Join(",", appointment.Categories.Split(new string[] {",  ", ", ", "," }, StringSplitOptions.RemoveEmptyEntries));
             Assert.AreEqual(expected, actural);
+            Assert.AreEqual(OlResponseStatus.olResponseAccepted, appointment.ResponseStatus);
+            Assert.AreEqual(EventStatus.Confirmed, icalEvent.Status);
 
             var alarm = icalEvent.Alarms.FirstOrDefault();
             if (alarm != null)
