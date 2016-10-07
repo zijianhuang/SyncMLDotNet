@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ical.Net.Collections</name>
+    </assembly>
+    <members>
+        <member name="E:ical.NET.Collections.Interfaces.IGroupedCollection`2.ItemAdded">
+            <summary>
+            Fired after an item is added to the collection.
+            </summary>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedCollection`2.Remove(`0)">
+            <summary>
+            Removes all items with the matching group from the collection.
+            </summary>        
+            <returns>True if the object was removed, false otherwise.</returns>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedCollection`2.Clear(`0)">
+            <summary>
+            Clears all items matching the specified group.
+            </summary>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedCollection`2.ContainsKey(`0)">
+            <summary>
+            Returns true if the list contains at least one 
+            object with a matching group, false otherwise.
+            </summary>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedCollection`2.CountOf(`0)">
+            <summary>
+            Returns the number of objects in the list
+            with a matching group.
+            </summary>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedCollection`2.AllOf(`0)">
+            <summary>
+            Returns a list of objects that
+            match the specified group.
+            </summary>
+        </member>
+        <member name="M:ical.NET.Collections.Interfaces.IGroupedList`2.IndexOf(`1)">
+            <summary>
+            Returns the index of the given item
+            within the list, or -1 if the item
+            is not found in the list.
+            </summary>
+        </member>
+        <member name="P:ical.NET.Collections.Interfaces.IGroupedList`2.Item(System.Int32)">
+            <summary>
+            Gets the object at the specified index.
+            </summary>
+        </member>
+        <member name="T:ical.NET.Collections.Proxies.GroupedCollectionProxy`3">
+            <summary>
+            A proxy for a keyed list.
+            </summary>
+        </member>
+        <member name="T:ical.NET.Collections.Proxies.GroupedValueListProxy`5">
+            <summary>
+            A proxy for a keyed list.
+            </summary>
+        </member>
+        <member name="T:ical.NET.Collections.GroupedList`2">
+            <summary>
+            A list of objects that are keyed.
+            </summary>
+        </member>
+    </members>
+</doc>

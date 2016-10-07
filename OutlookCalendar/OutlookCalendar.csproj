@@ -55,16 +55,21 @@
     <CodeAnalysisRuleSet>..\Fonlow.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DDay.Collections">
-      <HintPath>..\3rdParty\DDAYICAL\DDay.Collections.dll</HintPath>
+    <Reference Include="antlr.runtime">
+      <HintPath>..\3rdParty\iCalNet\antlr.runtime.dll</HintPath>
     </Reference>
-    <Reference Include="DDay.iCal, Version=0.80.0.0, Culture=neutral, PublicKeyToken=1790ba318ebc5d56, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\3rdParty\DDAYICAL\DDay.iCal.dll</HintPath>
+    <Reference Include="Ical.Net">
+      <HintPath>..\3rdParty\iCalNet\Ical.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ical.Net.Collections">
+      <HintPath>..\3rdParty\iCalNet\Ical.Net.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\3rdParty\PIA\Office14\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\3rdParty\iCalNet\NodaTime.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

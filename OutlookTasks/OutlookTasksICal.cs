@@ -2,8 +2,10 @@
 using System.Linq;
 using Fonlow.SyncML.Common;
 using Microsoft.Office.Interop.Outlook;
-using DDay.iCal;
-using DDay.iCal.Serialization.iCalendar;
+using Ical.Net;
+using Ical.Net.DataTypes;
+using Ical.Net.Serialization.iCalendar.Serializers;
+
 
 namespace Fonlow.SyncML.OutlookSync
 {
@@ -34,17 +36,17 @@ namespace Fonlow.SyncML.OutlookSync
 
         public override string ReadItemToText(TaskItem item)
         {
-            using (iCalendar calendar = new iCalendar())
+            using (Calendar calendar = new Calendar())
             {
-                calendar.ProductID = SyncConstants.ProdId;
+                calendar.ProductId = SyncConstants.ProdId;
                 Todo todo = new Todo();
                 try
                 {
                     todo.Summary = item.Subject;
                     todo.Description = item.Body;
-                    todo.Completed = new iCalDateTime(item.DateCompleted);
-                    todo.Due = new iCalDateTime(item.DueDate);
-                    todo.Start = new iCalDateTime(item.StartDate);
+                    todo.Completed = new CalDateTime(item.DateCompleted);
+                    todo.Due = new CalDateTime(item.DueDate);
+                    todo.Start = new CalDateTime(item.StartDate);
                     if (!String.IsNullOrEmpty(item.Categories))
                         todo.Categories = item.Categories.Split(new string[] { ",  ", ", ", "," }, StringSplitOptions.RemoveEmptyEntries);
                     //todo.Priority = item.SchedulePlusPriority;
@@ -54,7 +56,7 @@ namespace Fonlow.SyncML.OutlookSync
                     {
                         Alarm alarm = new Alarm();
                         alarm.Trigger = new Trigger(); //Alarm.Trigger is null by default.
-                        alarm.Trigger.DateTime = new iCalDateTime(item.ReminderTime);
+                        alarm.Trigger.DateTime = new CalDateTime(item.ReminderTime);
                         todo.Alarms.Add(alarm);
                     }
 
@@ -66,7 +68,7 @@ namespace Fonlow.SyncML.OutlookSync
                     todo.AddProperty("X-FONLOW-TEAMTASK", item.TeamTask ? "1" : "0");
 
                     calendar.Todos.Add(todo);
-                    iCalendarSerializer serializer = new iCalendarSerializer();
+                    CalendarSerializer serializer = new CalendarSerializer();
                     return serializer.SerializeToString(calendar);
                 }
                 catch (System.NullReferenceException e)
@@ -85,7 +87,7 @@ namespace Fonlow.SyncML.OutlookSync
                 System.Diagnostics.Debug.WriteLine("metaData: " + meta);
                 using (var reader = new System.IO.StringReader(meta))
                 {
-                    var calendarCollection = iCalendar.LoadFromStream(reader);
+                    var calendarCollection = Calendar.LoadFromStream(reader);
                     var calendar = calendarCollection.FirstOrDefault();
                     if (calendar == null)
                     {

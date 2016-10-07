@@ -1,5 +1,12 @@
-﻿using DDay.iCal;
-using DDay.iCal.Serialization.iCalendar;
+﻿using Ical.Net;
+using Ical.Net.DataTypes;
+using Ical.Net.Interfaces.DataTypes;
+using Ical.Net.Utility;
+using Ical.Net.Serialization;
+using Ical.Net.Serialization.iCalendar;
+
+using Ical.Net.Serialization.iCalendar.Serializers;
+
 using Fonlow.SyncML.Common;
 using Microsoft.Office.Interop.Outlook;
 using System;
@@ -37,17 +44,17 @@ namespace Fonlow.SyncML.OutlookSync
 
         public override string ReadItemToText(AppointmentItem item)
         {
-            using (iCalendar calendar = new iCalendar())
+            using (Calendar calendar = new Calendar())
             {
-                calendar.ProductID = SyncConstants.ProdId;
+                calendar.ProductId = SyncConstants.ProdId;
                 Event icalEvent = new Event();
 
                 try
                 {
                     icalEvent.Description = item.Body;
                     icalEvent.Summary = item.Subject;
-                    icalEvent.Start = new iCalDateTime(DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc)); // item.StartUTC does not have Kind specified.
-                    icalEvent.End = new iCalDateTime(DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc));
+                    icalEvent.Start = new CalDateTime(DateTime.SpecifyKind(item.StartUTC, DateTimeKind.Utc)); // item.StartUTC does not have Kind specified.
+                    icalEvent.End = new CalDateTime(DateTime.SpecifyKind(item.EndUTC, DateTimeKind.Utc));
                     icalEvent.Duration = new TimeSpan(0, item.Duration, 0);
                     icalEvent.IsAllDay = item.AllDayEvent;
                     if (!String.IsNullOrEmpty(item.Categories))
@@ -76,7 +83,7 @@ namespace Fonlow.SyncML.OutlookSync
 
                 //iCalendarSerializer serializer = new iCalendarSerializer(calendar);
                 //return serializer.SerializeToString();
-                iCalendarSerializer serializer = new iCalendarSerializer();
+                CalendarSerializer serializer = new CalendarSerializer();
                 return serializer.SerializeToString(calendar);
             }
         }
@@ -88,7 +95,7 @@ namespace Fonlow.SyncML.OutlookSync
                 // System.Diagnostics.Trace.TraceInformation("metaData: " + metaData);
                 using (var reader = new System.IO.StringReader(meta))
                 {
-                    var calendarCollection = iCalendar.LoadFromStream(reader);
+                    var calendarCollection = Calendar.LoadFromStream(reader);
                     var calendar = calendarCollection.FirstOrDefault();
                     if (calendar == null)
                     {
@@ -102,8 +109,8 @@ namespace Fonlow.SyncML.OutlookSync
 
                     item.Subject = icalEvent.Summary;
                     item.Body = icalEvent.Description;
-                    item.StartUTC = icalEvent.Start.UTC;
-                    item.EndUTC = icalEvent.End.UTC;
+                    item.StartUTC = icalEvent.Start.AsUtc;
+                    item.EndUTC = icalEvent.End.AsUtc;
 
                     // item.Duration =  no need to define as duration is End - Start
                     item.AllDayEvent = icalEvent.IsAllDay;
