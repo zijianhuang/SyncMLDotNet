@@ -100,7 +100,7 @@ namespace Fonlow.SyncML.OutlookSync
             Office.CommandBarButton btn = buttons.FirstOrDefault();
             if (btn == null)
             {
-                btn = syncBar.Controls.Add(Office.MsoControlType.msoControlButton, missing, missing, missing, missing) as Office.CommandBarButton;
+                btn = syncBar.Controls.Add(Office.MsoControlType.msoControlButton, null, null, null, null) as Office.CommandBarButton;
                 btn.Style = Office.MsoButtonStyle.msoButtonIconAndCaption;
                 btn.Tag = buttonTag;
                 btn.Caption = caption;
