@@ -31,3 +31,5 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 bin/
 /Installers/SyncMLOutlookSetup/SyncMLOutlookSetup
+/.vs
+/packages
