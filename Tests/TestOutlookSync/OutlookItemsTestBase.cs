@@ -7,7 +7,7 @@ using System.IO;
 
 namespace TestOutlookSync
 {
-    [DeploymentItem(@"..\..\..\TestCase\Outlook", @"Outlook")]
+    [DeploymentItem(@"..\..\..\..\TestCase\Outlook", @"Outlook")]
     public class OutlookItemsTestBase
     {
         protected OutlookItemsTestBase()
